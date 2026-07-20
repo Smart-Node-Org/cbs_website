@@ -1,0 +1,126 @@
+<mds-modal style="width: 100%;" closable>
+    <mds-modal-header>
+        <mds-modal-title >
+            <div class="md-toolbar-tools" style="background-color: #2d3669">
+                <h2 style="color: #EBF7E5"  tr="modals.FTC"></h2>
+            </div>
+        </mds-modal-title>
+    </mds-modal-header>
+    <mds-modal-body style="padding: 40px;background-color: rgb(255,255,255);">
+        <div uk-grid>
+            <div class="uk-width-4-5">
+                <h1 class="md-title " tr="modals.pickYear"></h1>
+                <div layout="row">
+                    <!-- <div class="d-block uk-width-1-1">
+                        <h5  tr="modals.Years"> </h5>
+                        <select ng-model="selectedYear"  ng-change="getCountries()">
+                            <option value=""><input ng-model="searchTerm" aria-label="Vegetable filter"
+                                type="search" placeholder="Ex. 2010"
+                                class="demo-header-searchbox md-text uk-display-block uk-width-1-1">
+                     </option>
+                     <option ng-value="year.year" ng-repeat="year in AllForeignYears | filter:searchTerm">
+                        {{year.year}}
+                    </option></select>
+                    </div> -->
+                    <md-input-container class="d-block uk-width-1-1">
+                        <label tr="modals.Years"></label>
+                        <md-select ng-model="selectedYear"
+                                   md-on-close="clearSearchTerm()"
+                                   md-container-class="selectdemoSelectHeader"
+                                   ng-change="getCountries()">
+                            <md-select-header ><!--class="demo-select-header"-->
+                                <input ng-model="searchTerm" aria-label="Vegetable filter"
+                                       type="search" placeholder="Ex. 2010"
+                                       class="demo-header-searchbox md-text uk-display-block uk-width-1-1">
+                            </md-select-header>
+                            <md-optgroup label="country_list">
+                                <md-option ng-value="year.year" ng-repeat="year in AllForeignYears | filter:searchTerm">
+                                    {{year.year}}
+                                </md-option>
+                            </md-optgroup>
+                        </md-select>
+                    </md-input-container>
+                </div>
+            </div>
+        </div>
+        <div class="uk-overflow-auto">
+            <table class="table table-bordered text-center" id="allCountries">
+                <thead>
+                <tr   class="khlee">
+                    <th class="medium-white">Country</th> <!--uk-width-*-->
+                    <th class="medium-white">Import</th>
+                    <th class="medium-white">Export</th>
+                    <th class="medium-white">Re_export</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr  style="vertical-align: text-bottom" ng-repeat="country in allCountries">
+                    <td class="medium-bold" > {{country.country}}</td>
+                    <td>{{country.import}}</td>
+                    <td>{{country.export}}</td>
+                    <td>{{country.re_export}}</td>
+                </tr>
+        
+        
+                </tbody>
+            </table>
+        </div>
+    </mds-modal-body>
+</mds-modal>
+<!-- <md-dialog  style="width: 100%;">
+    <md-toolbar    style="color:#29303b;" >
+        <div class="md-toolbar-tools" style="background-color: #2d3669">
+            <h2 style="color: #EBF7E5">Foreign Trade Countries</h2>
+        </div>
+        <md-dialog-content style="padding: 40px;background-color: rgb(255,255,255);">
+
+<div uk-grid>
+    <div class="uk-width-4-5">
+        <h1 class="md-title ">Pick an year below</h1>
+        <div layout="row">
+            <md-input-container class="d-block uk-width-1-1">
+                <label>Years</label>
+                <md-select ng-model="selectedYear"
+                           md-on-close="clearSearchTerm()"
+                           md-container-class="selectdemoSelectHeader"
+                           ng-change="getCountries()">
+                    <md-select-header ><--class="demo-select-header"--
+                        <input ng-model="searchTerm" aria-label="Vegetable filter"
+                               type="search" placeholder="Ex. 2010"
+                               class="demo-header-searchbox md-text uk-display-block uk-width-1-1">
+                    </md-select-header>
+                    <md-optgroup label="country_list">
+                        <md-option ng-value="year.year" ng-repeat="year in AllForeignYears | filter:searchTerm">
+                            {{year.year}}
+                        </md-option>
+                    </md-optgroup>
+                </md-select>
+            </md-input-container>
+        </div>
+    </div>
+</div>
+<div class="uk-overflow-auto">
+    <table class="table table-bordered text-center" id="allCountries">
+        <thead>
+        <tr   class="khlee">
+            <th class="medium-white">Country</th> <--uk-width-*--
+            <th class="medium-white">Import</th>
+            <th class="medium-white">Export</th>
+            <th class="medium-white">Re_export</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr  style="vertical-align: text-bottom" ng-repeat="country in allCountries">
+            <td class="medium-bold" > {{country.country}}</td>
+            <td>{{country.import}}</td>
+            <td>{{country.export}}</td>
+            <td>{{country.re_export}}</td>
+        </tr>
+
+
+        </tbody>
+    </table>
+</div>
+        </md-dialog-content>
+    </md-toolbar>
+</md-dialog> -->

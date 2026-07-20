@@ -1,0 +1,14 @@
+{
+    "all":"الكل",
+    "economic":"الاقتصادي",
+    "Social":"الاجتماعي",
+    "SDJ":"SDJ",
+    "title":"المؤشرات الفردية",
+    "table_name":"الاسم",
+    "IndicatorsByGroups":"المؤشرات حسب المجموعات",
+    "table_unit":"الوحدة",
+    "table_value":"القيمة",
+    "bulding":"مواد البناء",
+    "food":"الامدادات الغذائية",
+    "foriegn_title":"أسعار العملات الأجنبية"
+}

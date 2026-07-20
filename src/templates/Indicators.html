@@ -1,0 +1,238 @@
+<div class="container">
+<section style="margin-top: 50px">
+    <!--  Single -->
+    <h3 style="font-size:50px;font-weight: bold;color:#3e4095;margin-top:40px" class=" {{lang=='ar'?'text-right':''}}"> <span class="border-heading"></span > <span tr="Indicators.title"></span> </h3>
+    <ul class="uk-subnav uk-subnav-pill {{lang=='ar'?'direction-rtl':''}}" uk-switcher swiping="false">
+        <li><a href="#" style="font-size: 20px; font-weight: bold" tr="Indicators.all"></a></li>
+        <li><a href="#" style="font-size: 18px; font-weight: bold" tr="Indicators.economic"></a></li>
+        <li><a href="#" style="font-size: 18px; font-weight: bold" tr="Indicators.Social"></a></li>
+    </ul>
+    <ul class="uk-switcher"  >
+        <li>
+            <div  class="uk-height-large uk-background-cover uk-light " uk-parallax="bgy: -200"   data-aos="fade-up" >
+                <div class=" uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider autoplay="true" style="padding-top: 50px">
+                    <ul dir="{{lang=='ar'?'ltr':'ltr'}}"  style=""  class="uk-slider-items uk-child-width-1-1@s uk-child-width-1-4@l uk-child-width-2-4@m uk-grid ">
+                        <li ng-repeat="ind in indicators">
+                            <div class="uk-panel" style="opacity: 1" >
+
+                                <div  style="text-align: center;padding-left: 5px">
+                                    <i class="fa {{ind.icon}} fa-5x " style="color: #3e4095;"></i>
+                                    <h3 style="color:#3e4095;font-size: 20px">{{lang=='ar'?ind.title_ar:ind.title}}
+                                    </h3>
+                                    <h1 style="color:#3e4095;font-size: 25px;font-weight: 900">{{ind.value.toFixed(1)}} {{ind.unit}}</h1>
+                                </div>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover"  uk-slidenav-previous uk-slider-item="previous" style="background-color:  #3e4095;border-radius: 50%;padding: 15px"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover"  uk-slidenav-next uk-slider-item="next" style="background-color:  #3e4095;border-radius: 50%;padding: 15px"></a>
+
+                </div>
+            </div>
+        </li>
+        <li>
+            <div  class="uk-height-large uk-background-cover uk-light " uk-parallax="bgy: -200"   data-aos="fade-up" >
+                <div class=" uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider autoplay="true" style="padding-top: 50px">
+                    <ul  class="uk-slider-items uk-child-width-1-1@s uk-child-width-1-4@l uk-child-width-2-4@m uk-grid">
+                        <li ng-repeat="ind in indicators|filter:{department_id:1}">
+                            <div class="uk-panel" style="opacity: 1" >
+
+                                <div  style="text-align: center;padding-left: 5px">
+                                    <i class="fa {{ind.icon}} fa-5x " style="color: #3e4095;"></i>
+                                    <h3 style="color:#3e4095;font-size: 20px">{{ind.title}}
+                                    </h3>
+                                    <h1 style="color:#3e4095;font-size: 25px;font-weight: 900">{{ind.value.toFixed(1)}} {{ind.unit}}</h1>
+                                </div>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover"  uk-slidenav-previous uk-slider-item="previous" style="background-color:  #3e4095;border-radius: 50%;padding: 15px"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover"  uk-slidenav-next uk-slider-item="next" style="background-color:  #3e4095;border-radius: 50%;padding: 15px"></a>
+
+                </div>
+            </div>
+        </li>
+        <li>
+            <div  class="uk-height-large uk-background-cover uk-light " uk-parallax="bgy: -200"   data-aos="fade-up" >
+                <div class=" uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider autoplay="true" style="padding-top: 50px">
+                    <ul  class="uk-slider-items uk-child-width-1-1@s uk-child-width-1-4@l uk-child-width-2-4@m uk-grid">
+                        <li ng-repeat="ind in indicators|filter:{department_id:2}">
+                            <div class="uk-panel" style="opacity: 1" >
+
+                                <div  style="text-align: center;padding-left: 5px">
+                                    <i class="fa {{ind.icon}} fa-5x " style="color: #3e4095;"></i>
+                                    <h3 style="color:#3e4095;font-size: 20px">{{ind.title}}
+                                    </h3>
+                                    <h1 style="color:#3e4095;font-size: 25px;font-weight: 900">{{ind.value.toFixed(1)}} {{ind.unit}}</h1>
+                                </div>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover"  uk-slidenav-previous uk-slider-item="previous" style="background-color:  #3e4095;border-radius: 50%;padding: 15px"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover"  uk-slidenav-next uk-slider-item="next" style="background-color:  #3e4095;border-radius: 50%;padding: 15px"></a>
+
+                </div>
+            </div>
+        </li>
+        <li>
+            <div  class="uk-height-large uk-background-cover uk-light " uk-parallax="bgy: -200"   data-aos="fade-up" >
+                <div class=" uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider autoplay="true" style="padding-top: 50px">
+                    <ul  class="uk-slider-items uk-child-width-1-1@s uk-child-width-1-4@l uk-child-width-2-4@m uk-grid">
+                        <li ng-repeat="ind in indicators|filter:{department_id:3}">
+                            <div class="uk-panel" style="opacity: 1" >
+
+                                <div  style="text-align: center;padding-left: 5px">
+                                    <i class="fa {{ind.icon}} fa-5x " style="color: #3e4095;"></i>
+                                    <h3 style="color:#3e4095;font-size: 20px">{{ind.title}}
+                                    </h3>
+                                    <h1 style="color:#3e4095;font-size: 25px;font-weight: 900">{{ind.value.toFixed(1)}} {{ind.unit}}</h1>
+                                </div>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover"  uk-slidenav-previous uk-slider-item="previous" style="background-color:  #3e4095;border-radius: 50%;padding: 15px"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover"  uk-slidenav-next uk-slider-item="next" style="background-color:  #3e4095;border-radius: 50%;padding: 15px"></a>
+
+                </div>
+            </div>
+        </li>
+    </ul>
+            <style>
+        .tab{
+            display: flex;
+            justify-items: center;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    </style>
+    <h3 style="font-size:50px;font-weight: bold;color:#3e4095;margin-top:40px" class="{{lang=='ar'?'text-right':''}}"> <span class="border-heading"></span><span tr="Indicators.IndicatorsByGroups"   > </span> </h3>
+    <section  class="services tab">
+        <!-- <ul class="uk-subnav uk-subnav-pill" uk-switcher swiping="false">
+            <li><a href="#" style="font-size: 20px; font-weight: bold">All</a></li>
+            <li><a href="#" style="font-size: 18px; font-weight: bold">Economic</a></li>
+            <li><a href="#" style="font-size: 18px; font-weight: bold">Social</a></li>
+        </ul> -->
+        <!--  Groups -->
+            <div class="uk-overflow-auto" ng-repeat="group in groups" style="width: 33%">
+                <h2 style="text-align: center;font-size: x-large;margin-top: 20px">{{group.title}}</h2>
+                <table class="uk-table uk-table-divider table-hover">
+                    <thead>
+                    <tr>
+                        <th style="text-align: center;font-size: medium;font-weight: bold;background: #3e4095;color:#eeeeee" tr="Indicators.table_name" ></th>
+                        <th style="text-align: center;font-size: medium;font-weight: bold;background: #3e4095;color:#eeeeee" tr="Indicators.table_unit"></th>
+                        <th style="text-align: center;font-size: medium;font-weight: bold;background: #3e4095;color:#eeeeee" tr="Indicators.table_value"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="indicator in group.values">
+                        <td style="font-size: medium;text-align: center">{{indicator.title}}</td>
+                        <td style="font-size: medium;text-align: center">{{indicator.unit}}</td>
+                        <td style="font-size: medium;text-align: center">{{indicator.value}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <li>
+                
+                <ul class="uk-switcher" >
+                    <li>
+
+                        <div  class="uk-height-large uk-background-cover uk-light " uk-parallax="bgy: -200"   data-aos="fade-up" >
+                            <div class=" uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider autoplay="true" style="padding-top: 50px">
+                                <ul  class="uk-slider-items uk-child-width-1-1@s uk-child-width-1-4@l uk-child-width-2-4@m uk-grid">
+                                    <li ng-repeat="ind in indicators">
+                                        <div class="uk-panel" style="opacity: 1" >
+                                            <div  style="text-align: center;padding-left: 5px">
+                                                <i class="fa {{ind.icon}} fa-5x" style="padding: 10px;color: #3e4095"></i>
+                                                <h3 style="color:#3e4095;font-size: 50px">{{ind.title}} 
+                                                </h3>
+                                                <h1 style="color:#3e4095;font-size: x-large">{{ind.value}} {{ind.unit}}</h1>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <a class="uk-position-center-left uk-position-small uk-hidden-hover"  uk-slidenav-previous uk-slider-item="previous" style="background-color:  #3e4095;border-radius: 50%;padding: 15px"></a>
+                                <a class="uk-position-center-right uk-position-small uk-hidden-hover"  uk-slidenav-next uk-slider-item="next" style="background-color:  #3e4095;border-radius: 50%;padding: 15px"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="uk-overflow-auto">
+                            <h2 style="text-align: center;font-size: x-large;margin-top: 20px" tr="Indicators.bulding"></h2>
+                            <table class="uk-table uk-table-divider table-hover">
+                                <thead>
+                                <tr>
+                                    <th style="text-align: center;font-size: medium;font-weight: bold;background: #3e4095;color:#eeeeee" tr="Indicators.name"></th>
+                                    <th style="text-align: center;font-size: medium;font-weight: bold;background: #3e4095;color:#eeeeee" tr="Indicators.unit"></th>
+                                    <th style="text-align: center;font-size: medium;font-weight: bold;background: #3e4095;color:#eeeeee" tr="Indicators.value"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat="indicator in indicatorsArray|filter:{group:'Building Material'}">
+                                    <td style="font-size: medium;text-align: center">{{indicator.name}}</td>
+                                    <td style="font-size: medium;text-align: center">{{indicator.unit}}</td>
+                                    <td style="font-size: medium;text-align: center">{{indicator.value}}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="uk-overflow-auto">
+                            <h2 style="text-align: center;font-size: x-large;margin-top: 50px" tr="Indicators.food"></h2>
+                            <table class="uk-table uk-table-divider table-hover">
+                                <thead>
+                                <tr>
+                                    <th style="text-align: center;font-size: medium;font-weight: bold;background: #3e4095;color:#eeeeee">Name</th>
+                                    <th style="text-align: center;font-size: medium;font-weight: bold;background: #3e4095;color:#eeeeee">Unit</th>
+                                    <th style="text-align: center;font-size: medium;font-weight: bold;background: #3e4095;color:#eeeeee">Value</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat="indicator in indicatorsArray|filter:{group:'Food Supplies'}">
+                                    <td style="font-size:medium;text-align: center">{{indicator.name}}</td>
+                                    <td style="font-size: medium;text-align: center">{{indicator.unit}}</td>
+                                    <td style="font-size: medium;text-align: center">{{indicator.value}}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="uk-overflow-auto">
+                            <h2 style="text-align: center;font-size: x-large;margin-top: 50px" tr="Indicators.foreign_title"></h2>
+                            <table class="uk-table uk-table-divider table-hover">
+                                <thead>
+                                <tr>
+                                    <th style="text-align: center;font-size: medium;font-weight: bold;background: #3e4095;color:#eeeeee" tr="Indicators.name"></th>
+                                    <th style="text-align: center;font-size: medium;font-weight: bold;background: #3e4095;color:#eeeeee" tr="Indicators.unit"></th>
+                                    <th style="text-align: center;font-size: medium;font-weight: bold;background: #3e4095;color:#eeeeee" tr="Indicators.value"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat="indicator in indicatorsArray|filter:{group:'Foriegn Currency Prices'}">
+                                    <td style="font-size: medium;text-align: center">{{indicator.name}}</td>
+                                    <td style="font-size: medium;text-align: center">{{indicator.unit}}</td>
+                                    <td style="font-size: medium;text-align: center">{{indicator.value}}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </li>
+                </ul>
+            </li>
+    </section>
+
+</section>
+</div>
+
+
+
+

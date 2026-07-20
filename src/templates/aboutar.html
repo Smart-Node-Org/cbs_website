@@ -1,0 +1,336 @@
+<div class="container">
+    <!-- Start mission and vision  Section -->
+    <section id="service" class="service" >
+        <h3 style="text-align: right;font-size:40px;font-weight: bold;color:#3e4095;margin-top:40px"> <span class="border-heading" style="margin-left: 10px"></span> عن الجهاز المركزي للاحصاء </h3>
+        <p id="text" class="lead" style="margin-right: 28px;text-align: right;font-size:22px;color: #595959;font-family: 'gotham-rounded, helvetica neue, helvetica', sans-serif">مر الجهاز المركزي للإحصاء بعدة مراحل منذ إنشائه - تم إنشاؤه كإدارة في مصلحة الجمارك لجمع إحصاءات التجارة الخارجية 1903. - تم تحويله إلى وزارة التخطيط الاقتصادي في عام 1969.</p>
+        <div class="hidden-sm hidden-xs row">
+            <div class="col-sm-6 col-md-4 col-xs-12 d-flex align-items-stretch mt-4 mt-lg-0" style="margin-bottom: 20px;margin-top: 20px">
+                <div class="icon-box text-center" style="box-shadow: 0 0 20px #ddd;" ng-init="hiddenss=true">
+                    <i class="fa fa-tachometer fa-5x" style="color: #3e4095; margin-bottom:15px"></i>
+                    <h2  style="color:#3e4095;font-size: 30px">الأهداف</h2>
+                    <div  id="{{hiddenss?'':'style-1'}}" class="scrollbar" style="height: 230px;overflow-y:{{ hiddenss?'hidden':'scroll'}}">
+                        <ul id="contentscroll2" class="list-group force-overflow">
+                            <li id="text" class="list-group-item hidden-xs" ng-if="hiddenss" ng-repeat="c in goalar.slice(0,4)" style="color:#595959;text-align:center;font-size: 20px;padding:0;font-family: 'gotham-rounded, helvetica neue, helvetica', sans-serif;">{{c}}</li>
+                            <li id="text" class="list-group-item hidden-sm hidden-md hidden-lg" ng-repeat="c in goalar.slice(0,6)" style="color:#595959;text-align:center;font-size: 20px;padding:0;font-family: 'gotham-rounded, helvetica neue, helvetica', sans-serif;">{{c}}</li>
+                            <li id="text" class="list-group-item " ng-if="!hiddenss" ng-repeat="c in goalar" style="color:#595959;text-align:center;font-size: 20px;padding: 0;font-family: 'gotham-rounded, helvetica neue, helvetica', sans-serif;">{{c}}</li>
+                        </ul>
+                    </div>
+                    <div style="transform: translateY(-20px)">
+                    <a href="#" ng-click="$event.preventDefault();hiddenss==true?hiddenss=false:hiddenss=true;" style="font-size: 18px;">{{hiddenss==true?'إظهار المزيد':'إظهار أقل'}}</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-xs-12 d-flex align-items-stretch mt-4 mt-md-0" ng-repeat="mission in ourMissions" style="margin-bottom: 20px;margin-top: 20px">
+                <div class="icon-box text-center" style="box-shadow: 0 0 20px #ddd;">
+                    <i class="fa fa-file fa-5x" style="color: #3e4095; margin-bottom:15px"></i>
+                    <h2  style="color:#3e4095;font-size: 30px">الرسالة</h2>
+                    <p id="text" style="text-align:justify;font-size: 22px;font-family: 'gotham-rounded, helvetica neue, helvetica', sans-serif;color:#595959">{{mission.missionar}}</p>
+                </div>
+            </div>
+            <div class="col-sm-3 hidden-md hidden-lg hidden-xs"></div>
+            <div class="col-sm-6 col-md-4 col-xs-12  d-flex align-items-stretch" ng-repeat="vision in ourVision" style="margin-bottom: 20px;margin-top: 20px">
+                <div class="icon-box text-center"  style="box-shadow: 0 0 20px #ddd;margin-top: -5px;">
+                    <i class="fa fa-dribbble fa-5x" style="color: #3e4095; margin-bottom:15px"></i>
+                    <h2 style="color:#3e4095;font-size: 30px">الرؤيه</h2>
+                    <p id="text" style="text-align:justify;font-size: 22px;font-family: 'gotham-rounded, helvetica neue, helvetica', sans-serif; color:#595959">{{vision.visionar}}</p>
+                </div>
+            </div>
+            <div class="col-sm-3 hidden-md hidden-lg hidden-xs"></div>
+
+        </div>
+
+        <div class="hidden-md hidden-lg row">
+            <div class="col-sm-12 col-md-4 col-xs-12  d-flex align-items-stretch" ng-repeat="vision in ourVision" style="margin-bottom: 20px;margin-top: 20px">
+                <div class="icon-box text-center"  style="box-shadow: 0 0 20px #ddd;margin-top: -5px;">
+                    <i class="fa fa-dribbble fa-5x" style="color: #3e4095; margin-bottom:15px"></i>
+                    <h2 style="color:#3e4095;font-size: 30px">الرؤيه</h2>
+                    <p id="text" style="text-align:justify;font-size: 22px;font-family: 'gotham-rounded, helvetica neue, helvetica', sans-serif; color:#595959">{{vision.visionar}}</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-xs-12 d-flex align-items-stretch mt-4 mt-md-0" ng-repeat="mission in ourMissions" style="margin-bottom: 20px;margin-top: 20px">
+                <div class="icon-box text-center" style="box-shadow: 0 0 20px #ddd;">
+                    <i class="fa fa-file fa-5x" style="color: #3e4095; margin-bottom:15px"></i>
+                    <h2  style="color:#3e4095;font-size: 30px">الرسالة</h2>
+                    <p id="text" style="text-align:justify;font-size: 22px;font-family: 'gotham-rounded, helvetica neue, helvetica', sans-serif;color:#595959">{{mission.missionar}}</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-xs-12 d-flex align-items-stretch mt-4 mt-lg-0" style="margin-bottom: 20px;margin-top: 20px">
+                <div class="icon-box text-center" style="box-shadow: 0 0 20px #ddd;" ng-init="hiddenss=true">
+                    <i class="fa fa-tachometer fa-5x" style="color: #3e4095; margin-bottom:15px"></i>
+                    <h2  style="color:#3e4095;font-size: 30px">الأهداف</h2>
+                    <div  id="{{hiddenss?'':'style-1'}}" class="scrollbar" style="height: 230px;overflow-y:{{ hiddenss?'hidden':'scroll'}}">
+                        <ul id="contentscroll2" class="list-group force-overflow">
+                            <li id="text" class="list-group-item hidden-xs" ng-if="hiddenss" ng-repeat="c in goalar.slice(0,4)" style="color:#595959;text-align:center;font-size: 20px;padding:0;font-family: 'gotham-rounded, helvetica neue, helvetica', sans-serif;">{{c}}</li>
+                            <li id="text" class="list-group-item hidden-sm hidden-md hidden-lg" ng-repeat="c in goalar.slice(0,5)" style="color:#595959;text-align:center;font-size: 20px;padding:0;font-family: 'gotham-rounded, helvetica neue, helvetica', sans-serif;">{{c}}</li>
+                            <li id="text" class="list-group-item " ng-if="!hiddenss" ng-repeat="c in goalar" style="color:#595959;text-align:center;font-size: 20px;padding: 0;font-family: 'gotham-rounded, helvetica neue, helvetica', sans-serif;">{{c}}</li>
+                        </ul>
+                    </div>
+                    <div style="transform: translateY(-20px)">
+                        <a href="#" ng-click="$event.preventDefault();hiddenss==true?hiddenss=false:hiddenss=true;" style="font-size: 18px;">{{hiddenss==true?'إظهار المزيد':'إظهار أقل'}}</a>
+                    </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- End mission and vision  Section -->
+</div>
+
+
+<!-- start Section manger-->
+<div class="managers text-center">
+    <div class="manager-overlay">
+        <div class="container">
+            <div class="row">
+                <!-- Start Section Boos-->
+                <div class="col-xs-12" ng-repeat="person in OrganiztionChart|filter:{position_job: 'General Manager'}">
+                    <div class="boss" >
+                        <img src="http://smart-node.net/data/cbs/organiztion/{{person.img}}" alt="manager" class="img-circle" >
+                        <p>{{person.name_ar}}</p>
+                        <span>{{person.position_job_ar}}</span>
+                    </div>
+                </div>
+                <!-- End Section Boss-->
+
+                <!-- Start Section Boos-->
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3" ng-repeat="person in organ|filter">
+                    <div class="manager">
+                        <img src="http://smart-node.net/data/cbs/organiztion/{{person.img}}" alt="manager" class="img-circle" >
+                        <div class="manager-info">
+                            <p>{{person.name_ar}}</p>
+                            <span>{{person.position_job_ar}}</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Section Boss-->
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end Section manger-->
+
+<!--  About Section  -->
+<section id="abouts" class="well" style="margin:60px 0">
+    <div class="container">
+        <div class="abouts-container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+                    <div id="myVideo" class="background order-lg-2 order-1 wow fadeInRight">
+
+<!--                        <img src="img/facebook.jpg" style="margin-top:20px;height: 450px;width:100%;border-radius: 15px; box-shadow: 5px 5px 3px rgba(62,64,149,0.8);">-->
+                        <video id="video4" class="lightbulbs" controls style="margin-top:20px;height: 450px;width:100%;background: black;border-radius: 10px">
+                            <source src="videos/4exper.mp4" type="video/mp4">
+                            Your browser does not support the video element
+                        </video>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+                    <div class="content order-lg-1 order-2">
+                        <h3 style="text-align: right;font-size:40px;font-weight: bold;color:#3e4095;margin-top:40px"> <span class="border-heading" style="margin-left: 10px"></span>نبذة تعريفية</h3>
+                        <p  class="lead" id="text4" style="text-align: justify;margin-right: 20px;color: #595959;font-size: 20px;font-family: 'gotham-rounded, helvetica neue, helvetica', sans-serif;font-weight: bold">
+                            شهد العالم في الآونة الأخيرة تزايدا ملحوظا من حيث الكم والكيف في طلب البيانات والمعلومات
+                            الاحصائية. كما أن التقدم الملحوظ لتقنيات المعلومات والاتصالات أدى إلى التسريع بالطلب
+                            على معلومات إحصائية تتسم بالآنية والشمولية والموثوقية والمرونة. وعلى الصعيد القومي فإن التطوير
+                            المستمر للمسار التنموي في السودان يحتاج هو الآخر إلى إحصاءات أكثر دقة
+                            وشمولية وآنية لدعم صنع القرار ورسم السياسات ورصد مدى التقدم وتقييم الآثار والأداء.
+                            إن الاستجابة المستمرة لهذه الطلبات المتزايدة كماً وكيفاً تقتضي من الجهاز المركزي للإحصاء بالسودان
+                            ايجاد آلية تمكنه من مواصلة تطوير عمله بشكل مستدام، وبمواكبة المستجدات ذات الصلة داخل وخارج السودان
+                            في نفس الوقت وذلك ببناء شراكة حقيقية بهدف الاستفادة من الخبرات والتجارب، وتضافر الجهود من أجل النهوض بهذا القطاع الحيوي.
+                        </p>
+                    </div>
+                </div>
+                    </div>
+
+        </div>
+        <div class="container abouts-container">
+        <div class="icon-box wow fadeInUp container" style="margin-top:30px">
+            <div class="icon" style="float: right"><span class="fa fa-history" style="color:#3e4095;font-size: 30px "></span></div>
+            <h3 style="font-size:20px;float:right;margin-right:20px;color: #3e4095;position: relative; top: 15px;left: 15px; font-weight: bold">التطور التاريخي للجهاز</h3>
+            <p id="text2" class="lead" style="text-align:justify;float:right;color: #595959;font-size: 20px;font-family: 'gotham-rounded, helvetica neue, helvetica', sans-serif;">
+                في عام 1903 كانت مصلحة الإحصاء (الجهاز المركزي للإحصاء حاليا ) قسما من أقسام مصلحة الجمارك وظيفتها الأساسية إعداد إحصاءات التجارة الخارجية .
+                وبحلول عام 1932 – تحول قسم الإحصاء هذا إلى ما كان يعرف باللجنة الاقتصادية التي تحولت في عام 1934م إلى مصلحة التجارة والاقتصاد .
+                وفي عام 1953م انفصل قسم الإحصاء عن مصلحة التجارة والاقتصاد وأصبح هذا القسم مصلحة مستقلة قائمة بذاتها عرفت بمصلحة الإحصاء وتتبع لوزارة الشئون الاجتماعية في ذلك الوقت وفي نوفمبر1958 أصبحت مصلحة الإحصاء تابعه لرئاسة مجلس الوزراء .
+                في عام 1969 تم إنشاء وزارة التخطيط الاقتصادي وصدر قرار بتبعية مصلحة الإحصاء إلى هذه الوزارة .
+                وفي 6 نوفمبر 1995 صدر قرار مجلس الوزراء المؤقر بإنشاء الجهاز المركزي للإحصاء وتبعيته للسيد/ وزير المالية والاقتصاد الوطني.
+                في  عام 2000م  تحول الى مجلس  الوزراء  وما زال حتى الآن. 
+                الإطار القانوني الذي يعمل بموجبه الجهاز المركزي للإحصاء هو قانون الإحصاء لعام 2004 والذي تم تحديثه في العام 2016 وهو الآن في طور الإجازة والذي يخول للجهاز رسميا إنتاج البيانات الإجتماعية والإقتصادية القومية،  والتنسيق مع النظام القومي الإحصائي (NSS).                             </p>
+        </div>
+
+        <div class="icon-box wow fadeInUp container" data-wow-delay="0.2s">
+            <div class="icon" style="float: right"><span class="fa fa-tasks" style="color:#3e4095;font-size: 30px "></span></div>
+            <h3 style="font-size:20px;float:right;margin-right:20px;color: #3e4095;position: relative; top: 15px;left: 15px; font-weight: bold">مهام الجهاز المركزي للإحصاء</h3>
+            <div id="text1" class="lead" style="text-align:justify;float:right;color: #595959;font-size: 20px;font-family: 'gotham-rounded, helvetica neue, helvetica', sans-serif;">
+                الجهاز المركزي للاحصاء هو الجهة المعنية بالإحصاء وهو المرجع الرسمي الوحيد لتنفيذ العمل الإحصائي والمشرف الفني والمنظم له، وله في سبيل تحقيق أهدافه الاختصاصات الآتية:
+            <ul class="list-unstyled" style="margin-right: -30px">
+                <li>
+                    <span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>إعداد إستراتيجية وطنية للعمل الإحصائي  في الدولة بالتنسيق مع الجهات العامة ذات العلاقة، ومتابعة تنفيذها بعد إقرارها وإقتراح تحديثها بشكل دوري.
+
+                </li>
+                <li>
+                    <span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>القيام بالعمل الإحصائي وفقاً للمعايير الدولية المتعارف عليها، ويشمل ذلك ما يأتي:
+                    <ul class="list-unstyled">
+                        <li>
+                            <span class="fa fa-arrow-left" style="margin-left: 10px;color: #3e4095"></span>تحديد منهجية العمل الإحصائي.
+                        </li>
+                        <li>
+                            <span class="fa fa-arrow-left" style="margin-left: 10px;color: #3e4095"></span>تصميم وتنفيذ المسوح والتعدادات.
+                        </li>
+                        <li>
+                            <span class="fa fa-arrow-left" style="margin-left: 10px;color: #3e4095"></span>إجراء الدراسات والبحوث.
+                        </li>
+                        <li>
+                            <span class="fa fa-arrow-left" style="margin-left: 10px;color: #3e4095"></span>تحليل البيانات والمعلومات.
+                        </li>
+                        <li>
+                            <span class="fa fa-arrow-left" style="margin-left: 10px;color: #3e4095"></span>نشر البيانات.
+                        </li>
+                        <li>
+                            <span class="fa fa-arrow-left" style="margin-left: 10px;color: #3e4095"></span>توثيق البيانات والمعلومات وحفظها في الوثائق الإحصائية.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>جمع البيانات والمعلومات التي تغطي جميع جوانب الحياة في السودان من مصادرها المختلفة وتدوينها وتبويبها، وجمع البيانات والمعلومات من السجلات الإدارية في الجهات العامة والمنشآت الخاصة وتبويبها وتحليلها وإستخراج مؤشراتها.
+                </li>
+                <li>
+                    <span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>إعداد الأدلة والتصنيفات الإحصائية وفقاً للمعايير الدولية، وإستخدامها والعمل على تحديثها وتطويرها متى دعت الحاجة إلى ذلك.
+                </li>
+                <li>
+                    <span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>إعداد النشرات والتقارير الإحصائية للمسوح والبحوث، وغيرها.
+                </li>
+                <li>
+                    <span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>تكوين منظومة شاملة من قواعد البيانات الإحصائية لمختلف المجالات الإحصائية.
+                </li>
+                <li>
+                    <span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>إيجاد نظام مركزي للمعلومات في الجهاز المركزي للإحصاء على المستوى القومي يرتبط آلياً بجميع الجهات العامة.
+                </li>
+                <li>
+                    <span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>تقديم العمل الإحصائي والخدمات الإستشارية والفنية في مجال الإحصاء للجهات العامة والمنشآت الخاصة.
+                </li>
+                <li>
+                    <span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>لا تقتصر مهمة الجهاز علي توفير البيانات علي المستوى المحلي فقط، بل تتعدي ذلك لتشمل المساهمة الإحصائية في المحيط الإقليمي والدولي من خلال تغذية قواعد البيانات الإقليمية والعالمية.
+            </li>
+            </ul>
+            </p>
+        </div>
+        </div>
+        <div class="icon-box wow fadeInUp container" data-wow-delay="0.4s" style="margin-top: -50px">
+            <div class="icon" style="float: right"><span class="fa fa-users" style="color:#3e4095;font-size: 30px "></span></div>
+            <h3 style="font-size:20px;float:right;margin-right:20px;color: #3e4095;position: relative; top: 15px;left: 15px; font-weight: bold">مدارء الجهاز المركزي للإحصاء للفترة من 1955 إلى الآن</h3>
+            <p class="lead hidden-lg hidden-md" style="text-align:justify;float:right;color: #595959;font-size: 20px;font-family: 'gotham-rounded, helvetica neue, helvetica', sans-serif;">
+                       <span  id="text" style="float:right;text-align: right;">                 نخبة من العلماء والخبراء الوطنيين تقلدوا مهام وظيفة المدير العام للجهاز المركزي للإحصاء في مراحل زمنية مختلفة من عمر البلاد هم
+                       : </span>
+                <br><span style="float: right;text-align: right;margin-right: 10px">
+                .السيد/ أحمد  عثمان  إسحاق   			 1955 – 1961م<span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>
+                <br>
+                .السيد/  عبد  المنعم   مرسى     		 1962 – 1966م<span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>
+                <br>
+                .السيد/  قاسم  أحمد  موسى      		 1967 – 1975م<span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>
+                <br>
+                .السيد/  عمر  أحمد  التاي        		 1976 – 1990م<span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>
+                <br>
+                .السيد/  بروفسير صديق ناصر عثمان 	 1991 – 1997م<span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>
+                <br>
+                .السيد/  حسن  عبد السلام سليمان  		 1998 – 2001م<span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>
+                <br>
+                .السيد/  د. عبد الرحمن محمد  حسن  		2001 -  2004م<span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>
+                <br>
+                .السيد/ بروفيسير عوض حاج على   		2004 -  2007م<span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>
+                <br>
+                .السيد/ د. يس الحاج عابدين 			2007- 2016م<span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>
+                <br>
+                .السيد/ د. كرم الله علي عبد الرحمن 			2016- 2021م<span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>
+<br>
+                                            .السيد/ د.علي عباس 			2019- الآن<span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>
+            </span>  </p>
+
+
+            <p  class="lead hidden-sm hidden-xs" style="transform:translate(60px,25px);text-align:justify;float:right;color: #595959;font-size: 20px;font-family: 'gotham-rounded, helvetica neue, helvetica', sans-serif;">
+                       <span style="text-align: right;">-:                 نخبة من العلماء والخبراء الوطنيين تقلدوا مهام وظيفة المدير العام للجهاز المركزي للإحصاء في مراحل زمنية مختلفة من عمر البلاد هم
+                        </span>
+                <br><span style="float: right;text-align: right;margin-right: 10px">
+                .السيد/ أحمد  عثمان  إسحاق   			 1955 – 1961م<span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>
+                <br>
+                .السيد/  عبد  المنعم   مرسى     		 1962 – 1966م<span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>
+                <br>
+                .السيد/  قاسم  أحمد  موسى      		 1967 – 1975م<span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>
+                <br>
+                .السيد/  عمر  أحمد  التاي        		 1976 – 1990م<span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>
+                <br>
+                .السيد/  بروفسير صديق ناصر عثمان 	 1991 – 1997م<span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>
+                <br>
+                .السيد/  حسن  عبد السلام سليمان  		 1998 – 2001م<span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>
+                <br>
+                .السيد/  د. عبد الرحمن محمد  حسن  		2001 -  2004م<span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>
+                <br>
+                .السيد/ بروفيسير عوض حاج على   		2004 -  2007م<span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>
+                <br>
+                .السيد/ د. يس الحاج عابدين 			2007- 2016م<span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>
+                <br>
+              .السيد/ د. كرم الله علي عبد الرحمن 			2016- 2021م<span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>
+<br>
+                                            .السيد/ د.علي عباس 			2019- الآن<span class="fa fa-chevron-circle-left" style="margin-left: 10px;color: #3e4095"></span>
+            </span>  </p>
+        </div>
+
+
+        </div>
+    </div>
+        </div>
+    </div>
+</section>
+<!-- End About Section -->
+
+
+
+
+ <!--<div class="container">-->
+     <!--<h3 style="font-size:40px;font-weight: bold;color:#3e4095;margin-top:40px"> <span class="border-heading"></span>Administrative Structure</h3>-->
+     <!--<section id="speakers">-->
+         <!--<div class="row">-->
+             <!--<div class="col-xs-12">-->
+                 <!--<div class="text-center">-->
+                     <!--<div ng-repeat="person in OrganiztionChart|filter:{position_job: 'AL Manager'}">-->
+                         <!--<div data-aos="fade-up element-animate">-->
+                             <!--<div class="speaker  media d-block media-feature text-center" data-aos="fade-up" data-aos-delay="300">-->
+                                 <!--<img src="http://smart-node.net/data/cbs/organiztion/{{person.img}}" alt="Speaker 6" class="img-fluid" style="height: 300px">-->
+                                 <!--<div class="details" style="width: 450px; margin-left:360px">-->
+                                     <!--<h3>{{person.name}}</h3>-->
+                                     <!--<p>{{person.position_job}}</p>-->
+                                 <!--</div>-->
+                             <!--</div>-->
+                         <!--</div>-->
+                     <!--</div>-->
+                 <!--</div>-->
+             <!--</div>-->
+             <!--<div >-->
+                 <!--<div class="text-center wow zoomIn" data-wow-duration="1s" data-wow-offset="120">-->
+                     <!--<div ng-repeat="person in organ|filter" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">&lt;!&ndash;|filter:{position_job!:'AL Manager'}&ndash;&gt;-->
+                         <!--<div>-->
+                             <!--<div>-->
+                                 <!--<div data-aos="fade-up" >-->
+                                     <!--<div class="speaker" data-aos="fade-up" data-aos-delay="300">-->
+                                         <!--<img src="http://smart-node.net/data/cbs/organiztion/{{person.img}}" alt="Speaker 6" class="img-fluid" style="height: 300px">-->
+                                         <!--<div class="details">-->
+                                             <!--<h3>{{person.name}}</h3>-->
+                                             <!--<p>{{person.position_job}}</p>-->
+
+                                         <!--</div>-->
+                                     <!--</div>-->
+                                 <!--</div>-->
+                             <!--</div>-->
+                         <!--</div>-->
+                     <!--</div>-->
+                 <!--</div>-->
+             <!--</div>-->
+         <!--</div>-->
+
+     <!--</section>-->
+ <!--</div>-->
+
+
+
+
+

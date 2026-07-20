@@ -1,0 +1,210 @@
+<mds-modal style="width: 100%;" closable>
+    <mds-modal-header>
+        <mds-modal-title >
+            <div class="md-toolbar-tools" style="background-color: #2d3669">
+                <h2 style="color: #EBF7E5"  tr="modals.InflationSudanTable">  </h2>
+            </div>
+        </mds-modal-title>
+    </mds-modal-header>
+    <mds-modal-body style="padding: 40px;background-color: rgb(255,255,255);">
+        <div class="container-fluid">
+            <ul uk-tab>
+                <li><a href="#">Section</a></li>
+                <li><a href="#">Level</a></li>
+            </ul>
+        
+            <ul class="uk-switcher uk-margin">
+                <li>
+                    <table class="table table-bordered text-center" id="InflationSudanSection">
+                        <thead>
+                        <tr class="khlee">
+                            <th class="medium-white" class="medium-white">No</th>
+                            <th class="medium-white">Years</th>
+                            <th class="medium-white" colspan="2">Urban</th>
+                            <th class="medium-white" colspan="2">Rural</th>
+                            <th class="medium-white" colspan="2">Overall</th>
+                        </tr>
+                        <tr class="active">
+                            <td></td>
+                            <td></td>
+                            <td  class="medium-bold">Standard</td>
+                            <td class="medium-bold" >Ongoing</td>
+                            <td class="medium-bold" >Standard</td>
+                            <td class="medium-bold" >Ongoing</td>
+                            <td class="medium-bold" >Rural</td>
+                            <td class="medium-bold" >Urban</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat=" InflationSuSection in getInflationSudanSection">
+                            <td>{{$index + 1}}</td>
+                            <td class="medium-bold">{{InflationSuSection.year}}</td>
+                            <td>{{InflationSuSection.urban_standard}}</td>
+                            <td>{{InflationSuSection.urban_ongoing}}</td>
+                            <td>{{InflationSuSection.rural_standard}}</td>
+                            <td>{{InflationSuSection.rural_ongoing}}</td>
+                            <td>{{InflationSuSection.overall_rural}}</td>
+                            <td>{{InflationSuSection.overall_urban}}</td>
+        
+        
+                        </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <!-- End Cpi-sudan-section-->
+        
+                <!-- start Cpi-sudan-Level-->
+                    <table class="table table-bordered" id="InflationSudanLevels">
+                        <thead>
+                        <tr class="khlee">
+                            <th class="medium-white">No</th>
+                            <th class="medium-white">Years</th>
+                            <th class="medium-white" colspan="2">Level 1</th>
+                            <th class="medium-white" colspan="2">Level 2</th>
+                            <th class="medium-white" colspan="2">Level 3</th>
+                            <th class="medium-white" colspan="2">Level 4</th>
+                            <th class="medium-white" colspan="2">Level 5</th>
+        
+                        </tr>
+                        <tr class="active">
+                            <td></td>
+                            <td></td>
+                            <td class="medium-bold">Standard</td>
+                            <td class="medium-bold">Ongoing</td>
+                            <td class="medium-bold">Standard</td>
+                            <td class="medium-bold">Ongoing</td>
+                            <td class="medium-bold">Standard</td>
+                            <td class="medium-bold">Ongoing</td>
+                            <td class="medium-bold">Standard</td>
+                            <td class="medium-bold">Ongoing</td>
+                            <td class="medium-bold">Standard</td>
+                            <td class="medium-bold">Ongoing</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="Isl in getInflationSudanLevels">
+                            <td>{{$index+1}}</td>
+                            <td class="medium-bold">{{Isl.year}}</td>
+                            <td>{{Isl.l1_standard}}</td>
+                            <td>{{Isl.l1_ongoing}}</td>
+                            <td>{{Isl.l2_standard}}</td>
+                            <td>{{Isl.l2_ongoing}}</td>
+                            <td>{{Isl.l3_standard}}</td>
+                            <td>{{Isl.l3_ongoing}}</td>
+                            <td>{{Isl.l4_standard}}</td>
+                            <td>{{Isl.l4_ongoing}}</td>
+                            <td>{{Isl.l5_standard}}</td>
+                            <td>{{Isl.l5_ongoing}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </li>
+            </ul>
+        
+        </div>
+    </mds-modal-body>
+</mds-modal>
+<!-- <md-dialog  style="width: 100%;">
+    <md-toolbar    style="color:#29303b;" >
+        <div class="md-toolbar-tools" style="background-color: #2d3669">
+            <h2 style="color: #EBF7E5"> Inflation Sudan Table </h2>
+        </div>
+        <md-dialog-content style="padding: 40px;background-color: rgb(255,255,255);">
+<div class="container-fluid">
+    <ul uk-tab>
+        <li><a href="#">Section</a></li>
+        <li><a href="#">Level</a></li>
+    </ul>
+
+    <ul class="uk-switcher uk-margin">
+        <li>
+            <table class="table table-bordered text-center" id="InflationSudanSection">
+                <thead>
+                <tr class="khlee">
+                    <th class="medium-white" class="medium-white">No</th>
+                    <th class="medium-white">Years</th>
+                    <th class="medium-white" colspan="2">Urban</th>
+                    <th class="medium-white" colspan="2">Rural</th>
+                    <th class="medium-white" colspan="2">Overall</th>
+                </tr>
+                <tr class="active">
+                    <td></td>
+                    <td></td>
+                    <td  class="medium-bold">Standard</td>
+                    <td class="medium-bold" >Ongoing</td>
+                    <td class="medium-bold" >Standard</td>
+                    <td class="medium-bold" >Ongoing</td>
+                    <td class="medium-bold" >Rural</td>
+                    <td class="medium-bold" >Urban</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat=" InflationSuSection in getInflationSudanSection">
+                    <td>{{$index + 1}}</td>
+                    <td class="medium-bold">{{InflationSuSection.year}}</td>
+                    <td>{{InflationSuSection.urban_standard}}</td>
+                    <td>{{InflationSuSection.urban_ongoing}}</td>
+                    <td>{{InflationSuSection.rural_standard}}</td>
+                    <td>{{InflationSuSection.rural_ongoing}}</td>
+                    <td>{{InflationSuSection.overall_rural}}</td>
+                    <td>{{InflationSuSection.overall_urban}}</td>
+
+
+                </tr>
+                </tbody>
+            </table>
+        </li>
+        <- End Cpi-sudan-section--
+
+        <- start Cpi-sudan-Level--
+            <table class="table table-bordered" id="InflationSudanLevels">
+                <thead>
+                <tr class="khlee">
+                    <th class="medium-white">No</th>
+                    <th class="medium-white">Years</th>
+                    <th class="medium-white" colspan="2">Level 1</th>
+                    <th class="medium-white" colspan="2">Level 2</th>
+                    <th class="medium-white" colspan="2">Level 3</th>
+                    <th class="medium-white" colspan="2">Level 4</th>
+                    <th class="medium-white" colspan="2">Level 5</th>
+
+                </tr>
+                <tr class="active">
+                    <td></td>
+                    <td></td>
+                    <td class="medium-bold">Standard</td>
+                    <td class="medium-bold">Ongoing</td>
+                    <td class="medium-bold">Standard</td>
+                    <td class="medium-bold">Ongoing</td>
+                    <td class="medium-bold">Standard</td>
+                    <td class="medium-bold">Ongoing</td>
+                    <td class="medium-bold">Standard</td>
+                    <td class="medium-bold">Ongoing</td>
+                    <td class="medium-bold">Standard</td>
+                    <td class="medium-bold">Ongoing</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="Isl in getInflationSudanLevels">
+                    <td>{{$index+1}}</td>
+                    <td class="medium-bold">{{Isl.year}}</td>
+                    <td>{{Isl.l1_standard}}</td>
+                    <td>{{Isl.l1_ongoing}}</td>
+                    <td>{{Isl.l2_standard}}</td>
+                    <td>{{Isl.l2_ongoing}}</td>
+                    <td>{{Isl.l3_standard}}</td>
+                    <td>{{Isl.l3_ongoing}}</td>
+                    <td>{{Isl.l4_standard}}</td>
+                    <td>{{Isl.l4_ongoing}}</td>
+                    <td>{{Isl.l5_standard}}</td>
+                    <td>{{Isl.l5_ongoing}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </li>
+    </ul>
+
+</div>
+        </md-dialog-content>
+    </md-toolbar>
+</md-dialog> -->

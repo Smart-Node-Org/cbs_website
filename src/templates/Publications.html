@@ -1,0 +1,129 @@
+<style>
+    .tab{
+        display: flex;
+        justify-items: space-around;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+</style>
+
+<!--Start Publications  Section -->
+<div class="container"  ng-init="y=true;z=true">
+    <h3 style="font-size:50px; font-weight: bold;color:#3e4095;margin-top:40px"  class="{{lang=='ar'?'text-right':''}}"> <span class="border-heading"></span ><span> {{lang=='ar'?'الاصدارات':'PUBLICATIONS'}}</span> </h3>
+    <section  class="services"  style="margin-top: 40px" >
+        <ul class="uk-subnav uk-subnav-pill" uk-switcher="connect: .switcher-container" swiping="false">
+            <li><a href="#" style="font-size: 18px"  ng-click="y=true;z=true">All</a></li>
+            <li ng-repeat=" department in AllDepartment"><a href="#" style="font-size: 18px" ng:click="$parent.y=true; $parent.z=true;">{{department.title}}</a></li>
+        </ul>
+        <ul class="uk-switcher switcher-container uk-margin uk-grid" >
+            <!-- Start All-->
+
+            <div style="height: 550px" class="uk-position-relative uk-visible-toggle uk-light " dir="{{lang=='ar'?'ltr':'ltr'}}"  tabindex="-1" uk-slider Autoplay="true" >
+                <li>
+                    <div class="row">
+                        <ul class="uk-slider-items " style="height: 490px !important;">
+                            <li   ng-repeat="publication in Allpublications.slice(-8)" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="icon-box" style="height: 500px;width: 100%; background-color: #eeeeee">
+                                    <div class="uk-inline-clip uk-transition-toggle" tabindex="0" style="width: 100%!important;">
+                                        <img class="uk-transition-scale-up uk-transition-opaque " src="http://smart-node.net/data/cbs/publications/{{publication.img}}" style="border-radius: 15px;width:100%;height: 300px" class="centerPublicationImage">
+                                    </div>
+                                    <div class="text-center" style="margin-top: 20px" >
+                                        <span style="color: #3e4095!important; font-size: 18px; font-weight: bold" >{{publication.title}}</span>
+                                    </div>
+                                    <a target="_blank" href="http://smart-node.net/data/cbs/publications/{{publication.file}}"  uk-tooltip="title:Read {{publication.title}} publication;pos:bottom" style="position: absolute;right:30px;bottom:30px; margin-right: 8px;margin-top:100px ;background: #3e4095;width: 30px; height:30px; line-height: 30px;text-align: center; border-radius: 50%;">
+                                        <i class="fa fa-eye" aria-hidden="true" ></i>
+                                    </a>
+                                    <a ng-click="download(publication)" style="position: absolute;left:30px;bottom:30px;margin-top:100px;margin-right: 20px ; background-color: #3e4095;width: 30px;color: #ffffdd; height: 30px; line-height: 30px;text-align: center; border-radius: 50%;" uk-tooltip="title:Download {{publication.title}} publication;pos:bottom">
+                                        <i class="fa fa-arrow-circle-down" ></i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </li>
+                <a class="uk-position-bottom-left uk-position-small hidden-xs hidden-sm hidden-md"  uk-slidenav-previous uk-slider-item="previous" style="background-color: #3e4095; border-radius: 50%; color: #ffffff; left: 450px; bottom: -10px"></a>
+                <a class="uk-position-bottom-right uk-position-small hidden-xs hidden-sm hidden-md"  uk-slidenav-next uk-slider-item="next" style="background-color: #3e4095; border-radius: 50%; color: #ffffff; right: 430px; bottom: 7px"></a>
+
+            </div>
+
+            <!-- End All-->
+            <!-- Start Economic  ng-repeat="publication in Allpublications|filter:{department:department.id}"   -->
+            <div style="height: 550px" class="uk-position-relative uk-visible-toggle uk-light"   tabindex="-1" uk-slider Autoplay="true" ng-repeat="department in AllDepartment">
+                <li>
+                    <div class="row">
+                        <ul class="uk-slider-items" style="height: 490px !important;">
+                            <li  ng-repeat="publication in  Allpublications.slice(-8)|filter:{department:department.id}" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="icon-box" style="height: 500px; background-color: #eeeeee">
+                                    <div class="uk-inline-clip uk-transition-toggle text-center" tabindex="0">
+                                        <img class="uk-transition-scale-up uk-transition-opaque " src="http://smart-node.net/data/cbs/publications/{{publication.img}}" style="border-radius: 15px;width:100%;height: 300px" class="centerPublicationImage">
+                                    </div>
+                                    <div class="text-center" style="margin-top: 20px" >
+                                        <span style="color: #3e4095!important; font-size: 18px; font-weight: bold" >{{publication.title}}</span>
+                                    </div>
+                                    <a target="_blank" href="http://smart-node.net/data/cbs/publications/{{publication.file}}"  uk-tooltip="title:Read {{publication.title}} publication;pos:bottom" style="position: absolute;right:30px;bottom:30px; margin-right: 8px;margin-top:100px ;background: #3e4095;width: 30px; height:30px; line-height: 30px;text-align: center; border-radius: 50%;">
+                                        <i class="fa fa-eye" aria-hidden="true" ></i>
+                                    </a>
+                                    <a ng-click="download(publication)" style="position: absolute;left:30px;bottom:30px;margin-top:100px;margin-right: 20px ; background-color: #3e4095;width: 30px;color: #ffffdd; height: 30px; line-height: 30px;text-align: center; border-radius: 50%;" uk-tooltip="title:Download {{publication.title}} publication;pos:bottom">
+                                        <i class="fa fa-arrow-circle-down" ></i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <a class="uk-position-bottom-left uk-position-small hidden-xs hidden-sm hidden-md"  uk-slidenav-previous uk-slider-item="previous" style="background-color: #3e4095; border-radius: 50%; color: #ffffff; left: 450px; bottom: -10px"></a>
+                <a class="uk-position-bottom-right uk-position-small hidden-xs hidden-sm hidden-md"  uk-slidenav-next uk-slider-item="next" style="background-color: #3e4095; border-radius: 50%; color: #ffffff; right: 430px; bottom: 7px"></a>
+            </div>
+
+            <!-- End Economic-->
+        </ul>
+
+    </section>
+</div>
+<div class="container">
+<ul class="uk-switcher switcher-container uk-margin" style="transform: rotate(-180deg)">
+    <div  ng-switch="z" class="uk-position-relative uk-visible-toggle"   tabindex="-1" uk-slider >
+    <li style="transform: rotate(-180deg)" ng-switch-when="true" class="list-group-item publicationPageListGroup" ng-repeat="publication in Allpublications.slice(-15)"><span class="fa fa-chevron-circle-right" style="color: #3e4095;font-size: 16px"></span> <span><a target="_blank" href="http://smart-node.net/data/cbs/publications/{{publication.file}}" style="margin-left: 10px;color: black;">{{publication.title}}</a></span>
+        <a target="_blank" href="http://smart-node.net/data/cbs/publications/{{publication.file}}"  uk-tooltip="title:Read {{publication.title}} publication;pos:bottom" style="float: right">
+            <i class="fa fa-eye" aria-hidden="true" style="font-size: 25px;color: #3e4095;"></i>
+        </a>
+        <a target="_blank" ng-click="download(publication)" style="margin-right: 20px;float: right" uk-tooltip="title:Download {{publication.title}} publication;pos:bottom">
+            <i class="fa fa-arrow-down" style="font-size: 20px;color: #3e4095;"></i>
+        </a>
+    </li>
+        <li style="transform: rotate(-180deg)"  ng-switch-when="false" class="list-group-item publicationPageListGroup" ng-repeat="publication in Allpublications"><span class="fa fa-chevron-circle-right" style="color: #3e4095;font-size: 16px"></span> <span><a target="_blank" href="http://smart-node.net/data/cbs/publications/{{publication.file}}" style="margin-left: 10px;color: black;">{{publication.title}}</a></span>
+            <a target="_blank" href="http://smart-node.net/data/cbs/publications/{{publication.file}}"  uk-tooltip="title:Read {{publication.title}} publication;pos:bottom" style="float: right">
+                <i class="fa fa-eye" aria-hidden="true" style="font-size: 25px;color: #3e4095;"></i>
+            </a>
+            <a target="_blank" ng-click="download(publication)" style="margin-right: 20px;float: right" uk-tooltip="title:Download {{publication.title}} publication;pos:bottom">
+                <i class="fa fa-arrow-down" style="font-size: 20px;color: #3e4095;"></i>
+            </a>
+        </li>
+    </div>
+    <div ng-switch="y" class="uk-position-relative uk-visible-toggle"   tabindex="-1" uk-slider ng-repeat="department in AllDepartment">
+        <li style="transform: rotate(-180deg)" ng-switch-when="true" class="list-group-item publicationPageListGroup" ng-repeat="publication in Allpublications.slice(-20)|filter:{department:department.id}"><span class="fa fa-chevron-circle-right" style="color: #3e4095;font-size: 16px"></span> <span><a target="_blank" href="http://smart-node.net/data/cbs/publications/{{publication.file}}" style="margin-left: 10px;color: black;">{{publication.title}}</a></span>
+                    <a target="_blank" href="http://smart-node.net/data/cbs/publications/{{publication.file}}"  uk-tooltip="title:Read {{publication.title}} publication;pos:bottom" style="float: right">
+                        <i class="fa fa-eye" aria-hidden="true" style="font-size: 25px;color: #3e4095;"></i>
+                    </a>
+                    <a target="_blank" ng-click="download(publication)" style="margin-right: 20px;float: right" uk-tooltip="title:Download {{publication.title}} publication;pos:bottom">
+                        <i class="fa fa-arrow-down" style="font-size: 20px;color: #3e4095;"></i>
+                    </a>
+        </li>
+        <li style="transform: rotate(-180deg)" ng-switch-when="false" class="list-group-item publicationPageListGroup" ng-repeat="publication in Allpublications|filter:{department:department.id}"><span class="fa fa-chevron-circle-right" style="color: #3e4095;font-size: 16px"></span> <span><a target="_blank" href="http://smart-node.net/data/cbs/publications/{{publication.file}}" style="margin-left: 10px;color: black;">{{publication.title}}</a></span>
+            <a target="_blank" href="http://smart-node.net/data/cbs/publications/{{publication.file}}"  uk-tooltip="title:Read {{publication.title}} publication;pos:bottom" style="float: right">
+                <i class="fa fa-eye" aria-hidden="true" style="font-size: 25px;color: #3e4095;"></i>
+            </a>  
+            <a target="_blank" ng-click="download(publication)" style="margin-right: 20px;float: right" uk-tooltip="title:Download {{publication.title}} publication;pos:bottom">
+                <i class="fa fa-arrow-down" style="font-size: 20px;color: #3e4095;"></i>
+            </a>
+        </li>
+    </div>
+</ul>
+
+</div>
+<div class="text-center">
+<button class="uk-button btn-primary uk-button-large" ng-click="y=!y;z=!z" style="font-size: 15px;font-weight: bold;margin-top: 20px">{{z==true? lang=='en'?'Show more':'عرض المزيد' : lang=='en'?'Show less':'عرض اقل' }}</button>
+</div>

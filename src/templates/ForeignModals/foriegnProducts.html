@@ -1,0 +1,138 @@
+<mds-modal style="width: 100%;" closable>
+    <mds-modal-header>
+        <mds-modal-title >
+            <div class="md-toolbar-tools" style="background-color: #2d3669">
+                <h2 style="color: #EBF7E5" tr="modals.FTC"></h2>
+            </div>
+        </mds-modal-title>
+    </mds-modal-header>
+    <mds-modal-body style="padding: 40px;background-color: rgb(255,255,255);">
+        <ul uk-tab>
+
+            <li ><a href="#"> <span style="font-size: 18px"  tr="modals.Export"> </span></a></li>
+            <li ><a href="#"><span style="font-size: 18px" tr="modals.Import"> </span></a></li>
+        </ul>
+        
+        <ul class="uk-switcher uk-margin">
+            <li>
+                <div class="uk-overflow-auto">
+                    <table class="table table-bordered text-center" id="uniqueExportYears">
+                        <thead>
+                        <tr class="khlee">
+                            <th rowspan="2" class="medium-white" tr="modals.Product"></th>
+                            <th colspan="2" class="medium-white" ng-repeat="year in uniqueExportYears">{{year.year}}</th> <!--uk-width-*-->
+        
+                        </tr>
+                        <tr>
+                            <th  class="medium-bold" ng-repeat="unit in uniqueExportYears.concat(uniqueExportYears) track by $index">{{$index%2==0 ? 'Unit':'SDG'}}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="alExport{{$index}}" style="vertical-align: text-bottom" ng-repeat="product in productsExportNames">
+                            <td class="medium-bold">{{product.title}}</td>
+                            <td  ng-repeat="year in uniqueExportYears.concat(uniqueExportYears) track by $index">
+                                <p class="medium-bold" ></p>
+        
+                            </td>
+        
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+        
+            </li>
+            <li>
+                <div class="uk-overflow-auto">
+                    <table class="table table-bordered text-center" id="">
+                        <thead>
+                        <tr class="khlee">
+                            <th  class="medium-white" rowspan="2" tr="modals.Product"></th>
+                            <th colspan="2" class="medium-white" ng-repeat="year in uniqueImportYears">{{year.year}}</th>
+                        </tr>
+                        <tr>
+                            <th  class="medium-bold" ng-repeat="unit in uniqueImportYears.concat(uniqueImportYears) track by $index">{{$index%2==0 ? 'Unit':'SDG'}}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="alImport{{$index}}"  ng-repeat="product in productsImportNames">
+                            <td class="medium-bold">{{product.title}}</td>
+                            <td  class="medium-bold" ng-repeat="year in uniqueImportYears.concat(uniqueImportYears) track by $index">
+                                <p ></p>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+        
+            </li>
+        </ul>
+    </mds-modal-body>
+</mds-modal>
+<!-- <md-dialog  style="width: 100%;">
+    <md-toolbar style="color:#29303b;" >
+        <div class="md-toolbar-tools" style="background-color: #2d3669">
+            <h2 style="color: #EBF7E5">Foreign Trade Countries</h2>
+        </div>
+        <md-dialog-content style="padding: 40px;background-color: rgb(255,255,255);">
+<ul uk-tab>
+
+    <li ><a href="#"> <span style="font-size: 18px"> Export</span></a></li>
+    <li ><a href="#"><span style="font-size: 18px"> Import</span></a></li>
+</ul>
+
+<ul class="uk-switcher uk-margin">
+    <li>
+        <div class="uk-overflow-auto">
+            <table class="table table-bordered text-center" id="uniqueExportYears">
+                <thead>
+                <tr class="khlee">
+                    <th rowspan="2" class="medium-white">Product</th>
+                    <th colspan="2" class="medium-white" ng-repeat="year in uniqueExportYears">{{year.year}}</th> <!-uk-width-*--
+
+                </tr>
+                <tr>
+                    <th  class="medium-bold" ng-repeat="unit in uniqueExportYears.concat(uniqueExportYears) track by $index">{{$index%2==0 ? 'Unit':'SDG'}}</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="alExport{{$index}}" style="vertical-align: text-bottom" ng-repeat="product in productsExportNames">
+                    <td class="medium-bold">{{product.title}}</td>
+                    <td  ng-repeat="year in uniqueExportYears.concat(uniqueExportYears) track by $index">
+                        <p class="medium-bold" ></p>
+
+                    </td>
+
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </li>
+    <li>
+        <div class="uk-overflow-auto">
+            <table class="table table-bordered text-center" id="">
+                <thead>
+                <tr class="khlee">
+                    <th  class="medium-white" rowspan="2">Product</th>
+                    <th colspan="2" class="medium-white" ng-repeat="year in uniqueImportYears">{{year.year}}</th>
+                </tr>
+                <tr>
+                    <th  class="medium-bold" ng-repeat="unit in uniqueImportYears.concat(uniqueImportYears) track by $index">{{$index%2==0 ? 'Unit':'SDG'}}</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="alImport{{$index}}"  ng-repeat="product in productsImportNames">
+                    <td class="medium-bold">{{product.title}}</td>
+                    <td  class="medium-bold" ng-repeat="year in uniqueImportYears.concat(uniqueImportYears) track by $index">
+                        <p ></p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </li>
+</ul>
+        </md-dialog-content>
+    </md-toolbar>
+</md-dialog> -->

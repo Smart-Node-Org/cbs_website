@@ -1,0 +1,109 @@
+<mds-modal style="width: 100%;" closable>
+    <mds-modal-header> 
+        <mds-modal-title >
+            <div class="md-toolbar-tools" style="background-color: #2d3669">
+                <h2 style="color: #EBF7E5"  tr="modals.PopulationTable"> </h2>
+            </div>
+        </mds-modal-title>
+    </mds-modal-header>
+    <mds-modal-body style="padding: 40px;background-color: rgb(255,255,255);">
+         <div class="form-group">
+                <label tr="modals.Chooseyear"></label>
+                <select ng-change="changeYear()" class="form-control" ng-model="yearsOfPop.year">
+                    <option ng-value="{{year.year}}" ng-repeat="year in yearsOfPop">{{year.year}}</option>
+                </select>
+            </div>
+            
+            
+                    <div class="statement-table purchase-table table-responsive mb-" >
+                        <table class="table table-bordered table-responsive table-fixed">
+                            <tr style="background: #2d3669">
+                                <th rowspan="3" style="position: relative"><span style="top: 37%;left: 24%;font-size: 18px;position: absolute;color: #ffffdd"> State </span></th>
+                                <th colspan="4" ng-repeat="state in States[0].ageGroup"> <span style="margin-left: 45%;font-size: 16px;color: #ffffdd"> {{state.title}} </span></th>
+                            </tr>
+                            <tr style="background: #2d3669">
+                                <th colspan="2" ng-repeat="state in States[0].ageGroup.concat(States[0].ageGroup) track by $index">
+            
+                                    <span style="margin-left: 55px;color: #ffffdd;font-size: 16px">{{$index%2==0?'Rural':'Urban'}}</span>
+            
+                                </th>
+                            </tr>
+                            <tr style="background: #2d3669">
+                                <th ng-repeat="state in States[0].ageGroup.concat(States[0].ageGroup).concat(States[0].ageGroup).concat(States[0].ageGroup) track by $index">
+            
+                                    <span style="margin-left: 3px;color: #ffffdd;font-size: 14px">{{$index%2==0?'Male':'Female'}}</span>
+            
+                                </th>
+                            </tr>
+                            <tr class="al{{$index}}" ng-repeat="state in States">
+                                <td style="font-size: 12px">{{state.name}}</td>
+                                <td  ng-init="prepare($last)" ng-repeat="stat in state.ageGroup">
+                                    <p></p>
+                                </td>
+                                <td ng-init="prepare($last)" ng-repeat="stat in state.ageGroup">
+                                    <p  ></p>
+                                </td>
+                                <td  ng-init="prepare($last)" ng-repeat="stat in state.ageGroup">
+                                    <p></p>
+                                </td>
+                                <td  ng-init="prepare($last)" ng-repeat="stat in state.ageGroup">
+                                    <p ></p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+    </mds-modal-body>
+</mds-modal>
+<!-- <md-dialog  style="width: 100%;">
+    <md-toolbar    style="color:#29303b;" >
+        <div class="md-toolbar-tools" style="background-color: #2d3669">
+            <h2 style="color: #EBF7E5">Population Table </h2>
+        </div>
+        <md-dialog-content style="padding: 40px;background-color: rgb(255,255,255);">
+<div class="form-group">
+    <label>Choose year</label>
+    <select ng-change="changeYear()" class="form-control" ng-model="yearsOfPop.year">
+        <option ng-value="{{year.year}}" ng-repeat="year in yearsOfPop">{{year.year}}</option>
+    </select>
+</div>
+ <div class="statement-table purchase-table table-responsive mb-" >
+            <table class="table table-bordered table-responsive table-fixed">
+                <tr style="background: #2d3669">
+                    <th rowspan="3" style="position: relative"><span style="top: 37%;left: 24%;font-size: 18px;position: absolute;color: #ffffdd"> State </span></th>
+                    <th colspan="4" ng-repeat="state in States[0].ageGroup"> <span style="margin-left: 45%;font-size: 16px;color: #ffffdd"> {{state.title}} </span></th>
+                </tr>
+                <tr style="background: #2d3669">
+                    <th colspan="2" ng-repeat="state in States[0].ageGroup.concat(States[0].ageGroup) track by $index">
+
+                        <span style="margin-left: 55px;color: #ffffdd;font-size: 16px">{{$index%2==0?'Rural':'Urban'}}</span>
+
+                    </th>
+                </tr>
+                <tr style="background: #2d3669">
+                    <th ng-repeat="state in States[0].ageGroup.concat(States[0].ageGroup).concat(States[0].ageGroup).concat(States[0].ageGroup) track by $index">
+
+                        <span style="margin-left: 3px;color: #ffffdd;font-size: 14px">{{$index%2==0?'Male':'Female'}}</span>
+
+                    </th>
+                </tr>
+                <tr class="al{{$index}}" ng-repeat="state in States">
+                    <td style="font-size: 12px">{{state.name}}</td>
+                    <td  ng-init="prepare($last)" ng-repeat="stat in state.ageGroup">
+                        <p></p>
+                    </td>
+                    <td ng-init="prepare($last)" ng-repeat="stat in state.ageGroup">
+                        <p  ></p>
+                    </td>
+                    <td  ng-init="prepare($last)" ng-repeat="stat in state.ageGroup">
+                        <p></p>
+                    </td>
+                    <td  ng-init="prepare($last)" ng-repeat="stat in state.ageGroup">
+                        <p ></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        </md-dialog-content>
+    </md-toolbar>
+</md-dialog> -->

@@ -1,0 +1,558 @@
+
+<ul class="nav nav-tabs" id="nat-switcher"  uk-switcher="connect: #population ;animation: uk-animation-slide-right-medium, uk-animation-slide-left-medium">
+    <li class="{{tab=='population'?'active':''}}"><a href="#" ng-click="tab='population'" tr="social.Population"></a></li>
+    <li class="{{tab=='health'?'active':''}}" > <a href="#" ng-click="tab='health'" tr="social.health"></a></li>
+    <li class="{{tab=='family'?'active':''}}"><a href="#" ng-click="tab='family'" tr="social.family"> </a></li>
+    <li class="{{tab=='immegration'?'active':''}}"><a href="#" ng-click="tab='immegration'" tr="social.labor"></a></li>
+
+</ul>
+
+<ul id="population" class="uk-switcher uk-margin">
+    <li>
+        <!--National Acoount-->
+        <div class="uk-grid-small  uk-child-width-1-1@s  uk-child-width-1-4@l uk-text-center" uk-grid>
+
+            <div class="stat uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-large uk-padding ">
+                <h1 style="margin-top: 20px" class="uk-card-title"  tr="social.product"></h1>
+                <md-menu>
+                    <md-card-actions layout="row" layout-align="end center">
+
+                        <md-button class="md-icon-button" style="margin-right: 160px" aria-label="Share" ng-click="showAdvanced($event)">
+                            <md-icon tr="social.preview"></md-icon>
+                        </md-button>
+                        <md-menu>
+                            <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdMenu, $event)">
+                                <md-icon md-menu-origin md-svg-icon="call:phone"></md-icon>
+                            </md-button>
+                            <md-menu-content width="4">
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        Excel
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        word
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        pdf
+                                    </md-button>
+                                </md-menu-item>
+
+                            </md-menu-content>
+                        </md-menu>
+                    </md-card-actions>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+
+
+
+            <div class="stat uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-large uk-padding ">
+                <h1 style="margin-top: 20px" class="uk-card-title" tr="social.projections"></h1>
+                <md-menu>
+                    <md-card-actions layout="row" layout-align="end center">
+
+
+                        <md-button class="md-icon-button" style="margin-right: 160px" aria-label="Share" ng-click="showAdvanced($event)">
+                            <md-icon tr="social.preview"></md-icon>
+                        </md-button>
+                        <md-menu>
+                            <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdMenu, $event)">
+                                <md-icon md-menu-origin md-svg-icon="call:phone" tr="social.today"></md-icon>
+                            </md-button>
+                            <md-menu-content width="4">
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        Excel
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        word
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        pdf
+                                    </md-button>
+                                </md-menu-item>
+
+                            </md-menu-content>
+                        </md-menu>
+                    </md-card-actions>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+
+
+
+            <div class="stat uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-large uk-padding ">
+                <h1 style="margin-top: 20px" class="uk-card-title" tr="social.N_income"></h1>
+                <md-menu>
+                    <md-card-actions layout="row" layout-align="end center">
+
+
+                        <md-button class="md-icon-button" style="margin-right: 160px" aria-label="Share" ng-click="showAdvanced($event)">
+                            <md-icon tr="social.preview"></md-icon>
+                        </md-button>
+                        <md-menu>
+                            <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdMenu, $event)">
+                                <md-icon md-menu-origin md-svg-icon="call:phone" tr="social.today"></md-icon>
+                            </md-button>
+                            <md-menu-content width="4">
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        Excel
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        word
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        pdf
+                                    </md-button>
+                                </md-menu-item>
+
+                            </md-menu-content>
+                        </md-menu>
+                    </md-card-actions>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+
+
+            <div class="stat uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-large uk-padding ">
+                <h1 style="margin-top: 20px" class="uk-card-title" tr="social.contribute"></h1>
+                <md-menu>
+                    <md-card-actions layout="row" layout-align="end center">
+
+
+                        <md-button class="md-icon-button" style="margin-right: 160px" aria-label="Share" ng-click="showAdvanced($event)">
+                            <md-icon tr="social.preview"></md-icon>
+                        </md-button>
+                        <md-menu>
+                            <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdMenu, $event)">
+                                <md-icon md-menu-origin md-svg-icon="call:phone" tr="social.today"></md-icon>
+                            </md-button>
+                            <md-menu-content width="4">
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        Excel
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        word
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        pdf
+                                    </md-button>
+                                </md-menu-item>
+
+                            </md-menu-content>
+                        </md-menu>
+                    </md-card-actions>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+
+
+
+
+            <div class="stat uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-large uk-padding ">
+                <h1 style="margin-top: 20px" class="uk-card-title" tr="social.N_income"></h1>
+                <md-menu>
+                    <md-card-actions layout="row" layout-align="end center">
+
+
+                        <md-button class="md-icon-button" style="margin-right: 160px" aria-label="Share" ng-click="showAdvanced($event)">
+                            <md-icon tr="social.preview"></md-icon>
+                        </md-button>
+                        <md-menu>
+                            <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdMenu, $event)">
+                                <md-icon md-menu-origin md-svg-icon="call:phone" tr="social.today"></md-icon>
+                            </md-button>
+                            <md-menu-content width="4">
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        Excel
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        word
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        pdf
+                                    </md-button>
+                                </md-menu-item>
+
+                            </md-menu-content>
+                        </md-menu>
+                    </md-card-actions>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+
+
+
+
+            <div class="stat uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-large uk-padding ">
+                <h1 style="margin-top: 20px" class="uk-card-title" tr="social.N_income">National Income</h1>
+                <md-menu>
+                    <md-card-actions layout="row" layout-align="end center">
+
+
+                        <md-button class="md-icon-button" style="margin-right: 160px" aria-label="Share" ng-click="showAdvanced($event)">
+                            <md-icon tr="social.preview"></md-icon>
+                        </md-button>
+                        <md-menu>
+                            <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdMenu, $event)">
+                                <md-icon md-menu-origin md-svg-icon="call:phone" tr="social.today"></md-icon>
+                            </md-button>
+                            <md-menu-content width="4">
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        Excel
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        word
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        pdf
+                                    </md-button>
+                                </md-menu-item>
+
+                            </md-menu-content>
+                        </md-menu>
+                    </md-card-actions>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+
+
+
+
+        </div>
+    </li>
+
+            <div class="uk-grid-medium uk-child-width-1-1@s  uk-child-width-1-4@l uk-text-center" uk-grid>
+                <div class="stat uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-large uk-padding ">
+                    <h1 style="margin-top: 20px" class="uk-card-title" tr="social.customer"> </h1>
+                    <md-menu>
+                        <md-card-actions layout="row" layout-align="end center">
+
+
+                            <md-button class="md-icon-button" style="margin-right: 160px" aria-label="Share" ng-click="showAdvanced($event)">
+                                <md-icon tr="social.preview"></md-icon>
+                            </md-button>
+                            <md-menu>
+                                <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdMenu, $event)">
+                                    <md-icon md-menu-origin md-svg-icon="call:phone" tr="social.today"></md-icon>
+                                </md-button>
+                                <md-menu-content width="4">
+                                    <md-menu-item>
+                                        <md-button ng-click="ctrl.redial($event)">
+                                            <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                            Excel
+                                        </md-button>
+                                    </md-menu-item>
+                                    <md-menu-item>
+                                        <md-button ng-click="ctrl.redial($event)">
+                                            <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                            word
+                                        </md-button>
+                                    </md-menu-item>
+                                    <md-menu-item>
+                                        <md-button ng-click="ctrl.redial($event)">
+                                            <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                            pdf
+                                        </md-button>
+                                    </md-menu-item>
+
+                                </md-menu-content>
+                            </md-menu>
+                        </md-card-actions>
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+                <div class="stat uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-large uk-padding ">
+                    <h1 style="margin-top: 20px" class="uk-card-title" tr="social.rate"></h1>
+                    <md-menu>
+                        <md-card-actions layout="row" layout-align="end center">
+
+                            <md-button class="md-icon-button" style="margin-right: 160px" aria-label="Share" ng-click="showAdvanced($event)">
+                                <md-icon tr="social.preview"></md-icon>
+                            </md-button>
+                            <md-menu>
+                                <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdMenu, $event)">
+                                    <md-icon md-menu-origin md-svg-icon="call:phone" tr="social.today"></md-icon>
+                                </md-button>
+                                <md-menu-content width="4">
+                                    <md-menu-item>
+                                        <md-button ng-click="ctrl.redial($event)">
+                                            <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                            Excel
+                                        </md-button>
+                                    </md-menu-item>
+                                    <md-menu-item>
+                                        <md-button ng-click="ctrl.redial($event)">
+                                            <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                            word
+                                        </md-button>
+                                    </md-menu-item>
+                                    <md-menu-item>
+                                        <md-button ng-click="ctrl.redial($event)">
+                                            <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                            pdf
+                                        </md-button>
+                                    </md-menu-item>
+
+                                </md-menu-content>
+                            </md-menu>
+                        </md-card-actions>
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+                <div class="stat uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-large uk-padding ">
+                    <h1 style="margin-top: 20px" class="uk-card-title" tr="social.commodities"></h1>
+                    <md-menu>
+                        <md-card-actions layout="row" layout-align="end center">
+
+
+                            <md-button class="md-icon-button" style="margin-right: 160px" aria-label="Share" ng-click="showAdvanced($event)">
+                                <md-icon tr="social.preview"></md-icon>
+                            </md-button>
+                            <md-menu>
+                                <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdMenu, $event)">
+                                    <md-icon md-menu-origin md-svg-icon="call:phone" tr="social.today"></md-icon>
+                                </md-button>
+                                <md-menu-content width="4">
+                                    <md-menu-item>
+                                        <md-button ng-click="ctrl.redial($event)">
+                                            <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                            Excel
+                                        </md-button>
+                                    </md-menu-item>
+                                    <md-menu-item>
+                                        <md-button ng-click="ctrl.redial($event)">
+                                            <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                            word
+                                        </md-button>
+                                    </md-menu-item>
+                                    <md-menu-item>
+                                        <md-button ng-click="ctrl.redial($event)">
+                                            <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                            pdf
+                                        </md-button>
+                                    </md-menu-item>
+
+                                </md-menu-content>
+                            </md-menu>
+                        </md-card-actions>
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+                <div class="stat uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-large uk-padding ">
+                    <h1 style="margin-top: 20px" class="uk-card-title" tr="social.inflation"></h1>
+                    <md-menu>
+                        <md-card-actions layout="row" layout-align="end center">
+
+
+                            <md-button class="md-icon-button" style="margin-right: 160px" aria-label="Share" ng-click="showAdvanced($event)">
+                                <md-icon tr="social.preview"></md-icon>
+                            </md-button>
+                            <md-menu>
+                                <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdMenu, $event)">
+                                    <md-icon md-menu-origin md-svg-icon="call:phone" tr="social.today"></md-icon>
+                                </md-button>
+                                <md-menu-content width="4">
+                                    <md-menu-item>
+                                        <md-button ng-click="ctrl.redial($event)">
+                                            <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                            Excel
+                                        </md-button>
+                                    </md-menu-item>
+                                    <md-menu-item>
+                                        <md-button ng-click="ctrl.redial($event)">
+                                            <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                            word
+                                        </md-button>
+                                    </md-menu-item>
+                                    <md-menu-item>
+                                        <md-button ng-click="ctrl.redial($event)">
+                                            <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                            pdf
+                                        </md-button>
+                                    </md-menu-item>
+
+                                </md-menu-content>
+                            </md-menu>
+                        </md-card-actions>
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+
+                <div class="stat uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-large uk-padding ">
+                    <h1 style="margin-top: 20px" class="uk-card-title" tr="social.inflation1"></h1>
+                    <md-menu>
+                        <md-card-actions layout="row" layout-align="end center">
+
+                            <md-button class="md-icon-button" style="margin-right: 160px" aria-label="Share" ng-click="showAdvanced($event)">
+                                <md-icon tr="social.preview"></md-icon>
+                            </md-button>
+                            <md-menu>
+                                <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdMenu, $event)">
+                                    <md-icon md-menu-origin md-svg-icon="call:phone" tr="social.today"></md-icon>
+                                </md-button>
+                                <md-menu-content width="4">
+                                    <md-menu-item>
+                                        <md-button ng-click="ctrl.redial($event)">
+                                            <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                            Excel
+                                        </md-button>
+                                    </md-menu-item>
+                                    <md-menu-item>
+                                        <md-button ng-click="ctrl.redial($event)">
+                                            <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                            word
+                                        </md-button>
+                                    </md-menu-item>
+                                    <md-menu-item>
+                                        <md-button ng-click="ctrl.redial($event)">
+                                            <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                            pdf
+                                        </md-button>
+                                    </md-menu-item>
+
+                                </md-menu-content>
+                            </md-menu>
+                        </md-card-actions>
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+
+    </li>
+
+            </div>
+
+    <div class="uk-grid-medium uk-child-width-1-1@s  uk-child-width-1-4@l uk-text-center" uk-grid>
+        <div class="stat uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-large uk-padding ">
+            <h1 style="margin-top: 20px" class="uk-card-title" tr="social.family"> </h1>
+            <md-menu>
+                <md-card-actions layout="row" layout-align="end center">
+
+
+                    <md-button class="md-icon-button" style="margin-right: 160px" aria-label="Share" ng-click="showAdvanced($event)">
+                        <md-icon tr="social.preview"></md-icon>
+                    </md-button>
+                    <md-menu>
+                        <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdMenu, $event)">
+                            <md-icon md-menu-origin md-svg-icon="call:phone" tr="social.today"></md-icon>
+                        </md-button>
+                        <md-menu-content width="4">
+                            <md-menu-item>
+                                <md-button ng-click="ctrl.redial($event)">
+                                    <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                    Excel
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ng-click="ctrl.redial($event)">
+                                    <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                    word
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ng-click="ctrl.redial($event)">
+                                    <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                    pdf
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </md-card-actions>
+                </md-menu-content>
+            </md-menu>
+        </div>
+    </div>
+                </li>
+
+    <div class="uk-grid-medium uk-child-width-1-1@s  uk-child-width-1-4@l uk-text-center" uk-grid>
+        <div class="stat uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-large uk-padding ">
+            <h1 style="margin-top: 20px" class="uk-card-title" tr="social.labor"></h1>
+            <md-menu>
+                <md-card-actions layout="row" layout-align="end center">
+
+
+                    <md-button class="md-icon-button" style="margin-right: 160px" aria-label="Share" ng-click="showAdvanced($event)">
+                        <md-icon tr="social.preview"></md-icon>
+                    </md-button>
+                    <md-menu>
+                        <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdMenu, $event)">
+                            <md-icon md-menu-origin md-svg-icon="call:phone" tr="social.today"></md-icon>
+                        </md-button>
+                        <md-menu-content width="4">
+                            <md-menu-item>
+                                <md-button ng-click="ctrl.redial($event)">
+                                    <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                    Excel
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ng-click="ctrl.redial($event)">
+                                    <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                    word
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ng-click="ctrl.redial($event)">
+                                    <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                    pdf
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </md-card-actions>
+                </md-menu-content>
+            </md-menu>
+        </div>
+    </div>
+        </li>
+
+</ul>
+

@@ -1,0 +1,78 @@
+<mds-modal style="width: 100%;" closable>
+    <mds-modal-header>
+        <mds-modal-title >
+            <div class="md-toolbar-tools" style="background-color: #2d3669">
+                <h2 style="color: #EBF7E5" tr="DialogGdpSudan.title"></h2>
+            </div>
+        </mds-modal-title>
+    </mds-modal-header>
+    <mds-modal-body style="padding: 40px;background-color: rgb(255,255,255);">
+        <div class="container-fluid">
+
+
+
+            <!-- start Cpi-sudan-section-->
+
+                <table class="table table-bordered text-center" id="Gdp">
+                    <thead>
+                    <tr class="khlee">
+                        <th class="medium-white" tr="DialogGdpSudan.name"></th>
+                        <th class="medium-white" tr="DialogGdpSudan.sub"></th>
+                        <th class="medium-white" ng-repeat="gdp in Gdps[0].years">{{gdp.years}}</th>
+
+                    </tr>
+                    </thead>
+                    <tr ng-repeat="Gdp in Gdps"  style="color: #0f0f0f" >
+                        <td class="medium-bold">{{ Gdp.main_title}}</td>
+                        <td><md-button   ng-click="showSubsectors(Gdp,$event,$index)"><md-icon style="color: #2d3669">drag_handle</md-icon></md-button></td>
+                        <td ng-repeat="gd in Gdp.years">{{gd.total_gdp}}</td>
+
+                    </tr>
+
+                </table>
+
+
+
+    </div>
+
+
+    </mds-modal-body>
+</mds-modal>
+<!-- <md-dialog  style="width: 100%;">
+    <md-toolbar>
+        <div class="md-toolbar-tools" style="background-color: #2d3669">
+            <h2 style="color: #EBF7E5" tr="DialogGdpSudan.title"></h2>
+        </div>
+        <md-dialog-content style="padding: 40px;background-color: rgb(255,255,255);">
+            <div class="container-fluid">
+
+
+
+                     start Cpi-sudan-section-
+
+                        <table class="table table-bordered text-center" id="Gdp">
+                            <thead>
+                            <tr class="khlee">
+                                <th class="medium-white" tr="DialogGdpSudan.name"></th>
+                                <th class="medium-white" tr="DialogGdpSudan.sub"></th>
+                                <th class="medium-white" ng-repeat="gdp in Gdps[0].years">{{gdp.years}}</th>
+
+                            </tr>
+                            </thead>
+                            <tr ng-repeat="Gdp in Gdps"  style="color: #0f0f0f" >
+                                <td class="medium-bold">{{ Gdp.main_title}}</td>
+                                <td><md-button   ng-click="showSubsectors(Gdp,$event,$index)"><md-icon style="color: #2d3669">drag_handle</md-icon></md-button></td>
+                                <td ng-repeat="gd in Gdp.years">{{gd.total_gdp}}</td>
+
+                            </tr>
+
+                        </table>
+
+
+
+            </div>
+
+
+        </md-dialog-content>
+    </md-toolbar>
+</md-dialog> -->

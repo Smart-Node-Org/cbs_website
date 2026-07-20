@@ -1,0 +1,23 @@
+{
+    "FTC":"دول التجارة الخارجية",
+    "pickYear":"اختر سنة",
+    "Years":"السنوات ",
+    "Export":"تصدير",
+    "Import":"أستيراد",
+    "Product":"المنتج",
+    "FT":" التجارة الخارجية",
+    "SAT":"القطاعات السنوية حسب السنوات الجدول",
+    "Sector":"القطاع",
+    "reExport":"أعاده التصدير",
+    "TradeBalance":"الميزان التجاري",
+    "InflationProductTable":"جدول التضخم المنتج",
+    "SectorsAnnualTable":"الجدول السنوي للقطاعات",
+    "Contributionrate":"معدل المساهمة",
+    "Growthrate":"معدل النمو",
+    "ChooseSector":"اختر القطاع",
+    "Inflation Sudan Table": "جدول التضخم السودان",
+    "PopulationTable":"جدول السكان",
+    "Chooseyear":"اختر السنة",
+    "ProductsSectorsTable":"جدول قطاعات المنتجات"
+    
+}

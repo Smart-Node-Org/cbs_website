@@ -1,0 +1,29 @@
+<!-- <md-dialog  style="width: 30%;">
+    <md-toolbar>
+        <div class="md-toolbar-tools" style="background-color: #2d3669">
+            <h2 style="color: #EBF7E5">Sub sectors</h2>
+        </div>
+    </md-toolbar>
+        <md-dialog-content style="padding: 40px;background-color: rgb(255,255,255);">
+                <ul  ng-repeat="subs in SubGdp.sub" class="list-group list-unstyled">
+                    <li class="list-group-item" style="font-size: 18px">{{subs.title}} </li>
+
+                </ul>
+
+    </md-dialog-content>
+</md-dialog> -->
+<mds-modal style="width: 30%;" closable>
+    <mds-modal-header>
+        <mds-modal-title >
+            <div class="md-toolbar-tools" style="background-color: #2d3669">
+                <h2 style="color: #EBF7E5">Sub sectors</h2>
+            </div>
+        </mds-modal-title>
+    </mds-modal-header>
+    <mds-modal-body style="padding: 40px;background-color: rgb(255,255,255);">
+        <ul  ng-repeat="subs in SubGdp.sub" class="list-group list-unstyled">
+            <li class="list-group-item" style="font-size: 18px">{{subs.title}} </li>
+
+        </ul>
+    </mds-modal-body>
+</mds-modal>

@@ -1,0 +1,96 @@
+<div class="container" style="text-align: right;">
+    <h3 style="text-align: right;font-size:50px;font-weight: bold;color:#3e4095;margin-top:40px"> <span class="border-heading" style="margin-left: 10px"></span>الأخبار</h3>
+    <section id="about">
+    <div style="" class="about-cols uk-position-relative uk-visible-toggle uk-light "   tabindex="-1" uk-slider Autoplay="true" >
+        <li>
+            <div class="row">
+                <ul class="uk-slider-items" style="">
+                    <li style="position:relative;" class=" col-xs-12 col-sm-6 col-md-4 col-lg-4" ng-repeat="news1 in reverseAllNews.slice(-8)|filter:{shown: 1}"  >
+                            <div class="  uk-transition-toggle" data-aos="fade-up" data-aos-delay="100"  >
+                                <div class="about-col uk-inline-clip uk-transition-toggle" tabindex="0" style="background-color:#ececec;border-radius:6px;box-shadow: 3px 2px 7px #888">
+                                    <div class="img" >
+                                        <img class="uk-transition-scale-up uk-transition-opaque"  src="http://smart-node.net/data/cbs/news/{{news1.img}}" style="width: 500px;height: 350px" alt="" class="img-fluid">
+                                    </div>
+                                    <p style="position: absolute;bottom:-4px;margin-top: 20px;color:#3e4095;font-size: 15px;font-weight: bold;text-align: center;">{{news1.created|date:"dd-MM-y"}}</p>
+
+                                    <h3 class="title" style="text-align: right; font-size:18px;font-weight: bold;margin-top:20px;text-align: center"><a  ui-sref="app.newOne({news_id:news1.id})" style="color:#3e4095">{{ news1.title_ar}}</a></h3>
+                                        <p style="text-align: right;">{{news1.body_ar.substr(0,200)}} </p>
+                                    <button style="position: absolute;bottom: 13px;right: 12px;" class="btn btn-primary" ui-sref="app.newOne({news_id:news1.id})">قراءة المزيد</button>
+                                </div>
+                            </div>
+                    </li>
+                </ul>
+                <a class="uk-position-bottom-left uk-position-small hidden-xs hidden-sm hidden-md"  uk-slidenav-previous uk-slider-item="previous" style="background-color: #3e4095; border-radius: 50%; color: #ffffff; position: absolute;left: 450px; bottom: -15px;"></a>
+                <a class="uk-position-bottom-right uk-position-small hidden-xs hidden-sm hidden-md"  uk-slidenav-next uk-slider-item="next" style="background-color: #3e4095; border-radius: 50%; color: #ffffff; position: absolute;right: 430px; bottom: -15px"></a>
+            </div>
+        </li>
+        </div>
+    </section>
+</div>
+
+
+<div class="container">
+    <ul class="list-group" ng-init="x=true" ng-switch="x" style="transform: rotate(180deg);">
+        <li style="transform: rotate(-180deg)" ng-switch-when="true" class="list-group-item publicationPageListGroup" ng-repeat="news1 in AllNews.slice(-15)|filter:{shown: 1}">
+            <span style="color: #6363a3">{{news1.created|date:"dd-MM-y || h:mm a"}}</span>
+            <span class="fa fa-chevron-circle-left" style="float:right;color: #3e4095;font-size: 20px;transform: translateY(9px);"></span>
+            <span><a target="_blank"  ui-sref="app.newOne({news_id:news1.id})" style="float:right;font-size: 20px;margin-right: 10px;color: black">{{news1.title_ar}}</a></span>
+        </li>
+        <li style="transform: rotate(-180deg);" ng-switch-when="false" class="list-group-item publicationPageListGroup" ng-repeat="news1 in AllNews|filter:{shown: 1}">
+            <span style="color: #6363a3">{{news1.created|date:"dd-MM-y || h:mm a"}}</span>
+            <span class="fa fa-chevron-circle-left" style="float:right;color: #3e4095;font-size: 20px;transform: translateY(9px);"></span>
+            <span><a target="_blank"  ui-sref="app.newOne({news_id:news1.id})" style="float:right;font-size: 20px;margin-right: 10px;color: black">{{news1.title_ar}}</a></span>
+        </li>
+    </ul>
+    <div class="text-center">
+        <button class="uk-button btn-primary uk-button-large" ng-click="x=!x" style="font-size: 15px;font-weight: bold">{{x==true?'إظهار المزيد':'إظهار أقل'}}</button>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <ul class="uk-switcher switcher-container uk-margin"  style="transform: rotate(-180deg)">
+        <div   ng-switch="z" class="uk-position-relative uk-visible-toggle"   tabindex="-1" uk-slider >
+            <li  ng-switch-when="true"  style="transform: rotate(-180deg);" class="list-group-item publicationPageListGroup" ng-repeat="publication in Allpublications.slice(-15)">
+
+                <span class="fa fa-chevron-circle-left" style="transform:translateY(9px);color: #3e4095;font-size: 20px;float: right"></span> <span style="font-size:20px;float: right;margin-right: 20px"><a target="_blank" href="http://smart-node.net/data/cbs/publications/{{publication.file}}" style="margin-left: 10px;color: black;">{{publication.title_ar}}</a></span>
+                <a target="_blank" href="http://smart-node.net/data/cbs/publications/{{publication.file}}"  uk-tooltip="title:Read {{publication.title_ar}} publication;pos:bottom" style="color: #ffffdd;background: #3e4095;width: 30px; height:30px; line-height: 30px;text-align: center; border-radius: 50%;">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                </a>
+                <a target="_blank" ng-click="download(publication)" style="margin-left: 20px; background-color: #3e4095;width: 30px;color: #ffffdd; height: 30px; line-height: 30px;text-align: center; border-radius: 50%;" uk-tooltip="title:Download {{publication.title_ar}} publication;pos:bottom">
+                    <i class="fa fa-arrow-circle-down" ></i>
+                </a>
+            </li>
+            <li  ng-switch-when="false"  style="transform: rotate(-180deg)" class="list-group-item publicationPageListGroup" ng-repeat="publication in Allpublications">
+                <a target="_blank" href="http://smart-node.net/data/cbs/publications/{{publication.file}}"  uk-tooltip="title:Read {{publication.title_ar}} publication;pos:bottom" style="color: #ffffdd;background: #3e4095;width: 30px; height:30px; line-height: 30px;text-align: center; border-radius: 50%;">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                </a>
+                <a target="_blank" ng-click="download(publication)" style="margin-left: 20px; background-color: #3e4095;width: 30px;color: #ffffdd; height: 30px; line-height: 30px;text-align: center; border-radius: 50%;" uk-tooltip="title:Download {{publication.title_ar}} publication;pos:bottom">
+                    <i class="fa fa-arrow-circle-down" ></i>
+                </a>
+                <span class="fa fa-chevron-circle-left" style="transform:translateY(9px);color: #3e4095;font-size: 20px;float: right"></span> <span style="font-size:20px;float: right;margin-right: 20px"><a target="_blank" href="http://smart-node.net/data/cbs/publications/{{publication.file}}" style="margin-left: 10px;color: black;">{{publication.title_ar}}</a></span>
+            </li>
+        </div>
+        <div  ng-switch="y" class="uk-position-relative uk-visible-toggle"   tabindex="-1" uk-slider ng-repeat="department in AllDepartment">
+            <li  ng-switch-when="true"  style="transform: rotate(-180deg);" class="list-group-item publicationPageListGroup" ng-repeat="publication in Allpublications.slice(-15)|filter:{department:department.id}">
+                <a target="_blank" href="http://smart-node.net/data/cbs/publications/{{publication.file}}"  uk-tooltip="title:Read {{publication.title_ar}} publication;pos:bottom" style="color: #ffffdd;background: #3e4095;width: 30px; height:30px; line-height: 30px;text-align: center; border-radius: 50%;">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                </a>
+                <a target="_blank" ng-click="download(publication)" style="margin-left: 20px; background-color: #3e4095;width: 30px;color: #ffffdd; height: 30px; line-height: 30px;text-align: center; border-radius: 50%;" uk-tooltip="title:Download {{publication.title_ar}} publication;pos:bottom">
+                    <i class="fa fa-arrow-circle-down" ></i>
+                </a>
+                <span class="fa fa-chevron-circle-left" style="transform:translateY(9px);color: #3e4095;font-size: 20px;float: right"></span> <span style="font-size:20px;float: right;margin-right: 20px"><a target="_blank" href="http://smart-node.net/data/cbs/publications/{{publication.file}}" style="margin-left: 10px;color: black;">{{publication.title_ar}}</a></span>
+            </li>
+            <li   ng-switch-when="false"  style="transform: rotate(-180deg)" class="list-group-item publicationPageListGroup" ng-repeat="publication in Allpublications|filter:{department:department.id}">
+                <a target="_blank" href="http://smart-node.net/data/cbs/publications/{{publication.file}}"  uk-tooltip="title:Read {{publication.title_ar}} publication;pos:bottom" style="color: #ffffdd;background: #3e4095;width: 30px; height:30px; line-height: 30px;text-align: center; border-radius: 50%;">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                </a>
+                <a target="_blank" ng-click="download(publication)" style="margin-left: 20px; background-color: #3e4095;width: 30px;color: #ffffdd; height: 30px; line-height: 30px;text-align: center; border-radius: 50%;" uk-tooltip="title:Download {{publication.title_ar}} publication;pos:bottom">
+                    <i class="fa fa-arrow-circle-down" ></i>
+                </a>
+                <span class="fa fa-chevron-circle-left" style="transform:translateY(9px);color: #3e4095;font-size: 20px;float: right"></span> <span style="font-size:20px;float: right;margin-right: 20px"><a target="_blank" href="http://smart-node.net/data/cbs/publications/{{publication.file}}" style="margin-left: 10px;color: black;">{{publication.title_ar}}</a></span>
+            </li>
+        </div>
+    </ul>
+</div>

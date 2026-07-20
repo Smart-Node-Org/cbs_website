@@ -1,0 +1,369 @@
+<div class="statistic " dir="{{lang=='en'?'ltr':'rtl'}}" >
+    <div class="container-fluid">
+        <div uk-filter="target: .js-filter">
+        <div class="row" dir="{{lang=='en'?'ltr':'rtl'}}">
+                <div class="col-xs-12 col-sm-4 col-md-3 " >
+                    <ul uk-accordion class="list-group">
+                        <li class="uk-open list-group-item" style="border-radius: 8px">
+                            <a class="uk-accordion-title" href="#" style="color: #3e4095;font-size: 16px;font-weight: bold;" tr="statisitics.Economic"></a>
+                            <div class="uk-accordion-content">
+                                <ul class="list-unstyled" style="margin-left: 20px">
+                                    <li ><span class="fa fa-chevron-circle-right text-primary"></span> <a style="margin-left: 10px;color: #3e4095" href="#" ng-click="$event.preventDefault();changeStatistics('GDP')" tr="statisitics.N_Income"></a></li>
+                                    <li><span class="fa fa-chevron-circle-right text-primary"></span> <a style="margin-left: 10px;color:#3e4095" href="#" ng-click="$event.preventDefault();changeStatistics('CPI')" tr="statisitics.price"></a></li>
+                                    <li><span class="fa fa-chevron-circle-right text-primary"></span> <a style="margin-left: 10px;color:#3e4095" href="#" ng-click="$event.preventDefault();changeStatistics('Foreign')" tr="statisitics.F_Trade"></a></li>
+                                    <li><span class="fa fa-chevron-circle-right text-primary"></span> <a style="margin-left: 10px;color:#3e4095" href="#" ng-click="$event.preventDefault();changeStatistics('sectoral')" tr="statisitics.Sectoral"></a></li>
+                                    <li class="uk-active"><span class="fa fa-chevron-circle-right text-primary" style="color:#336c9c !important"></span> <a style="margin-left: 10px;color:#3e4095;font-weight: 600" href="#" ng-click="$event.preventDefault();changeStatistics('eco_inter')" tr="statisitics.Interactive_DB"></a></li>
+
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="list-group-item" style="border-radius: 8px">
+                            <a class="uk-accordion-title" href="#" style="color: #3e4095;font-size: 16px;font-weight: bold;">Social</a>
+                            <div class="uk-accordion-content">
+                                <ul class="list-unstyled" style="margin-left: 20px">
+                                    <li><span class="fa fa-chevron-circle-right text-primary"></span> <a style="margin-left: 10px;color:#3e4095" href="#" ng-click="$event.preventDefault();changeStatistics('pop')" tr="statisitics.Population"></a></li>
+                                    <li><span class="fa fa-chevron-circle-right text-primary"></span> <a style="margin-left: 10px;color:#3e4095" href="#" ng-click="$event.preventDefault();changeStatistics('health')" tr="statisitics.health"></a></li>
+                                    <li><span class="fa fa-chevron-circle-right text-primary"></span> <a style="margin-left: 10px;color:#3e4095" href="#" ng-click="$event.preventDefault();changeStatistics('family')" tr="statisitics.family"></a></li>
+                                    <li><span class="fa fa-chevron-circle-right text-primary"></span> <a style="margin-left: 10px;color:#3e4095" href="#" ng-click="$event.preventDefault();changeStatistics('labor')" tr="statisitics.Labor"></a></li>
+                                    <li><span class="fa fa-chevron-circle-right text-primary" style="color:#336c9c !important"></span> <a style="margin-left: 10px;color:#3e4095;font-weight: 600" href="#" ng-click="$event.preventDefault();changeStatistics('soc_inter')" tr="statisitics.Interactive_DB"></a></li>
+
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="list-group-item" style="border-radius: 8px">
+                            <a class="uk-accordion-title" href="#" style="color: #3e4095;font-size: 16px;font-weight: bold;">SDG</a>
+                            <div class="uk-accordion-content">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-8 col-md-9">
+                    <ul class="list-unstyled" ng-switch="data">
+                       <li class="col-xs-12 col-sm-6 col-md-4" ng-switch-when="GDP">
+                           <div class="statistic-item text-center">
+<!--                               <i class="fas fa-chart-line fa-4x"></i>-->
+                              <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/chart3.png" alt="" style="width: 50px;height: 50px;"></div>
+                               <h5 style="margin-top: 10px"  tr="statisitics.product" ></h5>
+                               <div class="Statistic-buttons text-center">
+                                   <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text" style="position: absolute; bottom: 50px;left: 50px;color: #2d3669;"></span></a>
+                                   <a href="" ng-click="ShowTableGdp()" uk-tooltip="title:show Gross Domestic Product-sudan table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px;color :#2d3669"></span></a>
+                               </div>
+                           </div>
+                       </li>
+                       <li class="col-xs-12 col-sm-6  col-md-4" ng-switch-when="GDP">
+                           <div class="statistic-item text-center">
+                               <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/chart1.png" alt="" style="width: 50px;height: 50px;"></div>
+                               <h5 style="margin-top: 10px"  tr="statisitics.product_state"></h5>
+                               <div class="Statistic-buttons">
+                                   <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                   <a href="" ng-click="ShowTableGdp()" uk-tooltip="title:show Gross Domestic Product-sudan table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px;color :#2d3669"></span></a>
+                               </div>
+                           </div>
+                       </li>
+                       <li class="col-xs-12 col-sm-6  col-md-4" ng-switch-when="CPI">
+                           <div class="statistic-item text-center">
+                               <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/cpi1.png" alt="" style="width: 50px;height: 50px;"></div>
+                               <h5 style="margin-top: 10px">CPI-Sudan-</h5>
+                               <div class="Statistic-buttons">
+                                   <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                   <a href="" ng-click="ShowTableCpi()" uk-tooltip="title:show CPI sudan table "><span class="fa fa-info  fa-2x text-muted"style="position: absolute; bottom: 50px;right: 50px;color :#2d3669"></span></a>
+                               </div>
+                           </div>
+                       </li>
+                        <li class="col-xs-12 col-sm-6 col-md-4" ng-switch-when="CPI">
+                            <div class="statistic-item text-center">
+                                <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/cpi2.png" alt="" style="width: 50px;height: 50px;"></div>
+                                <h5 style="margin-top: 10px" tr="statisitics.States"></h5>
+                                <div class="Statistic-buttons text-center">
+                                    <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                    <a href="" ng-click="ShowTableCpiStates()" uk-tooltip="title:show CPI states table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px;color :#2d3669"></span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-xs-12 col-sm-6  col-md-4" ng-switch-when="CPI">
+                            <div class="statistic-item text-center">
+                                <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/cpi3.png" alt="" style="width: 50px;height: 50px;"></div>
+                                <h5 style="margin-top: 10px"  tr="statisitics.CPI_product"></h5>
+                                <div class="Statistic-buttons">
+                                    <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                    <a href="" ng-click="ShowTableCpiProducts()" uk-tooltip="title:show CPI Product table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px;color :#2d3669"></span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-xs-12 col-sm-6  col-md-4" ng-switch-when="CPI">
+                            <div class="statistic-item text-center">
+                                <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/cpi3.png" alt="" style="width: 50px;height: 50px;"></div>
+                                <h5 style="margin-top: 10px"  tr="statisitics.Inflation"></h5>
+                                <div class="Statistic-buttons">
+                                    <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                    <a href="" ng-click="ShowTableInflationSudan()" uk-tooltip="title:show Inflation sudan table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px;color :#2d3669"></span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-xs-12 col-sm-6  col-md-4" ng-switch-when="CPI">
+                            <div class="statistic-item text-center">
+                                <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/cpi3.png" alt="" style="width: 50px;height: 50px;"></div>
+                                <h5 style="margin-top: 10px" tr="statisitics.Inflation_state"></h5>
+                                <div class="Statistic-buttons">
+                                    <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                    <a href="" ng-click="ShowTableInflationStates()" uk-tooltip="title:show Inflation States table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px"></span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-xs-12 col-sm-6  col-md-4" ng-switch-when="CPI">
+                            <div class="statistic-item text-center">
+                                <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/cpi3.png" alt="" style="width: 50px;height: 50px;"></div>
+                                <h5 style="margin-top: 10px" tr="statisitics.Inflation_product"></h5>
+                                <div class="Statistic-buttons">
+                                    <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                    <a href="" ng-click="ShowTableInflationProduct()" uk-tooltip="title:show Inflation Product table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px"></span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-xs-12 col-sm-6  col-md-4" ng-switch-when="Foreign">
+                            <div class="statistic-item text-center">
+                                <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/trade1.png" alt="" style="width: 50px;height: 50px;"></div>
+                                <h5 style="margin-top: 10px" tr="statisitics.foreign_Trade"></h5>
+                                <div class="Statistic-buttons">
+                                    <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                    <a href="" ng-click="ShowTableForeignYear()" uk-tooltip="title:show Foreign Trade years table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px"></span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-xs-12 col-sm-6 col-md-4" ng-switch-when="Foreign">
+                            <div class="statistic-item text-center">
+                                <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/trade2.png" alt="" style="width: 50px;height: 50px;"></div>
+                                <h5 style="margin-top: 10px" tr="statisitics.foriegn_countries"></h5>
+                                <div class="Statistic-buttons text-center">
+                                    <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                    <a href="" ng-click="ShowTableForeignCountries()" uk-tooltip="title:show Foreign Trade Countries table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px"></span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-xs-12 col-sm-6  col-md-4" ng-switch-when="Foreign">
+                            <div class="statistic-item text-center">
+                                <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/trade3.png" alt="" style="width: 50px;height: 50px;"></div>
+                                <h5 style="margin-top: 10px" tr="statisitics.foriegn_products"></h5>
+                                <div class="Statistic-buttons">
+                                    <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                    <a href="" ng-click="ShowTableForeignProducts()" uk-tooltip="title:show Foreign Trade Products table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px"></span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-xs-12 col-sm-6  col-md-4" ng-switch-when="sectoral">
+                            <div class="statistic-item text-center">
+                                <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/sector1.png" alt="" style="width: 50px;height: 50px;"></div>
+                                <h5 style="margin-top: 10px" tr="statisitics.Sectors_Years">Sectors-Years</h5>
+                                <div class="Statistic-buttons">
+                                    <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                    <a href="" ng-click="ShowTableSectorsAnnualSector()" uk-tooltip="title:show Sectors-Years table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px"></span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-xs-12 col-sm-6 col-md-4" ng-switch-when="sectoral">
+                            <div class="statistic-item text-center">
+                                <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/sector2.png" alt="" style="width: 50px;height: 50px;"></div>
+                                <h5 style="margin-top: 10px" tr="statisitics.Sectors_Years_select"></h5>
+                                <div class="Statistic-buttons text-center">
+                                    <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                    <a href="" ng-click="ShowTableSectorsAnnualYears()" uk-tooltip="title:show Sectors- select Years table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px"></span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-xs-12 col-sm-6  col-md-4" ng-switch-when="sectoral">
+                            <div class="statistic-item text-center">
+                                <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/sector3.png" alt="" style="width: 50px;height: 50px;"></div>
+                                <h5 style="margin-top: 10px" tr="statisitics.product_annual_years"></h5>
+                                <div class="Statistic-buttons">
+                                    <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                    <a href="" ng-click="ShowTableProductAnnual()" uk-tooltip="title:show Sectors-Products table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px"></span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-xs-12 col-sm-6  col-md-4" ng-switch-when="pop">
+                            <div class="statistic-item text-center">
+                                <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/population1.png" alt="" style="width: 50px;height: 50px;"></div>
+                                <h5 style="margin-top: 10px"  tr="statisitics.Population"></h5>
+                                <div class="Statistic-buttons">
+                                    <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                    <a href="" ng-click="ShowTablePopulation()" uk-tooltip="title:show Population table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px"></span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-xs-12 col-sm-6  col-md-4" ng-switch-when="pop">
+                            <div class="statistic-item text-center">
+                                <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/population2.png" alt="" style="width: 50px;height: 50px;"></div>
+                                <h5 style="margin-top: 10px" tr="statisitics.Population_date" ></h5>
+                                <div class="Statistic-buttons">
+                                    <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                    <a href="" ng-click="ShowTablePopulationData()" uk-tooltip="title:show Population-Data table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px"></span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-xs-12 col-sm-12  col-md-12" ng-switch-when="eco_inter">
+                            <div class="uk-animation-scale-up">
+                                <div class="food" style="height: auto !important;">
+                                    <div class="row card food-item"  style="height: auto !important;text-align: left">
+                                        <!--                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">-->
+                                        <!-- <md-input-container>
+                                            <label tr="statisitics.Department"></label>
+                                            <md-select ng-model="deprtData.deprt" ng-change="initDeprt()">
+                                                <md-option value="sectors" tr="statisitics.Population"></md-option>
+                                                <md-option value="cpi" tr="statisitics.CPI"></md-option>
+                                                <md-option value="foriegn" tr="statisitics.F_trade"></md-option>
+                                                <md-option value="gdp" tr="statisitics.N_account"></md-option>
+                                            </md-select>
+                                        </md-input-container> -->
+                                        <div>
+                                            <h5 class="uk-text-bold mb-2" tr="modals.Registration"> </h5>
+                                            <select  ng-model="deprtData.deprt" ng-change="initDeprt()"  class="uk-select">
+                                                <option value="sectors" tr="statisitics.Population"></option>
+                                                <option value="cpi" tr="statisitics.CPI"></option>
+                                                <option value="foriegn" tr="statisitics.F_trade"></option>
+                                                <option value="gdp" tr="statisitics.N_account"></option>
+                                             </select>
+                                        </div>
+
+                                        <div>
+                                            <h5 class="uk-text-bold mb-2" tr="statisitics.Years"> </h5>
+                                            <select  multiple ng-change="checkYears(selectedYears)" ng-model="selectedYears">
+                                                <option ng-value="year" ng-repeat="year in ['All'].concat(sectors.foriegn_general_years)">{{year}}</option>
+                                            </select>
+                                        </div>
+                                        <!-- <md-input-container ng-if="deprtData.deprt=='foriegn'">
+                                            <label tr="statisitics.Years"></label>
+                                            <md-select multiple ng-change="checkYears(selectedYears)" ng-model="selectedYears">
+                                                <md-option ng-value="year" ng-repeat="year in ['All'].concat(sectors.foriegn_general_years)">{{year}}</md-option>
+                                            </md-select>
+                                        </md-input-container> -->
+                                        <div  ng-if="deprtData.deprt=='sectors'">
+                                            <h5 class="uk-text-bold mb-2" tr="statisitics.Sector"> </h5>
+                                            <select  ng-model="selectedSector" ng-change="showSector(selectedSector)">
+                                                <option ng-value="sector" ng-repeat="sector in sectors.sectors">{{sector.title}}</option>  
+                                            </select>
+                                        </div>
+                                        <!-- <md-input-container ng-if="deprtData.deprt=='sectors'">
+                                            <label tr="statisitics.Sector"></label>
+                                            <md-select ng-model="selectedSector" ng-change="showSector(selectedSector)">
+                                                <md-option ng-value="sector" ng-repeat="sector in sectors.sectors">{{sector.title}}</md-option>
+                                            </md-select>
+                                        </md-input-container> -->
+                                        <div  ng-if="deprtData.deprt=='sectors'">
+                                            <h5 class="uk-text-bold mb-2" tr="statisitics.Products"> </h5>
+                                            <select   multiple ng-model="selectedProducts" ng-change="selectProducts(selectedProducts)">
+                                                <option ng-value="product.id" ng-repeat="product in selectedSector.products">{{product.title}}</option>
+                                            </select>
+                                        </div>
+                                        <!-- <md-input-container ng-if="deprtData.deprt=='sectors'">
+                                            <label tr="statisitics.Products"></label>
+                                            <md-select multiple ng-model="selectedProducts" ng-change="selectProducts(selectedProducts)">
+                                                <md-option ng-value="product.id" ng-repeat="product in selectedSector.products">{{product.title}}</md-option>
+                                            </md-select>
+                                        </md-input-container> -->
+                                        <div  ng-if="deprtData.deprt=='gdp'">
+                                            <h5 class="uk-text-bold mb-2" tr="statisitics.M_Department"> </h5>
+                                            <select ng-model="selectedGdpMain" ng-change="showGdpSub(selectedGdpMain)">
+                                                <option ng-value="deprt" ng-repeat="deprt in gdp_main">{{deprt.title}}</option>
+                                             </select>
+                                        </div>
+                                        <!-- <md-input-container ng-if="deprtData.deprt=='gdp'">
+                                            <label  tr="statisitics.M_Department"></label>
+                                            <md-select ng-model="selectedGdpMain" ng-change="showGdpSub(selectedGdpMain)">
+                                                <md-option ng-value="deprt" ng-repeat="deprt in gdp_main">{{deprt.title}}</md-option>
+                                            </md-select>
+                                        </md-input-container> -->
+                                        <div  ng-if="deprtData.deprt=='gdp' && selectedGdpMain">
+                                            <h5 class="uk-text-bold mb-2" tr="statisitics.S_Department"> </h5>
+                                            <select multiple ng-model="selectedGdpSub">
+                                                <option ng-value="deprt.id" ng-repeat="deprt in selectedGdpMain.sub">{{deprt.title}}</option>
+                                            </select>
+                                        </div>
+                                       
+                                        <div   ng-if="deprtData.deprt=='gdb' && selectedGdpMain && (!selectedGdpSub || selectedGdpSub.length==0)">
+                                            <h5 class="uk-text-bold mb-2" tr="statisitics.Years"> </h5>
+                                            <select multiple ng-change="checkYears(selectedYears)" ng-model="selectedYears">
+                                                <option ng-value="year" ng-repeat="year in ['All'].concat(gdp_main_years)">{{year}}</option>
+                                            </select>
+                                        </div>
+                                    
+
+                                        <div  ng-if="deprtData.deprt=='gdb' && selectedGdpMain && selectedGdpSub && selectedGdpSub.length>0">
+                                            <h5 class="uk-text-bold mb-2" tr="statisitics.Years"> </h5>
+                                            <select multiple ng-change="checkYears(selectedYears)" ng-model="selectedYears">
+                                                <option ng-value="year" ng-repeat="year in ['All'].concat(gdp_sub_years)">{{year}}</option>
+                                            </select>
+                                        </div>
+                                       
+                                        <div   ng-if="(deprtData.deprt=='foriegn')">
+                                            <h5 class="uk-text-bold mb-2" tr="statisitics.Countries"> </h5>
+                                            <select multiple ng-model="selectedCountries" ng-change="checkCountries(selectedCountries)">
+                                                <option ng-value="country" ng-repeat="country in ['None','All'].concat(foriegn_countries)">{{country}}</option>
+                                            </select>
+                                        </div>
+                                      
+                                        <div   ng-if="(deprtData.deprt=='foriegn')">
+                                            <h5 class="uk-text-bold mb-2" tr="statisitics.By_Products"> </h5>
+                                            <select multiple ng-model="selectedProducts" ng-change="selectProducts(selectedProducts)">
+                                                <option  ng-value="product.id" ng-repeat="product in ['None','All'].concat(foriegn_products)">{{product}}</option>
+                                            </select>
+                                        </div>
+                                        
+
+                                        <!--                            </div>-->
+                                        <!--                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-if="deprtData.deprt=='sectors'">-->
+                                            <div ng-if="(deprtData.deprt=='sectors' ) || (deprtData.deprt=='gdp' && selectedGdpSub && selectedGdpSub.length>0)">
+                                                <h5 class="uk-text-bold mb-2" tr="statisitics.States"> </h5>
+                                                <select  multiple ng-model="selectedStates" ng-model-options="{trackBy: '$value.id'}" ng-change="checkStates(selectedStates)">
+                                                    <option ng-value="state" ng-repeat="state in states">{{state.name}}</option>
+                                                </select>
+                                            </div>
+                                            
+                                        <!--                            </div>-->
+                                        <!--                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-if="deprtData.deprt=='sectors'">-->
+
+
+
+                                            <div ng-if="deprtData.deprt=='sectors' && selectedProducts && selectedProducts.length>0">
+                                                <h5 class="uk-text-bold mb-2" tr="statisitics.Years"> </h5>
+                                                <select  multiple ng-change="checkYears(selectedYears)" ng-model="selectedYears">
+                                                    <option ng-value="year" ng-repeat="year in ['All'].concat(sectors.product_annual_years)">{{year}}</option>
+                                                </select>
+                                            </div>
+                                    
+                                        <div  ng-if="deprtData.deprt=='sectors' && (!selectedProducts || selectedProducts.length==0)">
+                                            <h5 class="uk-text-bold mb-2" tr="statisitics.Years"> </h5>
+                                            <select m multiple ng-change="checkYears(selectedYears)" ng-model="selectedYears">
+                                                <option ng-value="year" ng-repeat="year in ['All'].concat(sectors.sectors_annual_years)">{{year}}</option>
+                                            </select>
+                                        </div>
+                                    
+
+                                        <md-menu md-offset="0 -7">
+                                            <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdMenu.open($event)">
+                                                <md-icon style="color: #3e416d;">archive</md-icon>
+                                            </md-button>
+                                            <md-menu-content width="2">
+                                                <md-menu-item>
+                                                    <md-button ng-click="ExportInteractive('Word')"> <span md-menu-align-target>Word</span>  </md-button>
+                                                    <md-button ng-click="ExportInteractive('Excel')"> <span md-menu-align-target>Excel</span>  </md-button>
+                                                    <md-button ng-click="ExportInteractive('PDF')"> <span md-menu-align-target>PDF</span>  </md-button>
+
+                                                </md-menu-item>
+                                            </md-menu-content>
+                                        </md-menu>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

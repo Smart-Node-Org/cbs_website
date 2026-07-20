@@ -1,0 +1,51 @@
+<div class="container">
+    <h3 style="font-size:50px;font-weight: bold;color:#3e4095;margin-top:40px " class="{{lang=='ar'?'text-right':''}}"> <span class="border-heading"></span> <span tr="news.News">  </span> </h3>
+    <section id="about">
+                <div style="" class="about-cols uk-position-relative uk-visible-toggle uk-light "   tabindex="-1" uk-slider Autoplay="true" >
+                    <li>
+                        <div class="row">
+                            <ul class="uk-slider-items" style="">
+                                <li style="position:relative;" class=" col-xs-12 col-sm-6 col-md-4 col-lg-4" ng-repeat="news1 in reverseAllNews.slice(-8)|filter:{shown: 1}"  >
+                                    <div class="">
+                                        <div class="uk-transition-toggle" data-aos="fade-up" data-aos-delay="100"  >
+                                            <div class="about-col uk-inline-clip uk-transition-toggle" tabindex="0" style="background-color:#ececec;border-radius:6px;box-shadow: 3px 2px 7px #888">
+                                                <div class="img" >
+                                                    <img class="uk-transition-scale-up uk-transition-opaque"  src="http://smart-node.net/data/cbs/news/{{news1.img}}" style="width: 500px;height: 350px" alt="" class="img-fluid">
+                                                </div>
+                                                <p style="position: absolute;bottom:-4px;margin-top: 20px;color:#3e4095;font-size: 15px;font-weight: bold;text-align: center;">{{news1.created|date:"dd-MM-y"}}</p>
+                                                    <h3 class="title" style="font-size:18px;font-weight: bold;margin-top:20px;text-align: center"><a  ui-sref="app.newOne({news_id:news1.id})" style="color:#3e4095">{{ news1.title_en}}</a></h3>
+                                                    <p style="text-align: justify">{{news1.body_en.substr(0,200)}} </p>
+                                                <button style="position: absolute;bottom: 13px;right: 12px;" class="btn btn-primary" ui-sref="app.newOne({news_id:news1.id})" tr="news.readmore"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                    </li>
+                            </ul>
+                            <a class="uk-position-bottom-left uk-position-small hidden-xs hidden-sm hidden-md"  uk-slidenav-previous uk-slider-item="previous" style="background-color: #3e4095; border-radius: 50%; color: #ffffff; position: absolute;left: 450px; bottom: -15px;"></a>
+                            <a class="uk-position-bottom-right uk-position-small hidden-xs hidden-sm hidden-md"  uk-slidenav-next uk-slider-item="next" style="background-color: #3e4095; border-radius: 50%; color: #ffffff; position: absolute;right: 430px; bottom: -15px"></a>
+                        </div>
+                    </li>
+
+        </div>
+
+
+    </section>
+</div>
+
+<div class="container">
+    <ul class="list-group" ng-init="x=true" ng-switch="x" style="transform: rotate(180deg);">
+            <li style="transform: rotate(-180deg)" ng-switch-when="true" class="list-group-item publicationPageListGroup" ng-repeat="news1 in AllNews.slice(-15)|filter:{shown: 1}">
+                <span class="fa fa-chevron-circle-right" style="color: #3e4095;font-size: 16px"></span>
+                <span><a target="_blank"  ui-sref="app.newOne({news_id:news1.id})" style="font-size: 15px;font-weight: bold;margin-left: 10px;color:#3e4095;">{{ news1.title_en}}</a></span>
+                <span style="float: right;color: #6363a3">{{news1.created|date:"dd-MM-y || h:mm a"}}</span>
+            </li>
+        <li style="transform: rotate(-180deg);" ng-switch-when="false" class="list-group-item publicationPageListGroup" ng-repeat="news1 in AllNews|filter:{shown: 1}">
+            <span class="fa fa-chevron-circle-right" style="color: #3e4095;font-size: 16px"></span>
+            <span><a target="_blank"  ui-sref="app.newOne({news_id:news1.id})" style="font-size: 15px;font-weight: bold;margin-left: 10px;color:#3e4095;">{{ news1.title_en}}</a></span>
+            <span style="float: right;color: #6363a3">{{news1.created|date:"dd-MM-y || h:mm a"}}</span>
+        </li>
+    </ul>
+    <div class="text-center">
+    <button class="uk-button btn-primary uk-button-large" ng-click="x=!x" style="font-size: 15px;font-weight: bold">{{x==true? lang=='en'?'Show more':'عرض المزيد' : lang=='en'?'Show less':'عرض اقل' }}</button>
+    </div>
+</div>

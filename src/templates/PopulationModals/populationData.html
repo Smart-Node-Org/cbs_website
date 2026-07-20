@@ -1,0 +1,191 @@
+<mds-modal style="width: 100%;" closable>
+    <mds-modal-header>
+        <mds-modal-title >
+            <div class="md-toolbar-tools" style="background-color: #2d3669">
+                <h2 style="color: #EBF7E5">Population-Data Table </h2>
+            </div>
+        </mds-modal-title>
+    </mds-modal-header>
+    <mds-modal-body style="padding: 40px;background-color: rgb(255,255,255);">
+        <div class="container-fluid">
+            <style> 
+                .medium-white{
+        
+                }
+            </style>
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr class="khlee">
+                            <th class="medium-white">States</th>
+                            <th class="medium-white">Year</th>
+                            <th class="medium-white">Cd-R</th>
+                            <th class="medium-white">Cb-R </th>
+                            <th class="medium-white">Dep-R</th>
+                            <th class="medium-white">Gr-rate</th>
+                            <th class="medium-white">IM-R</th>
+                            <th class="medium-white">life expectancy</th>
+                            <th class="medium-white" colspan="2">literacy</th>
+                            <th class="medium-white">MICS</th>
+                            <th class="medium-white"> Tf-R</th>
+                            <th class="medium-white">unemployment</th>
+                        </tr>
+                        <tr class="active">
+                            <td colspan="4"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td style="font-size: 12px">Female</td>
+                            <td style="font-size: 12px">male</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+        
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="population in PopulationsData" style="vertical-align: inherit;">
+                            <td class="medium-bold">{{population.name}}</td>
+                            <td class="medium-bold">{{population.year}}</td>
+                            <td>{{population.cdr}}</td>
+                            <td>{{population.cbr}}</td>
+                            <td>{{population.dr}}</td>
+                            <td>{{population.growth_rate}}</td>
+                            <td>{{population.imr}}</td>
+                            <td>{{population.life_excp}}</td>
+                            <td>{{population.literacy_female}}</td>
+                            <td>{{population.literacy_male}}</td>
+                            <td>{{population.mics}}</td>
+                            <td>{{population.tfr}}</td>
+                            <td>{{population.un_emp}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+            <style>
+                .list-style{
+                    display: flex;
+                    justify-content: center;
+                    align-content: center;
+                }
+                .medium{
+                    list-style-type: none;
+                    color: white;
+                    background-color: #2d3669;
+                    padding: 5px;
+                    margin: 5px;
+                    text-align: center;
+                    border-radius: 10px;
+                    box-shadow: #dbdded 0 0 5px 3px;
+                    font-size: 10px;
+                }
+            </style>
+            <div>
+                <ul class="list-style">
+        
+                   <li class="medium"> <span style="font-weight: bold ;">Cd-R </span><br>crude death rate</li>
+                    <li class="medium">  <span style="font-weight: bold ;">Cb-R </span><br>crude brith rate</li>
+                    <li class="medium"> <span style="font-weight: bold ;">Gr-rate </span><br>growth rate </li>
+                    <li class="medium"> <span style="font-weight: bold ;">Dep-R </span><br>dependency rate </li>
+                    <li class="medium"><span style="font-weight: bold ;">Im-R </span><br>infant Mortality rate</li>
+                    <li class="medium"> <span style="font-weight: bold ;">Tf-R </span><br>total fertility rate</li>
+                </ul>
+        
+            </div>
+        </div>
+    </mds-modal-body>
+</mds-modal>
+<!-- 
+<md-dialog  style="width: 100%;">
+    <md-toolbar    style="color:#29303b;" >
+        <div class="md-toolbar-tools" style="background-color: #2d3669">
+            <h2 style="color: #EBF7E5">Population-Data Table </h2>
+        </div>
+        <md-dialog-content style="padding: 40px;background-color: rgb(255,255,255);">
+<div class="container-fluid">
+    <style> 
+        .medium-white{
+
+        }
+    </style>
+            <table class="table table-bordered">
+                <thead>
+                <tr class="khlee">
+                    <th class="medium-white">States</th>
+                    <th class="medium-white">Year</th>
+                    <th class="medium-white">Cd-R</th>
+                    <th class="medium-white">Cb-R </th>
+                    <th class="medium-white">Dep-R</th>
+                    <th class="medium-white">Gr-rate</th>
+                    <th class="medium-white">IM-R</th>
+                    <th class="medium-white">life expectancy</th>
+                    <th class="medium-white" colspan="2">literacy</th>
+                    <th class="medium-white">MICS</th>
+                    <th class="medium-white"> Tf-R</th>
+                    <th class="medium-white">unemployment</th>
+                </tr>
+                <tr class="active">
+                    <td colspan="4"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="font-size: 12px">Female</td>
+                    <td style="font-size: 12px">male</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="population in PopulationsData" style="vertical-align: inherit;">
+                    <td class="medium-bold">{{population.name}}</td>
+                    <td class="medium-bold">{{population.year}}</td>
+                    <td>{{population.cdr}}</td>
+                    <td>{{population.cbr}}</td>
+                    <td>{{population.dr}}</td>
+                    <td>{{population.growth_rate}}</td>
+                    <td>{{population.imr}}</td>
+                    <td>{{population.life_excp}}</td>
+                    <td>{{population.literacy_female}}</td>
+                    <td>{{population.literacy_male}}</td>
+                    <td>{{population.mics}}</td>
+                    <td>{{population.tfr}}</td>
+                    <td>{{population.un_emp}}</td>
+                </tr>
+                </tbody>
+            </table>
+    <style>
+        .list-style{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+        .medium{
+            list-style-type: none;
+            color: white;
+            background-color: #2d3669;
+            padding: 5px;
+            margin: 5px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: #dbdded 0 0 5px 3px;
+            font-size: 10px;
+        }
+    </style>
+    <div>
+        <ul class="list-style">
+
+           <li class="medium"> <span style="font-weight: bold ;">Cd-R </span><br>crude death rate</li>
+            <li class="medium">  <span style="font-weight: bold ;">Cb-R </span><br>crude brith rate</li>
+            <li class="medium"> <span style="font-weight: bold ;">Gr-rate </span><br>growth rate </li>
+            <li class="medium"> <span style="font-weight: bold ;">Dep-R </span><br>dependency rate </li>
+            <li class="medium"><span style="font-weight: bold ;">Im-R </span><br>infant Mortality rate</li>
+            <li class="medium"> <span style="font-weight: bold ;">Tf-R </span><br>total fertility rate</li>
+        </ul>
+
+    </div>
+</div>
+        </md-dialog-content>
+    </md-toolbar>
+</md-dialog> -->

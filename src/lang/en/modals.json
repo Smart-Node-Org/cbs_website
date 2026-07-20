@@ -1,0 +1,22 @@
+{
+    "FTC":"Foreign Trade Countries",
+    "pickYear":"Pick an year below",
+    "Years":"Years",
+    "Export":"Export",
+    "Import ":"Import ",
+    "Product":"Product",
+    "FT":"Foreign Trade",
+    "Sector":"Sector",
+    "ReExport":"Re Export",
+    "SAT":"Sectors Annual By years Table",
+    "TradeBalance":"Trade Balance",
+    "InflationProductTable":"Inflation Product Table",
+    "SectorsAnnualTable":"الجدول السنوي للقطاعات",
+    "Contributionrate":"Contribution rate",
+    "Growthrate":"Growthrate",
+    "ChooseSector":"Choose Sector",
+    "InflationSudanTable":"Inflation Sudan Table",
+    "PopulationTable":"Population Table",
+    "Chooseyear":"Choose year",
+    "ProductsSectorsTable":"Products Sectors Table"
+}

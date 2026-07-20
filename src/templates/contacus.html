@@ -1,0 +1,93 @@
+<div class="container">
+    <section id="contact" class="contact section-bg " style="margin-top: 40px">
+        <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+            <h3 style="font-size:40px;font-weight: bold;color:#3e4095;margin-top:40px" class=" {{lang=='ar'?'text-right':''}}"> <span class="border-heading"></span>  <span tr="contactus.contactcell"> </span> </h3>
+            <p class="lead" style="font-size:18px;color: #595959;font-family: 'gotham-rounded, helvetica neue, helvetica', sans-serif">Magnam dol ores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+        <div class="form-group well" style="background-color: rgba(255,255,255,0);border: none">
+            <label style="font-size: 18px;font-weight: bold;color: #3e4095 " class="{{lang=='ar'?'text-right':''}}" tr="contactus.name"></label>
+            <select class="form-control" ng-model="selectedTab" ng-change="changeMap(state.id)" style="font-size: 15px">
+                <option ng-repeat="state in Addrs" ng-value="state">{{state.name}}</option>
+            </select>
+        </div>
+        <div class="uuu ">
+            <div class="oo m-repeat"  ng-repeat="add in Addrs track by $index" ng-if="add.name==selectedTab.name">
+                  <div class="row">
+                      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" >
+                          <div class="info-box mb-4">
+                              <i class="fa fa-map fa-3x" style="color:#3e4095"></i>
+                              <h3 style="color:#3e4095;" tr="contactus.address"></h3>
+                              <p class="lead" style="color:#3e4095"> {{add.address}}</p>
+                          </div>
+                      </div>
+
+                      <div class=" uk-first-column col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                          <div class="info-box  mb-4">
+                              <i class="fa fa-envelope fa-3x" style="color:#3e4095"></i>
+                              <h3 style="color:  #3e4095;" tr="contactus.email"></h3>
+                              <p class="lead" style="color:#3e4095">{{add.email}}</p>
+                          </div>
+                      </div>
+
+                      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                          <div class="info-box  mb-4">
+                              <i class="fa fa-phone fa-3x" style="color:#3e4095"></i>
+                              <h3 style="color:#3e4095;" tr="contactus.contactcell"> </h3>
+                              <p class="lead" style="color:#3e4095"> {{add.tell}}</p>
+                          </div>
+                      </div>
+                  </div>
+            </div>
+        </div>
+
+        <!--<div style="margin: 20px auto;">-->
+            <!---->
+                    <!--<h1 style="display: inline">Follow</h1>-->
+                    <!--<a href="#" class="twitter" style="display: inline;margin-left: 200px;padding: 10px;background-color: #2e77ff;color: white;border-radius: 50%"><i class="fa fa-twitter"></i></a>-->
+                    <!--<a href="#" class="facebook" style="display: inline;margin-left: 200px;padding: 10px;background-color: #0e6dcd;color: white;border-radius: 50%"><i class="fa fa-facebook"></i></a>-->
+                    <!--<a href="#" class="instagram" STYLE="margin-left: 200px;    padding: 10px;background-color: #9f1f35;color: white;border-radius: 50%"><i class="fa fa-instagram"></i></a>-->
+        <!--</div>-->
+        <div class="row "  data-wow-duration="2.0s" data-wow-offset="10"   data-wow-delay="1s" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-6">
+                <form ng-submit="contact($event)" role="form" class="php-email-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="hidden" ng-model="info.id" class="form-control" name="name" id="name" placeholder="You name" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />  
+                        </div>
+                        <div class="form-group">
+                            <input ng-model="name" type="text" class="form-control" name="name" id="name" placeholder="You name" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                            <div class="validate"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text"  class="form-control" ng-model="email" name=" email" id="email" placeholder="Your email" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                            <div class="validate"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="subject" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                        <div class="validate"></div>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" ng-model="message" name="message" rows="5" data-rule="required" data-msg="Please Write Something For Us" placeholder="Message"></textarea>
+                        <div class="validate"></div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="loading" >Loading</div>
+                        <div class="error-message"></div>
+                        <div class="sent-message"  tr="contactus.message"></div>
+                    </div>
+                    <button type="submit" style="background-color:  #3e4095;border-radius: 5px" tr="contactus.sendbtn"></button>
+                </form>
+            </div>
+
+            <div class="col-lg-6 ">
+                <iframe id="map"  width="600" height="450" frameborder="0" style="border:0;height: 420px !important;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+            </div>
+
+        </div>
+    </section>
+</div>
+
+
+

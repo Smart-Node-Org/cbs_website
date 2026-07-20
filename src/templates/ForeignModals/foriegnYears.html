@@ -1,0 +1,64 @@
+<mds-modal style="width: 100%;" closable>
+    <mds-modal-header>
+        <mds-modal-title >
+            <div class="md-toolbar-tools" style="background-color: #2d3669">
+                <h2 style="color: #EBF7E5"  tr="modals.FT"> </h2>
+            </div>
+        </mds-modal-title>
+    </mds-modal-header>
+    <mds-modal-body style="padding: 40px;background-color: rgb(255,255,255);">
+        <div class="uk-overflow-auto">
+            <table class="table table-bordered text-center" id="AllForeignYears">
+                <thead >
+                <tr  class="khlee">
+                    <th class="medium-white"  tr="modals.Year"></th> <!--uk-width-*-->
+                    <th class="medium-white"  tr="modals.Import"></th>
+                    <th class="medium-white"  tr="modals.Export"></th>
+                    <th class="medium-white"   tr="modals.reExport"></th>
+                    <th class="medium-white" tr="modals.TradeBalance"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr  style="vertical-align: text-bottom" ng-init="initDataTables($last,'AllForeignYears')" ng-repeat="year in AllForeignYears">
+                    <td style="font-weight: bold;margin-top: 100px; vertical-align: text-bottom"> {{year.year}}</td>
+                    <td >{{year.import}}</td>
+                    <td >{{year.export}}</td>
+                    <td  >{{year.re_export}}</td>
+                    <td >{{year.balance}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </mds-modal-body>
+</mds-modal>
+<!-- <md-dialog  style="width: 100%;">
+    <md-toolbar    style="color:#29303b;" >
+        <div class="md-toolbar-tools" style="background-color: #2d3669">
+            <h2 style="color: #EBF7E5">Foreign Trade </h2>
+        </div>
+        <md-dialog-content style="padding: 40px;background-color: rgb(255,255,255);">
+<div class="uk-overflow-auto">
+    <table class="table table-bordered text-center" id="AllForeignYears">
+        <thead >
+        <tr  class="khlee">
+            <th class="medium-white">Year</th> <-uk-width-*--
+            <th class="medium-white">Import</th>
+            <th class="medium-white">Export</th>
+            <th class="medium-white">Re Export</th>
+            <th class="medium-white">Trade Balance</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr  style="vertical-align: text-bottom" ng-init="initDataTables($last,'AllForeignYears')" ng-repeat="year in AllForeignYears">
+            <td style="font-weight: bold;margin-top: 100px; vertical-align: text-bottom"> {{year.year}}</td>
+            <td >{{year.import}}</td>
+            <td >{{year.export}}</td>
+            <td  >{{year.re_export}}</td>
+            <td >{{year.balance}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+        </md-dialog-content>
+    </md-toolbar>
+</md-dialog> -->

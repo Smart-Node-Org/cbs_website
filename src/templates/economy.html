@@ -1,0 +1,662 @@
+<ul class="nav nav-tabs" id="nat-switcher"  uk-switcher="connect: #nat ;animation: uk-animation-slide-right-medium, uk-animation-slide-left-medium">
+    <li class="{{tab=='nat'?'active':''}}"><a href="#" ng-click="tab='nat'">national Account</a></li>
+    <li class="{{tab=='price'?'active':''}}" > <a href="#" ng-click="tab='price'">price indice</a></li>
+    <li class="{{tab=='trade'?'active':''}}"><a href="#" ng-click="tab='trade'">foreign trade</a></li>
+    <li class="{{tab=='sectoral'?'active':''}}"><a href="#" ng-click="tab='sectoral'">Sectoral</a></li>
+
+</ul>
+
+<ul id="nat" class="uk-switcher uk-margin">
+
+
+
+    <li>
+
+        <!-----------------------------------------National Acoount---------------------------------------->
+        <div class="uk-grid-small  uk-child-width-1-1@s  uk-child-width-1-4@l uk-text-center" uk-grid>
+
+
+            <div class="stat uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-large uk-padding ">
+                <h1 style="margin-top: 20px" class="uk-card-title">National Income</h1>
+                <md-menu>
+                    <md-card-actions layout="row" layout-align="end center">
+
+
+                        <md-button class="md-icon-button" style="margin-right: 160px" aria-label="Share" ng-click="showAdvanced($event)">
+                            <md-icon>preview</md-icon>
+                        </md-button>
+                        <md-menu>
+                            <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdMenu, $event)">
+                                <md-icon md-menu-origin md-svg-icon="call:phone">today</md-icon>
+                            </md-button>
+                            <md-menu-content width="4">
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        Exsel
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        word
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        pdf
+                                    </md-button>
+                                </md-menu-item>
+
+                            </md-menu-content>
+                        </md-menu>
+                    </md-card-actions>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+
+
+
+
+            <div class="stat uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-large uk-padding ">
+                <h1 style="margin-top: 20px" class="uk-card-title">Growth Rate</h1>
+                <md-menu>
+                    <md-card-actions layout="row" layout-align="end center">
+
+                        <md-button class="md-icon-button" style="margin-right: 160px" aria-label="Share" ng-click="showAdvanced($event)">
+                            <md-icon>preview</md-icon>
+                        </md-button>
+                        <md-menu>
+                            <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdMenu, $event)">
+                                <md-icon md-menu-origin md-svg-icon="call:phone">today</md-icon>
+                            </md-button>
+                            <md-menu-content width="4">
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        Exsel
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        word
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        pdf
+                                    </md-button>
+                                </md-menu-item>
+
+                            </md-menu-content>
+                        </md-menu>
+                    </md-card-actions>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+
+
+
+            <div class="stat uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-large uk-padding ">
+                <h1 style="margin-top: 20px" class="uk-card-title">GDP pre capita SDG</h1>
+                <md-menu>
+                    <md-card-actions layout="row" layout-align="end center">
+
+                        <md-button class="md-icon-button" style="margin-right: 160px" aria-label="Share" ng-click="showAdvanced($event)">
+                            <md-icon>preview</md-icon>
+                        </md-button>
+                        <md-menu>
+                            <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdMenu, $event)">
+                                <md-icon md-menu-origin md-svg-icon="call:phone">today</md-icon>
+                            </md-button>
+                            <md-menu-content width="4">
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        Exsel
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        word
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        pdf
+                                    </md-button>
+                                </md-menu-item>
+
+                            </md-menu-content>
+                        </md-menu>
+                    </md-card-actions>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+
+
+
+            <div class="stat uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-large uk-padding ">
+                <h1 style="margin-top: 20px" class="uk-card-title">gross domestic product at current price</h1>
+                <md-menu>
+                    <md-card-actions layout="row" layout-align="end center">
+
+                        <md-button class="md-icon-button" style="margin-right: 160px" aria-label="Share" ng-click="showAdvanced($event)">
+                            <md-icon>preview</md-icon>
+                        </md-button>
+                        <md-menu>
+                            <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdMenu, $event)">
+                                <md-icon md-menu-origin md-svg-icon="call:phone">today</md-icon>
+                            </md-button>
+                            <md-menu-content width="4">
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        Exsel
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        word
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        pdf
+                                    </md-button>
+                                </md-menu-item>
+
+                            </md-menu-content>
+                        </md-menu>
+                    </md-card-actions>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+
+
+
+</div>
+        <div class="uk-grid-small  uk-child-width-1-1@s  uk-child-width-1-4@l uk-text-center" uk-grid>
+
+
+            <div class="stat uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-large uk-padding ">
+                <h1 style="margin-top: 20px" class="uk-card-title">gross domestic product at current price</h1>
+                <md-menu>
+                    <md-card-actions layout="row" layout-align="end center">
+
+                        <md-button class="md-icon-button" style="margin-right: 160px" aria-label="Share" ng-click="showAdvanced($event)">
+                            <md-icon>preview</md-icon>
+                        </md-button>
+                        <md-menu>
+                            <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdMenu, $event)">
+                                <md-icon md-menu-origin md-svg-icon="call:phone">today</md-icon>
+                            </md-button>
+                            <md-menu-content width="4">
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        Exsel
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        word
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        pdf
+                                    </md-button>
+                                </md-menu-item>
+
+                            </md-menu-content>
+                        </md-menu>
+                    </md-card-actions>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+
+        </div>
+
+    </li>
+
+    <!--End National Account-->
+
+<!--------------------------------------------------------Star price  indices------------------------------------>
+    <li>
+
+        <div class="uk-child-width-1-1@s  uk-child-width-1-4@l uk-text-center" uk-grid>
+            <div class="stat uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-large uk-padding ">
+                <h1 style="margin-top: 20px" class="uk-card-title">consumer price index </h1>
+                <md-menu>
+                    <md-card-actions layout="row" layout-align="end center">
+
+                        <md-button class="md-icon-button" style="margin-right: 180px" aria-label="Share" ng-click="showAdvanced($event)">
+                            <md-icon>build</md-icon>
+                        </md-button>
+                        <md-menu>
+
+                            <md-button class="md-icon-button" style="margin-right: 160px" aria-label="Share" ng-click="showAdvanced($event)">
+                                <md-icon>preview</md-icon>
+                            </md-button>
+                            <md-menu-content width="4">
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        Exsel
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        word
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        pdf
+                                    </md-button>
+                                </md-menu-item>
+
+                            </md-menu-content>
+                        </md-menu>
+                    </md-card-actions>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+            <div class="stat uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-large uk-padding ">
+                <h1 style="margin-top: 20px" class="uk-card-title">inflaction rates for counsumer </h1>
+                <md-menu>
+                    <md-card-actions layout="row" layout-align="end center">
+
+                        <md-button class="md-icon-button" style="margin-right: 180px" aria-label="Share" ng-click="showAdvanced($event)">
+                            <md-icon>build</md-icon>
+                        </md-button>
+                        <md-menu>
+
+                            <md-button class="md-icon-button" style="margin-right: 160px" aria-label="Share" ng-click="showAdvanced($event)">
+                                <md-icon>preview</md-icon>
+                            </md-button>
+                            <md-menu-content width="4">
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        Exsel
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        word
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        pdf
+                                    </md-button>
+                                </md-menu-item>
+
+                            </md-menu-content>
+                        </md-menu>
+                    </md-card-actions>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+            <div class="stat uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-large uk-padding ">
+                <h1 style="margin-top: 20px" class="uk-card-title">price most importnent commodities</h1>
+                <md-menu>
+                    <md-card-actions layout="row" layout-align="end center">
+
+                        <md-button class="md-icon-button" style="margin-right: 160px" aria-label="Share" ng-click="showAdvanced($event)">
+                            <md-icon>preview</md-icon>
+                        </md-button>
+                        <md-menu>
+                            <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdMenu, $event)">
+                                <md-icon md-menu-origin md-svg-icon="call:phone">today</md-icon>
+                            </md-button>
+                            <md-menu-content width="4">
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        Exsel
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        word
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        pdf
+                                    </md-button>
+                                </md-menu-item>
+
+                            </md-menu-content>
+                        </md-menu>
+                    </md-card-actions>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+            <div class="stat uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-large uk-padding ">
+                <h1 style="margin-top: 20px" class="uk-card-title">press release for indices and inflation</h1>
+                <md-menu>
+                    <md-card-actions layout="row" layout-align="end center">
+
+
+                        <md-button class="md-icon-button" style="margin-right: 160px" aria-label="Share" ng-click="showAdvanced($event)">
+                            <md-icon>preview</md-icon>
+                        </md-button>
+                        <md-menu>
+                            <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdMenu, $event)">
+                                <md-icon md-menu-origin md-svg-icon="call:phone">today</md-icon>
+                            </md-button>
+                            <md-menu-content width="4">
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        Exsel
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        word
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        pdf
+                                    </md-button>
+                                </md-menu-item>
+
+                            </md-menu-content>
+                        </md-menu>
+                    </md-card-actions>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+
+        </div>
+        <div class="uk-child-width-1-1@s  uk-child-width-1-4@l uk-text-center" uk-grid>
+            <div class="stat uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-large uk-padding ">
+                <h1 style="margin-top: 20px" class="uk-card-title">monthly reading of records and inflation </h1>
+                <md-menu>
+                    <md-card-actions layout="row" layout-align="end center">
+
+                        <md-button class="md-icon-button" style="margin-right: 180px" aria-label="Share" ng-click="showAdvanced($event)">
+                            <md-icon>build</md-icon>
+                        </md-button>
+                        <md-menu>
+
+                            <md-button class="md-icon-button" style="margin-right: 160px" aria-label="Share" ng-click="showAdvanced($event)">
+                                <md-icon>preview</md-icon>
+                            </md-button>
+                            <md-menu-content width="4">
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        Exsel
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        word
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        pdf
+                                    </md-button>
+                                </md-menu-item>
+
+                            </md-menu-content>
+                        </md-menu>
+                    </md-card-actions>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+
+        </div>
+
+    </li>
+
+<!-------------------------------------------------end price indices---------------------------------->
+
+    <!---------------------------------------------Star foreign trade--------------------------------->
+    <li id="trade">
+
+        <div class="uk-child-width-1-1@s  uk-child-width-1-4@l uk-text-center" uk-grid>
+            <div class="stat uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-large uk-padding ">
+                <h1 style="margin-top: 20px" class="uk-card-title">trade balance </h1>
+                <md-menu>
+                    <md-card-actions layout="row" layout-align="end center">
+
+
+                        <md-button class="md-icon-button" style="margin-right: 160px" aria-label="Share" ng-click="showAdvanced($event)">
+                            <md-icon>preview</md-icon>
+                        </md-button>
+                        <md-menu>
+                            <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdMenu, $event)">
+                                <md-icon md-menu-origin md-svg-icon="call:phone">today</md-icon>
+                            </md-button>
+                            <md-menu-content width="4">
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        Exsel
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        word
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        pdf
+                                    </md-button>
+                                </md-menu-item>
+
+                            </md-menu-content>
+                        </md-menu>
+                    </md-card-actions>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+            <div class="stat uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-large uk-padding ">
+                <h1 style="margin-top: 20px" class="uk-card-title">export unit value index</h1>
+                <md-menu>
+                    <md-card-actions layout="row" layout-align="end center">
+
+                        <md-button class="md-icon-button" style="margin-right: 180px" aria-label="Share" ng-click="showAdvanced($event)">
+                            <md-icon>build</md-icon>
+                        </md-button>
+                        <md-menu>
+
+                            <md-button class="md-icon-button" style="margin-right: 160px" aria-label="Share" ng-click="showAdvanced($event)">
+                                <md-icon>preview</md-icon>
+                            </md-button>
+                            <md-menu-content width="4">
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        Exsel
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        word
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        pdf
+                                    </md-button>
+                                </md-menu-item>
+
+                            </md-menu-content>
+                        </md-menu>
+                    </md-card-actions>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+            <div class="stat uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-large uk-padding ">
+                <h1 style="margin-top: 20px" class="uk-card-title">import quanity index</h1>
+                <md-menu>
+                    <md-card-actions layout="row" layout-align="end center">
+
+
+                        <md-button class="md-icon-button" style="margin-right: 160px" aria-label="Share" ng-click="showAdvanced($event)">
+                            <md-icon>preview</md-icon>
+                        </md-button>
+                        <md-menu>
+                            <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdMenu, $event)">
+                                <md-icon md-menu-origin md-svg-icon="call:phone">today</md-icon>
+                            </md-button>
+                            <md-menu-content width="4">
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        Exsel
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        word
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        pdf
+                                    </md-button>
+                                </md-menu-item>
+
+                            </md-menu-content>
+                        </md-menu>
+                    </md-card-actions>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+            <div class="stat uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-large uk-padding ">
+                <h1 style="margin-top: 20px" class="uk-card-title">export quantity index</h1>
+                <md-menu>
+                    <md-card-actions layout="row" layout-align="end center">
+
+
+                        <md-button class="md-icon-button" style="margin-right: 160px" aria-label="Share" ng-click="showAdvanced($event)">
+                            <md-icon>preview</md-icon>
+                        </md-button>
+                        <md-menu>
+                            <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdMenu, $event)">
+                                <md-icon md-menu-origin md-svg-icon="call:phone">today</md-icon>
+                            </md-button>
+                            <md-menu-content width="4">
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        Exsel
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        word
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        pdf
+                                    </md-button>
+                                </md-menu-item>
+
+                            </md-menu-content>
+                        </md-menu>
+                    </md-card-actions>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+
+
+        </div>
+
+
+
+
+    </li>
+
+
+    <!----------------------------------------------End foreing trade------------------------------------------>
+    <!----------------------------------------------Star sectorial statistics---------------------------------->
+    <li>
+
+        <div class="uk-child-width-1-1@s  uk-child-width-1-4@l uk-text-center" uk-grid>
+            <div class="stat uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-large uk-padding ">
+                <h1 style="margin-top: 20px" class="uk-card-title">press release for indices and inflation</h1>
+                <md-menu>
+                    <md-card-actions layout="row" layout-align="end center">
+
+
+                        <md-button class="md-icon-button" style="margin-right: 160px" aria-label="Share" ng-click="showAdvanced($event)">
+                            <md-icon>preview</md-icon>
+                        </md-button>
+                        <md-menu>
+                            <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdMenu, $event)">
+                                <md-icon md-menu-origin md-svg-icon="call:phone">today</md-icon>
+                            </md-button>
+                            <md-menu-content width="4">
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        Exsel
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        word
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="ctrl.redial($event)">
+                                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                        pdf
+                                    </md-button>
+                                </md-menu-item>
+
+                            </md-menu-content>
+                        </md-menu>
+                    </md-card-actions>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+
+        </div>
+
+    </li>
+    <!----------------------------------------------End sectorial statistics---------------------------------->
+
+</ul>

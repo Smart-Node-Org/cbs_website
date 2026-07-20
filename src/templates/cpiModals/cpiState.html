@@ -1,0 +1,222 @@
+<mds-modal style="width: 100%;" closable>
+    <mds-modal-header>
+        <mds-modal-title >
+            <div class="md-toolbar-tools" style="background-color: #2d3669">
+                <h2 style="color: #EBF7E5"> CPI States Table </h2>
+            </div>
+        </mds-modal-title>
+    </mds-modal-header>
+    <mds-modal-body style="padding: 40px;background-color: rgb(255,255,255);">
+        <div class="container-fluid">
+            <ul uk-tab>
+                <li><a href="#">Section</a></li>
+                <li><a href="#">Level</a></li>
+            </ul>
+        
+            <ul class="uk-switcher uk-margin">
+                <!-- start Cpi-sudan-section-->
+                <li>
+                    <table  id="datatablecpistatesection" class="table table-bordered " >
+                        <thead>
+                         <tr class="khlee">
+                            <th class="medium-white">No</th>
+                            <th class="medium-white">S-name</th>
+                            <th  class="medium-white">Years</th>
+                            <th  class="medium-white" colspan="2">Urban</th>
+                            <th  class="medium-white" colspan="2">Rural</th>
+                            <th class="medium-white" colspan="2">Overall</th>
+                        </tr>
+                        <tr class="active">
+                            <td colspan="3"></td>
+                            <td class="medium-bold">Standard</td>
+                            <td class="medium-bold">Ongoing</td>
+                            <td class="medium-bold">Standard</td>
+                            <td class="medium-bold">Ongoing</td>
+                            <td class="medium-bold">Standard</td>
+                            <td class="medium-bold">Ongoing</td>
+                            <td></td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="cpiss in getCpiStateSection">
+                            <td>{{$index+1}}</td>
+                            <td class="medium-bold">{{cpiss.name}}</td>
+                            <td class="medium-bold">{{cpiss.year}}</td>
+                            <td>{{cpiss.urban_standard}}</td>
+                            <td>{{cpiss.urban_ongoing}}</td>
+                            <td>{{cpiss.rural_standard}}</td>
+                            <td>{{cpiss.rural_ongoing}}</td>
+                            <td>{{cpiss.overall_rural}}</td>
+                            <td>{{cpiss.overall_urban}}</td>
+                        </tr>
+        
+                        </tbody>
+                    </table>
+                </li>
+                <!-- End Cpi-sudan-section-->
+        
+                <!-- start Cpi-sudan-Level-->
+                <li>
+        
+                    <table class="table table-bordered" id="getCpiStateLevel">
+                        <thead>
+                        <tr class="khlee">
+                            <th class="medium-white">No</th>
+                            <th class="medium-white" >S-name</th>
+                             <th class ="medium-white" >Year</th>
+                            <th class="medium-white" colspan="2">Level 1</th>
+                            <th class="medium-white" colspan="2">Level 2</th>
+                            <th class="medium-white" colspan="2">Level 3</th>
+                          <th class="medium-white" colspan="2">Level 4</th>
+                            <th class="medium-white" colspan="2">Level 5</th>
+                        </tr>
+                        <tr class="active">
+                            <td colspan="3"></td>
+                            <td class="medium-bold">Standard</td>
+                            <td class="medium-bold">Ongoing</td>
+                            <td class="medium-bold">Standard</td>
+                            <td class="medium-bold">Ongoing</td>
+                            <td class="medium-bold">Standard</td>
+                            <td class="medium-bold">Ongoing</td>
+                            <td class="medium-bold">Standard</td>
+                            <td class="medium-bold">Ongoing</td>
+                            <td class="medium-bold">Standard</td>
+                            <td class="medium-bold">Ongoing</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr  ng-repeat="cpisl in getCpiStateLevel">
+                            <td>{{$index+1}}</td>
+                            <td class="medium-bold">{{cpisl.name}}</td>
+                            <td class="medium-bold">{{cpisl.year}}</td>
+                            <td>{{cpisl.l1_standard}}</td>
+                            <td>{{cpisl.l1_ongoing}}</td>
+                            <td>{{cpisl.l2_standard}}</td>
+                            <td>{{cpisl.l2_ongoing}}</td>
+                            <td>{{cpisl.l3_standard}}</td>
+                            <td>{{cpisl.l3_ongoing}}</td>
+                            <td>{{cpisl.l4_standard}}</td>
+                            <td>{{cpisl.l4_ongoing}}</td>
+                            <td>{{cpisl.l5_standard}}</td>
+                            <td>{{cpisl.l5_ongoing}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <!-- End Cpi-sudan-level-->
+            </ul>
+        
+        </div>
+    </mds-modal-body>
+</mds-modal>
+<!-- 
+<md-dialog  style="width: 100%;">
+    <md-toolbar    style="color:#29303b;" >
+        <div class="md-toolbar-tools" style="background-color: #2d3669">
+            <h2 style="color: #EBF7E5"> CPI States Table </h2>
+        </div>
+        <md-dialog-content style="padding: 40px;background-color: rgb(255,255,255);">
+
+<div class="container-fluid">
+    <ul uk-tab>
+        <li><a href="#">Section</a></li>
+        <li><a href="#">Level</a></li>
+    </ul>
+
+    <ul class="uk-switcher uk-margin">
+        start Cpi-sudan-section
+        <li>
+            <table  id="datatablecpistatesection" class="table table-bordered " >
+                <thead>
+                 <tr class="khlee">
+                    <th class="medium-white">No</th>
+                    <th class="medium-white">S-name</th>
+                    <th  class="medium-white">Years</th>
+                    <th  class="medium-white" colspan="2">Urban</th>
+                    <th  class="medium-white" colspan="2">Rural</th>
+                    <th class="medium-white" colspan="2">Overall</th>
+                </tr>
+                <tr class="active">
+                    <td colspan="3"></td>
+                    <td class="medium-bold">Standard</td>
+                    <td class="medium-bold">Ongoing</td>
+                    <td class="medium-bold">Standard</td>
+                    <td class="medium-bold">Ongoing</td>
+                    <td class="medium-bold">Standard</td>
+                    <td class="medium-bold">Ongoing</td>
+                    <td></td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="cpiss in getCpiStateSection">
+                    <td>{{$index+1}}</td>
+                    <td class="medium-bold">{{cpiss.name}}</td>
+                    <td class="medium-bold">{{cpiss.year}}</td>
+                    <td>{{cpiss.urban_standard}}</td>
+                    <td>{{cpiss.urban_ongoing}}</td>
+                    <td>{{cpiss.rural_standard}}</td>
+                    <td>{{cpiss.rural_ongoing}}</td>
+                    <td>{{cpiss.overall_rural}}</td>
+                    <td>{{cpiss.overall_urban}}</td>
+                </tr>
+
+                </tbody>
+            </table>
+        </li>
+       End Cpi-sudan-section
+
+        start Cpi-sudan-Level
+        <li>
+
+            <table class="table table-bordered" id="getCpiStateLevel">
+                <thead>
+                <tr class="khlee">
+                    <th class="medium-white">No</th>
+                    <th class="medium-white" >S-name</th>
+                     <th class ="medium-white" >Year</th>
+                    <th class="medium-white" colspan="2">Level 1</th>
+                    <th class="medium-white" colspan="2">Level 2</th>
+                    <th class="medium-white" colspan="2">Level 3</th>
+                  <th class="medium-white" colspan="2">Level 4</th>
+                    <th class="medium-white" colspan="2">Level 5</th>
+                </tr>
+                <tr class="active">
+                    <td colspan="3"></td>
+                    <td class="medium-bold">Standard</td>
+                    <td class="medium-bold">Ongoing</td>
+                    <td class="medium-bold">Standard</td>
+                    <td class="medium-bold">Ongoing</td>
+                    <td class="medium-bold">Standard</td>
+                    <td class="medium-bold">Ongoing</td>
+                    <td class="medium-bold">Standard</td>
+                    <td class="medium-bold">Ongoing</td>
+                    <td class="medium-bold">Standard</td>
+                    <td class="medium-bold">Ongoing</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr  ng-repeat="cpisl in getCpiStateLevel">
+                    <td>{{$index+1}}</td>
+                    <td class="medium-bold">{{cpisl.name}}</td>
+                    <td class="medium-bold">{{cpisl.year}}</td>
+                    <td>{{cpisl.l1_standard}}</td>
+                    <td>{{cpisl.l1_ongoing}}</td>
+                    <td>{{cpisl.l2_standard}}</td>
+                    <td>{{cpisl.l2_ongoing}}</td>
+                    <td>{{cpisl.l3_standard}}</td>
+                    <td>{{cpisl.l3_ongoing}}</td>
+                    <td>{{cpisl.l4_standard}}</td>
+                    <td>{{cpisl.l4_ongoing}}</td>
+                    <td>{{cpisl.l5_standard}}</td>
+                    <td>{{cpisl.l5_ongoing}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </li>
+      End Cpi-sudan-level
+    </ul>
+
+</div>
+        </md-dialog-content>
+    </md-toolbar>
+</md-dialog> -->

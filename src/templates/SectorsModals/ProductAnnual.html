@@ -1,0 +1,75 @@
+<mds-modal style="width: 100%;" closable>
+    <mds-modal-header >
+        <mds-modal-title >
+            <div class="md-toolbar-tools" style="background-color: #2d3669">
+                <h2 style="color: #EBF7E5" tr="modals.SAT">  </h2>
+            </div>
+        </mds-modal-title>
+    </mds-modal-header>
+    <mds-modal-body >
+        <div class="container-fluid">
+            <label tr="modals.Chooseyear"> </label>
+            <!-- <md-select  name="type" ng-change="changeProductAnnualForState()"  ng-model="YearsOFState.year" required>
+                <md-option ng-value="{{year.year}}" ng-repeat="year in YearsOFState">{{year.year}}</md-option>
+            </md-select> -->
+            <div >
+               <select name="type" ng-change="changeProductAnnualForState()"  ng-model="YearsOFState.year" required>
+                    <option ng-value="{{year.year}}" ng-repeat="year in YearsOFState">{{year.year}}</option>
+                </select>
+            </div>
+            <table class="table table-bordered" id="uniqueProducts">
+                <thead>
+                <tr class="khlee" >
+                    <th rowspan="2" style="color: #ffffdd" class="medium">State</th>
+                    <th colspan="4"  style="color: #ffffdd" class="medium" ng-repeat="productState in uniqueProducts">{{productState.product_title}}</th>
+                </tr>
+                <tr class="active" >
+                    <th   class="medium" ng-repeat="value in uniqueProducts.concat(uniqueProducts).concat(uniqueProducts).concat(uniqueProducts) track by $index">{{$index%4 == 0?'main_value_title':$index%4 == 1?'sub_value_title':$index%4 == 2?'production':'productivity'}}</th>
+                </tr>
+        
+                </thead>
+                <tbody>
+                <tr class="pro{{$index}}" ng-repeat="productState in uniqueStates" >
+                    <td  style="font-weight: bold" class="medium">{{productState.state_name}}</td>
+                    <td ng-init="initDataTables($last,'uniqueProducts')" ng-repeat="product in uniqueProducts.concat(uniqueProducts).concat(uniqueProducts).concat(uniqueProducts) track by $index">
+                        <p class="medium"></p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </mds-modal-body>
+</mds-modal>
+<!-- <md-dialog  style="width: 100%;">
+    <md-toolbar    style="color:#29303b;" >
+       
+        <md-dialog-content style="padding: 40px;background-color: rgb(255,255,255);">
+<div class="container-fluid">
+    <label> Choose Year</label>
+    <md-select  name="type" ng-change="changeProductAnnualForState()"  ng-model="YearsOFState.year" required>
+        <md-option ng-value="{{year.year}}" ng-repeat="year in YearsOFState">{{year.year}}</md-option>
+    </md-select>
+    <table class="table table-bordered" id="uniqueProducts">
+        <thead>
+        <tr class="khlee" >
+            <th rowspan="2" style="color: #ffffdd" class="medium">State</th>
+            <th colspan="4"  style="color: #ffffdd" class="medium" ng-repeat="productState in uniqueProducts">{{productState.product_title}}</th>
+        </tr>
+        <tr class="active" >
+            <th   class="medium" ng-repeat="value in uniqueProducts.concat(uniqueProducts).concat(uniqueProducts).concat(uniqueProducts) track by $index">{{$index%4 == 0?'main_value_title':$index%4 == 1?'sub_value_title':$index%4 == 2?'production':'productivity'}}</th>
+        </tr>
+
+        </thead>
+        <tbody>
+        <tr class="pro{{$index}}" ng-repeat="productState in uniqueStates" >
+            <td  style="font-weight: bold" class="medium">{{productState.state_name}}</td>
+            <td ng-init="initDataTables($last,'uniqueProducts')" ng-repeat="product in uniqueProducts.concat(uniqueProducts).concat(uniqueProducts).concat(uniqueProducts) track by $index">
+                <p class="medium"></p>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+        </md-dialog-content>
+    </md-toolbar>
+</md-dialog> -->

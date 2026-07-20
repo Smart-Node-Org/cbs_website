@@ -1,0 +1,14 @@
+{
+    "all":"All",
+    "economic":"Economic",
+    "IndicatorsByGroups":"IndicatorsByGroups",
+    "Social":"Social",
+    "SDJ":"SDJ",
+    "title":"Indicators By Single",
+    "table_name":"Name",
+    "table_unit":"Unit",
+    "table_value":"Value",
+    "bulding":"Building Materials",
+    "food":"Food Supplies",
+    "foriegn_title":"Foriegn Currency Prices"
+}

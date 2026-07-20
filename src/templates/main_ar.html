@@ -1,0 +1,317 @@
+<div>
+<section style="background: url('img/download.jfif') ; ">
+    <div class="statistic text-center" >
+        <div class="row" style="margin-right: 0!important;">
+            <div style="margin-top: 30px">
+                <div  class="col-xs-12 col-sm-4 col-md-4 ">
+                    <img src="img/iegal.png">
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 ">
+                    <h1 style="color: #3e4095;font-family: gotham-rounded, helvetica neue, helvetica; font-weight: bold;line-height: 1.6;" class="republic"><span style="font-size: 18px" class="republicHeader">جمهورية السودان</span><br> <span style="font-size: 23px" class="cabinetHeadeer">مجلس الوزراء</span><br> <span style="font-size: 30px" class="statisticHeader">الجهاز المركزي للإحصاء
+</span></h1>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 ">
+                    <img src="img/cbslogo.png" style="width: 180px;height: 180px">
+                    <h1 id="counter_ar" class="republic"></h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Start Navbar-->
+<nav class="navbar"   ng-mouseleave="open='';margin=''" style="height: {{margin}}px;">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" style="border:2px solid #eeeeee">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar" style="background-color: #eeeeee"></span>
+                <span class="icon-bar" style="background-color: #eeeeee"></span>
+                <span class="icon-bar" style="background-color: #eeeeee"></span>
+            </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav  navbar-right">
+                <li><a ui-sref="app.contact" style="color: white;font-size: 22px; font-weight: bold;" ng-mouseenter="open='';margin=''">اتصل بنا </a></li>
+				                <li ><a ui-sref="app.metadata"  style="float: left; color: white;font-size: 22px; font-weight: bold" ng-mouseenter="open='';margin=''">البيانات الوصفية</a></li>
+
+                <li ><a ui-sref="app.news" style="color: white;font-size: 22px; font-weight: bold;" ng-mouseenter="open='';margin=''">الأخبار</a></li>
+                <li><a ui-sref="app.Publications" style="color: white;font-size: 22px; font-weight: bold;" ng-mouseenter="open='';margin=''">الإصدارات </a></li>
+                <li><a ui-sref="app.Indicators" style="color: white;font-size: 22px; font-weight: bold;" ng-mouseenter="open='';margin=''">المؤشرات</a></li>
+                <li class=" nav-item dropdown has-megamenu {{open}} hidden-xs" ng-mouseenter="open='open';margin=250">
+                    <a ui-sref="app.statisitics" class="nav-link dropdown-toggle" style="color: white;font-size:18px; font-weight: bold;padding: 15px!important;"><i class="fa fa-caret-down hidden-xs"></i> الاحصاءات
+                        </a>
+                    <div class="dropdown-menu mega-dropdownNavbar hidden-xs container " style="top:50px;padding: 50px;width: 99%!important;transform: translateY(5px);background: #4345B7;" role="menu">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-4 col-md-4">
+                                <div class="col-megamenu" style="float: right">
+                                    <h4 class="title" style="color: #ffffff;font-size: 20px;transform: translateX(60px)">SDG</h4>
+                                    <ul class="list-unstyled">
+                                    </ul>
+                                </div>  <!-- col-megamenu.// -->
+                            </div>
+                            <div class="col-xs-12 col-sm-4 col-md-4">
+                                <div class="col-megamenu" style="float: right">
+                                    <h4 class="title" style="color: #ffffff;font-size: 20px;transform: translateX(60px)">الاجتماعيه</h4>
+                                    <ul class="list-unstyled">
+                                        <li><a style="display: inline !important; color:#ffffff; font-size: 15px; font-weight: bold" ui-sref="app.statisitics" ng-click="changeStatistics('pop')"><span class="fa fa-chevron-circle-left text-primary" style="float: right;display: inline!important;margin-left: 10px;transform: translateY(5px);margin-right: 20px"></span><span style="float: right">السكان</span></a></li>
+                                        <li><a style="display: inline !important; color:#ffffff; font-size: 15px; font-weight: bold" ui-sref="app.statisitics" ng-click="changeStatistics('health')"><span class="fa fa-chevron-circle-left text-primary" style="float: right;display: inline!important;margin-left: 10px;transform: translateY(5px);margin-right: 20px"></span><span style="float: right">الصحة</span></a></li>
+                                        <li><a style="display: inline !important; color:#ffffff; font-size: 15px; font-weight: bold" ui-sref="app.statisitics" ng-click="changeStatistics('family')"><span class="fa fa-chevron-circle-left text-primary" style="float: right;display: inline!important;margin-left: 10px;transform: translateY(5px);margin-right: 20px"></span><span style="float: right">الأسرة</span></a></li>
+                                        <li><a style="display: inline !important; color:#ffffff; font-size: 15px; font-weight: bold" ui-sref="app.statisitics" ng-click="changeStatistics('labor')"><span class="fa fa-chevron-circle-left text-primary" style="float: right;display: inline!important;margin-left: 10px;transform: translateY(5px);margin-right: 20px"></span><span style="float: right">العمل والهجرة</span></a></li>
+                                    </ul>
+                                </div>  <!-- col-megamenu.// -->
+                            </div><!-- end col-3 -->
+                            <div class="col-xs-12 col-sm-4 col-md-4">
+                                <div class="col-megamenu" style="float: right">
+                                    <h4 class="title" style="color: #ffffff;font-size: 20px;transform: translateX(60px)">الاقتصاديه</h4>
+                                    <ul class="list-unstyled">
+                                        <li><a style="display: inline!important; color: #ffffff; font-size: 15px; font-weight: bold;" ui-sref="app.statisitics" ng-click="changeStatistics('GDP')"><span class="fa fa-chevron-circle-left text-primary" style="float: right;display: inline!important;margin-left: 10px;transform: translateY(5px);margin-right: 20px"></span><span style="float: right">الدخل القومي</span></a></li>
+                                        <li><a style="display: inline!important; color:#ffffff; font-size: 15px; font-weight: bold;" ui-sref="app.statisitics" ng-click="changeStatistics('CPI')"><span class="fa fa-chevron-circle-left text-primary" style="float: right;display: inline!important;margin-left: 10px;transform: translateY(5px);margin-right: 20px"></span><span style="float: right">مؤشرات الأسعار</span></a></li>
+                                        <li><a style="display: inline!important; color:#ffffff; font-size: 15px; font-weight: bold;" ui-sref="app.statisitics" ng-click="changeStatistics('Foreign')"><span class="fa fa-chevron-circle-left text-primary" style="float: right;display: inline!important;margin-left: 10px;transform: translateY(5px);margin-right: 20px"></span><span style="float: right">التجارة الخارجية</span></a></li>
+                                        <li><a style="display: inline!important; color:#ffffff; font-size: 15px; font-weight: bold;" ui-sref="app.statisitics" ng-click="changeStatistics('sectoral')"><span class="fa fa-chevron-circle-left text-primary" style="float: right;display: inline!important;margin-left: 10px;transform: translateY(5px);margin-right: 20px"></span><span style="float: right">القطاعيه</span></a></li>
+                                    </ul>
+                                </div>  <!-- col-megamenu.// -->
+                            </div><!-- end col-3 -->
+                        </div><!-- end row -->
+                    </div> <!-- dropdown-mega-menu.// -->
+                </li>
+                <li class="nav-item hidden-lg hidden-sm hidden-md" ng-mouseenter="margin=''">
+                    <a ui-sref="app.statisitics" class="nav-link" style="color: white;font-size:22px; font-weight: bold;padding: 15px!important;">الإحصاءات</a></li>
+                <li><a ui-sref="app.about" style="color: white;font-size: 22px; font-weight: bold;" ng-mouseenter="open='';margin=''">عن الجهاز  </a></li>
+                <li class="active"><a ui-sref="app.home" style="color: white;font-size: 22px; font-weight: bold;" ng-mouseenter="open='';margin=''">الرئيسية</a
+                </li></ul>
+            <ul class="nav navbar-nav navbar-left">
+                <li><a style="float: left;color: white;font-size: 22px; font-weight: bold" ng-click="langShiftToEn()">En</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav><!-- end navbar-->
+</div>
+
+        <!--<header id="header" class="fixed-top" style="background: #3e4095;height: 80px">-->
+            <!--<div class="container d-flex align-items-center" >-->
+
+                <!--<nav class="nav-menu d-none d-lg-block navigation-main" style="margin-top: 10px">-->
+                    <!--<ul style="margin-left: -80px">-->
+                        <!--<li class="active"><a ui-sref="app.home" style="color: white;font-size: 15px" >HOME</a></li>-->
+                        <!--<li class="drop-down"><a ui-sref="app.statisitics" style="color: white;font-size:15px">STATISTICS</a>-->
+
+                        <!--</li>-->
+                        <!--<li><a ui-sref="app.Indicators" style="color: white;font-size: 15px">INDICATORS </a></li>-->
+                        <!--&lt;!&ndash;<li><a ui-sref="app.poplications" style="color: white">POPLICATIONS </a></li>&ndash;&gt;-->
+
+                        <!--<li ><a ui-sref="app.news" style="color: white;font-size: 15px">NEWS</a>-->
+
+                        <!--</li>-->
+                        <!--<li><a ui-sref="app.about" style="color: white;font-size: 15px">ABOUT </a></li>-->
+
+                        <!--<li><a ui-sref="app.contact" style="color: white;font-size: 15px">CONTACT</a></li>-->
+
+
+                        <!--<li><a ui-sref="app.metadata" style="position: relative;left: 570px;color: white;font-size: 15px">METADATA</a></li>-->
+
+
+                        <!--<li><a style="color: white;position: relative;left:580px;font-size: 15px" >Ar</a></li>-->
+
+                    <!--</ul>-->
+
+                <!--</nav>&lt;!&ndash; .nav-menu &ndash;&gt;-->
+
+
+            <!--</div>-->
+        <!--</header>&lt;!&ndash; End Header &ndash;&gt;-->
+
+
+
+<!--<nav class="navbar navbar-inverse " style="background-color:#8d25e8;height: 80px">-->
+    <!--<div class="container-fluid"style="color: white">-->
+        <!--<div class="navbar-header">-->
+            <!--<button class="navbar-toggle" data-toggle="collapse" data-target="#y">-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+            <!--</button>-->
+            <!--<a class="navbar-brand" href="#">Mega Store</a>-->
+        <!--</div>-->
+        <!--<div id="y" class="collapse navbar-collapse">-->
+            <!--<ul class="nav navbar-nav">-->
+                <!--<li><a href="#"style="color: white;font-size: 25px" >Home</a></li>-->
+                <!--<li><a href="#">Store</a></li>-->
+                <!--<li><a href="#">Fourm</a></li>-->
+                <!--<li><a href="#">About</a></li>-->
+                <!--<li><a href="#">Contact</a></li>-->
+            <!--</ul>-->
+
+            <!--<ul class="nav navbar-nav navbar-right">-->
+                <!--<p class="navbar-text">Welcome User</p>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</nav>-->
+
+
+
+<!--<nav class="navbar navbar-default navbar-static">-->
+    <!--<div class="navbar-header">-->
+        <!--<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">-->
+            <!--<span class="sr-only">Toggle navigation</span>-->
+            <!--<span class="icon-bar"></span>-->
+            <!--<span class="icon-bar"></span>-->
+            <!--<span class="icon-bar"></span>-->
+        <!--</button>-->
+
+    <!--</div>-->
+
+    <!--<div class="collapse navbar-collapse js-navbar-collapse">-->
+        <!--<ul class="nav navbar-nav">-->
+            <!--<li class="dropdown dropdown-large">-->
+                <!--<a href="#">Some link</a>-->
+            <!--</li>-->
+            <!--<li class="dropdown dropdown-large">-->
+                <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Statistics <b class="caret"></b></a>-->
+
+                <!--<ul class="dropdown-menu dropdown-menu-large row">-->
+                    <!--<li class="col-sm-6">-->
+                        <!--<ul>-->
+                            <!--<li class="dropdown-header">Econamic</li>-->
+                            <!--<li><a href="#">Example</a></li>-->
+                            <!--<li><a href="#">Example</a></li>-->
+                            <!--<li><a href="#">Example</a></li>-->
+                            <!--<li><a href="#">Example</a></li>-->
+                            <!--<li><a href="#">Example</a></li>-->
+                            <!--<li><a href="#">Example</a></li>-->
+                            <!--<li class="divider"></li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                    <!--<li class="col-sm-6">-->
+                        <!--<ul>-->
+                            <!--<li class="dropdown-header">Soical</li>-->
+                            <!--<li><a href="#">Example</a></li>-->
+                            <!--<li><a href="#">Example</a></li>-->
+                            <!--<li><a href="#">Example</a></li>-->
+                            <!--<li><a href="#">Example</a></li>-->
+                            <!--<li><a href="#">Example</a></li>-->
+                            <!--<li class="divider"></li>-->
+
+                        <!--</ul>-->
+                    <!--</li>-->
+
+
+                <!--</ul>-->
+
+            <!--</li>-->
+
+
+
+
+
+
+        <!--</ul>-->
+
+    <!--</div>&lt;!&ndash; /.nav-collapse &ndash;&gt;-->
+<!--</nav>-->
+
+<section class="">
+    <div ui-view="sub"></div>
+</section>
+
+<!-- Start Footer -->
+<footer id="footer" >
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <!-- Start CBS -->
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 footer-contact">
+                    <hr style="background-color: white;width: 100%!important;transform: translateY(27px)">
+                    <h2 style="color:#eeeeee;margin-top: -19px;font-size: x-large;text-align: right">تواصل معنا</h2>
+                    <ul class="list-unstyled" style="position: relative;">
+                        <li style="text-align: right; margin-bottom: 0px">
+                            <a href=""><span class="fa fa-youtube text-primary footerIcons" style="margin-right:30px;color: #eeeeee!important;transform: translateY(-3px);font-size: 25px;text-align: left;border-radius: 50%;"></span></a>
+                            <a href=""><span class="fa fa-facebook text-primary footerIcons" style="margin-right:30px;color: #eeeeee!important;transform: translateY(-3px);font-size: 25px;text-align: center;border-radius: 50%;"></span></a>
+                            <a href=""><span class="fa fa-twitter text-primary footerIcons" style="margin-right:30px;color: #eeeeee!important;transform: translateY(-3px);font-size: 25px;text-align: center;border-radius: 50%;"></span></a>
+                            <a href=""><span class="fa fa-linkedin text-primary footerIcons" style="margin-right:10px;color: #eeeeee!important;transform: translateY(-3px);font-size: 25px;text-align: right;border-radius: 50%;"></span></a>
+                        </li>
+                        <li style="text-align: right;"><span class="fa fa-chevron-left text-primary" style="float:right;color: white!important;transform: translateY(7px)"></span><span style="margin-right: 10px;font-size: large"> شارع 60</span></li>
+                        <li style="text-align: right;"><span class="fa fa-chevron-left text-primary" style="float:right;color: white!important;transform: translateY(7px)"></span><span style="margin-right: 10px;font-size: large"> الخرطوم-السودان-337782</span></li>
+                        <li style="text-align: right;"><span class="fa fa-chevron-left text-primary" style="float:right;color: white!important;transform: translateY(7px)"></span><span style="margin-right: 10px;font-size: large"> جمهورية السودان</span></li>
+                        <li style="text-align: right;"><span class="fa fa-chevron-left text-primary" style="float:right;color: white!important;transform: translateY(7px)"></span><span style="margin-right: 10px;font-size: large">الهاتف : 0122028025</span></li>
+                        <li style="text-align: right;margin-bottom: 30px "><span class="fa fa-chevron-left text-primary" style="float:right;color: white!important;transform: translateY(7px)"></span><span style="margin-right: 10px;font-size: large">   CBS@gmail.com : البريد الإلكتروني</span></li>
+                    </ul>
+                </div>
+                <!-- End CBS -->
+
+                <!--Start Useful Link-->
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 footer-links">
+                    <hr style="background-color: white;width: 100%!important;transform: translateY(27px)">
+                    <div style="float: right">
+                    <h2 style="color:#eeeeee;margin-top: -19px;font-size: x-large">روابط مفيدة</h2>
+                        <ul class="list-unstyled" style="margin-top: 20px!important;">
+                        <li  style="margin-bottom: 11px;"><a ui-sref="" style=""><span class="fa fa-chevron-left text-primary" style="color: white!important;position:absolute;right: 10px;transform: translateY(2px)"></span><span style="position:absolute;right:30px;float: left;font-size: large;font-family: gotham-rounded, helvetica neue, helvetica !important;"> الرئيسية</span></a></li>
+                        <li  style="margin-bottom: 11px"><a ui-sref="" style=""><span class="fa fa-chevron-left text-primary" style="color: white!important;position:absolute;right: 10px;transform: translateY(2px)"></span><span style="position:absolute;right:30px;float: left;font-size: large;font-family: gotham-rounded, helvetica neue, helvetica !important;"> عن الجهاز </span></a></li>
+                        <li  style="margin-bottom: 11px"><a ui-sref="" style=""><span class="fa fa-chevron-left text-primary" style="color: white!important;position:absolute;right: 10px;transform: translateY(2px)"></span><span style="position:absolute;right:30px;float: left;font-size: large;font-family: gotham-rounded, helvetica neue, helvetica !important;"> الاحصاءات</span></a></li>
+                        <li  style="margin-bottom: 11px"><a ui-sref="" style=""><span class="fa fa-chevron-left text-primary" style="color: white!important;position:absolute;right: 10px;transform: translateY(2px)"></span><span style="position:absolute;right:30px;float: left;font-size: large;font-family: gotham-rounded, helvetica neue, helvetica !important;"> تواصل معنا</span></a></li>
+                        <li  style="margin-bottom: 11px"><a ui-sref="" style=""><span class="fa fa-chevron-left text-primary" style="color: white!important;position:absolute;right: 10px;transform: translateY(2px)"></span><span style="position:absolute;right:30px;float: left;font-size: large;font-family: gotham-rounded, helvetica neue, helvetica !important;"> سياسة الخصوصية</span></a></li>
+                    </ul>
+                    </div>
+                </div>
+                <!--End Useful Link-->
+
+                <!--Start Our Services-->
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 footer-links">
+                    <hr style="background-color: white;width: 100%!important;transform: translateY(27px)">
+                    <div style="float: right">
+                    <h2 style="color:#eeeeee;margin-top: -15px;font-size: x-large">خدماتنا</h2>
+                        <ul class="list-unstyled" style="">
+                        <li  style="margin-bottom: 11px"><a ui-sref="" style=""><span class="fa fa-chevron-left text-primary" style="color: white!important;position:absolute;right: 10px;transform: translateY(2px)"></span><span style="position:absolute;right:30px;float: left;font-size: large;font-family: gotham-rounded, helvetica neue, helvetica !important;"> الاحصاءات</span></a></li>
+                        <li  style="margin-bottom: 11px"><a ui-sref="" style=""><span class="fa fa-chevron-left text-primary" style="color: white!important;position:absolute;right: 10px;transform: translateY(2px)"></span><span style="position:absolute;right:30px;float: left;font-size: large;font-family: gotham-rounded, helvetica neue, helvetica !important;"> طلب البيانات الإحصائية</span></a></li>
+                        <li  style="margin-bottom: 11px"><a ui-sref="" style=""><span class="fa fa-chevron-left text-primary" style="color: white!important;position:absolute;right: 10px;transform: translateY(2px)"></span><span style="position:absolute;right:30px;float: left;font-size: large;font-family: gotham-rounded, helvetica neue, helvetica !important;"> الاستشارة الإحصائية </span></a></li>
+                        <li  style="margin-bottom: 11px"><a ui-sref="" style=""><span class="fa fa-chevron-left text-primary" style="color: white!important;position:absolute;right: 10px;transform: translateY(2px)"></span><span style="position:absolute;right:30px;float: left;font-size: large;font-family: gotham-rounded, helvetica neue, helvetica !important;"> التدريب الإحصائي </span></a></li>
+                        <li  style="margin-bottom: 11px"><a ui-sref="" style=""><span class="fa fa-chevron-left text-primary" style="color: white!important;position:absolute;right: 10px;transform: translateY(2px)"></span><span style="position:absolute;right:30px;float: left;font-size: large;font-family: gotham-rounded, helvetica neue, helvetica !important;"> المسح الإحصائي</span></a></li>
+                    </ul>
+                    </div>
+                </div>
+                <!--End Our Services-->
+
+                <!--Start Join Our Newsletter-->
+<!--                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 footer-newsletter">-->
+<!--                    <h2 style="color:#eeeeee;float: right;font-size: x-large;margin-top: 4px" class="hidden-xs hidden-sm">انضم إلى نشرتنا الإخبارية</h2>-->
+<!--                    <hr style="background-color: white;margin-top: 37px;width: 100%" class="hidden-xs hidden-sm">-->
+<!--                    <h2 style="color:#eeeeee;text-align: center;font-size:x-large;margin-top: 10px" class="hidden-md hidden-lg">انضم إلى نشرتنا الإخبارية</h2>-->
+<!--                    <hr style="background-color: white;margin-top: -10px;width: 100%" class="hidden-md hidden-lg">-->
+<!--                    <div class="text-center">-->
+<!--                    <input type="text" id="email" class="form-control" ng-model="email" placeholder="أدخل الإيميل للاشتراك">-->
+<!--                     <button class="btn btn-primary" style="font-size: large;margin-top: -10px">إضغط للاشتراك</button>-->
+
+<!--                    </div>-->
+<!--                </div>-->
+                </div>
+                <!--End Join Our Newsletter-->
+
+            </div>
+        </div>
+    </div>
+    <!--Start Join Our Newsletter-->
+    <!--End Join Our Newsletter-->
+    <div class="container d-md-flex py-4" >
+
+        <div class="mr-md-auto text-center text-md-left" style="margin-bottom: 30px">
+            <div class="copyright">
+                <h4 style="color: white"> <SPAN style="font-size: large;color: yellow">  حقوق النشر &copy;</SPAN>
+                    <br><span>  جميع الحقوق محفوظة للجهاز المركزي للإحصاء</span>
+                </h4></div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/company-free-html-bootstrap-template/ -->
+            </div>
+        </div>
+
+    </div>
+</footer>
+<!-- End Footer -->

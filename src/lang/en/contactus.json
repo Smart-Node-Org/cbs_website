@@ -1,0 +1,9 @@
+{
+    "name":"Name of branch : ",
+    "address":"Our Address",
+    "email":"Email",
+    "contactcell":"Contact Us",
+    
+    "message":" Your message has been sent. Thank you!",
+    "sendbtn":"Send Message"
+}

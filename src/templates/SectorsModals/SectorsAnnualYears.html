@@ -1,0 +1,68 @@
+<mds-modal style="width: 100%;" closable>
+    <mds-modal-header>
+        <mds-modal-title >
+            <div class="md-toolbar-tools" style="background-color: #2d3669">
+                <h2 style="color: #EBF7E5"  tr="modals.SectorsAnnualTable"> </h2>
+            </div>
+        </mds-modal-title>
+    </mds-modal-header>
+    <mds-modal-body style="padding: 40px;background-color: rgb(255,255,255);">
+        <div class="container-fluid">
+            <label>Choose Year</label>
+            <md-select  name="type" ng-change="changeSectorAnnualYear()" ng-model="YearsOfSectorAnnual.year" required>
+                <md-option ng-value="{{year.year}}" ng-repeat="year in YearsOfSectorAnnual">{{year.year}}</md-option>
+            </md-select>
+            <table class="table table-bordered" id="AllSectorAnnualYears">
+                <thead>
+                <tr class="khlee">
+                    <th  style="color: #ffffdd" class="medium"  tr="modals.Sector"></th>
+                    <th style="color: #ffffdd" class="medium"  tr="modals.Contributionrate"></th>
+                    <th style="color: #ffffdd" class="medium"  tr="modals.Growthrate"></th>
+                </tr>
+        
+                </thead>
+                <tbody>
+                <tr ng-repeat="annualYear in AllSectorAnnualYears[0].value">
+                    <td style="font-weight: bold" class="medium">{{annualYear.title}}</td>
+                    <td class="medium">{{annualYear.Contribution_rate}}</td>
+                    <td class="medium">{{annualYear.growth_rate}}</td>
+                </tr>
+                </tbody>
+            </table>
+        
+        </div>
+    </mds-modal-body>
+</mds-modal>
+<!-- <md-dialog  style="width: 100%;">
+    <md-toolbar    style="color:#29303b;" >
+        <div class="md-toolbar-tools" style="background-color: #2d3669">
+            <h2 style="color: #EBF7E5">Sectors Annual By years Table </h2>
+        </div>
+        <md-dialog-content style="padding: 40px;background-color: rgb(255,255,255);">
+<div class="container-fluid">
+    <label>Choose Year</label>
+    <md-select  name="type" ng-change="changeSectorAnnualYear()" ng-model="YearsOfSectorAnnual.year" required>
+        <md-option ng-value="{{year.year}}" ng-repeat="year in YearsOfSectorAnnual">{{year.year}}</md-option>
+    </md-select>
+    <table class="table table-bordered" id="AllSectorAnnualYears">
+        <thead>
+        <tr class="khlee">
+            <th style="color: #ffffdd" class="medium">Sector</th>
+            <th style="color: #ffffdd" class="medium">Contribution rate</th>
+            <th style="color: #ffffdd" class="medium">Growth rate</th>
+        </tr>
+
+        </thead>
+        <tbody>
+        <tr ng-repeat="annualYear in AllSectorAnnualYears[0].value">
+            <td style="font-weight: bold" class="medium">{{annualYear.title}}</td>
+            <td class="medium">{{annualYear.Contribution_rate}}</td>
+            <td class="medium">{{annualYear.growth_rate}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+        </md-dialog-content>
+    </md-toolbar>
+</md-dialog> -->

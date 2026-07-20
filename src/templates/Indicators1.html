@@ -1,0 +1,81 @@
+<div class="container">
+<section style="margin-top: 50px">
+    <h3 style="font-size:50px;font-weight: bold;color:#3e4095;margin-top:40px"> <span class="border-heading"></span> Indicators</h3>
+
+    <section  class="services"  style="margin-top: 40px" >
+        <ul class="uk-subnav uk-subnav-pill" uk-switcher swiping="false">
+            <li><a href="#" style="font-size: 18px">Single</a></li>
+            <li><a href="#" style="font-size: 18px">Group</a></li>
+        </ul>
+
+        <ul class="uk-switcher uk-margin uk-grid" >
+            <li>
+                <div class="uk-overflow-auto">
+                    <table class="uk-table uk-table-divider table-bordered table-hovered">
+                        <thead>
+                        <tr>
+                            <th>Icon</th>
+                            <th>Name</th>
+                            <th>Unit</th>
+                            <th>Cycle</th>
+                            <th>Group</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="indicator in indicators">
+                            <td><span class="{{indicator.icon}}"></span> </td>
+                            <td>{{indicator.title}}</td>
+                            <td>{{indicator.unit}}</td>
+                            <td>{{indicator.cycle}}</td>
+                            <td>{{indicator.type_title}}</td>
+                            <td>
+                                <md-button class="md-icon-button" ng-click="showCycles(indicator,$event,$index)">
+                                    <md-icon style="color: #0f6ecd">legend_toggle</md-icon>
+                                </md-button>
+                                <md-button class="md-icon-button" ng-click="editInicatorDialog(indicator,$event,$index)">
+                                    <md-icon style="color: #0f6ecd"> create</md-icon>
+                                </md-button>
+                                <md-button class="md-icon-button" ng-click="deleteIndicator(indicator,$event,$index)"><md-icon style="color: #0f6ecd"> delete_forever</md-icon></md-button>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </li>
+            <li>
+                <div class="uk-overflow-auto">
+                    <table class="uk-table uk-table-divider table-bordered table-hovered">
+                        <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Name</th>
+                            <th>Group</th>
+                            <th>Unit</th>
+                            <th>Cycle</th>
+                            <th>Date</th>
+                            <th>Value</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="indicator in indicatorsArray">
+                            <td><span class="{{$index+1}}"></span> </td>
+                            <td>{{indicator.name}}</td>
+                            <td>{{indicator.group}}</td>
+                            <td>{{indicator.unit}}</td>
+                            <td>{{indicator.cycle}}</td>
+                            <td>{{indicator.date}}</td>
+                            <td>{{indicator.value}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </li>
+        </ul>
+
+    </section>
+</section>
+</div>

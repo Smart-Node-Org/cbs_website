@@ -1,0 +1,286 @@
+<div class="statistic">
+    <div class="container">
+        <div uk-filter="target: .js-filter">
+        <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-3 " >
+                    <ul uk-accordion class="list-group">
+                        <li class="uk-open list-group-item" style="border-radius: 8px">
+                            <a class="uk-accordion-title" href="#" style="color: #3e4095;font-size: 16px;font-weight: bold;">Economic</a>
+                            <div class="uk-accordion-content">
+                                <ul class="list-unstyled" style="margin-left: 20px">
+                                    <li uk-filter-control="[data-tags*='GDP']" ><span class="fa fa-chevron-circle-right text-primary"></span> <a style="margin-left: 10px;color: #3e4095" href="#" ng-click="$event.preventDefault()">National Income</a></li>
+                                    <li uk-filter-control="[data-tags*='CPI']"><span class="fa fa-chevron-circle-right text-primary"></span> <a style="margin-left: 10px;color:#3e4095" href="#" ng-click="$event.preventDefault()">Price Indexes</a></li>
+                                    <li uk-filter-control="[data-tags*='Foreign']"><span class="fa fa-chevron-circle-right text-primary"></span> <a style="margin-left: 10px;color:#3e4095" href="#" ng-click="$event.preventDefault()">Foreign Trade</a></li>
+                                    <li uk-filter-control="[data-tags*='sectoral']"><span class="fa fa-chevron-circle-right text-primary"></span> <a style="margin-left: 10px;color:#3e4095" href="#" ng-click="$event.preventDefault()">Sectoral</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="list-group-item" style="border-radius: 8px">
+                            <a class="uk-accordion-title" href="#" style="color: #3e4095;font-size: 16px;font-weight: bold;">Social</a>
+                            <div class="uk-accordion-content">
+                                <ul class="list-unstyled" style="margin-left: 20px">
+                                    <li uk-filter-control="[data-tags*='pop']"><span class="fa fa-chevron-circle-right text-primary"></span> <a style="margin-left: 10px;color:#3e4095" href="#">Population</a></li>
+                                    <li uk-filter-control="[data-tags*='health']"><span class="fa fa-chevron-circle-right text-primary"></span> <a style="margin-left: 10px;color:#3e4095" href="#">Health</a></li>
+                                    <li uk-filter-control="[data-tags*='family']"><span class="fa fa-chevron-circle-right text-primary"></span> <a style="margin-left: 10px;color:#3e4095" href="#">Family</a></li>
+                                    <li uk-filter-control="[data-tags*='labor']"><span class="fa fa-chevron-circle-right text-primary"></span> <a style="margin-left: 10px;color:#3e4095" href="#">Labor And Immigration</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="list-group-item" style="border-radius: 8px">
+                            <a class="uk-accordion-title" href="#" style="color: #3e4095;font-size: 16px;font-weight: bold;">SDG</a>
+                            <div class="uk-accordion-content">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-8 col-md-9">
+                    <ul class="js-filter list-unstyled">
+                       <li data-tags="GDP" class="col-xs-12 col-sm-6 col-md-4">
+                           <div class="statistic-item text-center">
+<!--                               <i class="fas fa-chart-line fa-4x"></i>-->
+                              <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/chart3.png" alt="" style="width: 50px;height: 50px;"></div>
+                               <h5 style="margin-top: 10px">Gross Domestic Product<br>-Sudan-</h5>
+                               <div class="Statistic-buttons text-center">
+                                   <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                   <a href="" ng-click="ShowTableGdp()" uk-tooltip="title:show Gross Domestic Product-sudan table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px"></span></a>
+                               </div>
+                           </div>
+                       </li>
+                       <li data-tags="GDP" class="col-xs-12 col-sm-6  col-md-4">
+                           <div class="statistic-item text-center">
+                               <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/chart1.png" alt="" style="width: 50px;height: 50px;"></div>
+                               <h5 style="margin-top: 10px">Gross Domestic Product<br>-The State-</h5>
+                               <div class="Statistic-buttons">
+                                   <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                   <a href="" ng-click="ShowTableGdp()" uk-tooltip="title:show Gross Domestic Product-sudan table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px"></span></a>
+                               </div>
+                           </div>
+                       </li>
+                       <li data-tags="CPI" class="col-xs-12 col-sm-6  col-md-4">
+                           <div class="statistic-item text-center">
+                               <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/cpi1.png" alt="" style="width: 50px;height: 50px;"></div>
+                               <h5 style="margin-top: 10px">CPI-Sudan-</h5>
+                               <div class="Statistic-buttons">
+                                   <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                   <a href="" ng-click="ShowTableCpi()" uk-tooltip="title:show CPI sudan table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px"></span></a>
+                               </div>
+                           </div>
+                       </li>
+                        <li data-tags="CPI" class="col-xs-12 col-sm-6 col-md-4">
+                            <div class="statistic-item text-center">
+                                <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/cpi2.png" alt="" style="width: 50px;height: 50px;"></div>
+                                <h5 style="margin-top: 10px">CPI-States-</h5>
+                                <div class="Statistic-buttons text-center">
+                                    <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                    <a href="" ng-click="ShowTableCpiStates()" uk-tooltip="title:show CPI states table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px"></span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-tags="CPI" class="col-xs-12 col-sm-6  col-md-4">
+                            <div class="statistic-item text-center">
+                                <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/cpi3.png" alt="" style="width: 50px;height: 50px;"></div>
+                                <h5 style="margin-top: 10px">CPI -Product-</h5>
+                                <div class="Statistic-buttons">
+                                    <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                    <a href="" ng-click="ShowTableCpiProducts()" uk-tooltip="title:show CPI Product table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px"></span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-tags="CPI" class="col-xs-12 col-sm-6  col-md-4">
+                            <div class="statistic-item text-center">
+                                <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/cpi3.png" alt="" style="width: 50px;height: 50px;"></div>
+                                <h5 style="margin-top: 10px">Inflation -Sudan-</h5>
+                                <div class="Statistic-buttons">
+                                    <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                    <a href="" ng-click="ShowTableInflationSudan()" uk-tooltip="title:show Inflation sudan table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px"></span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-tags="CPI" class="col-xs-12 col-sm-6  col-md-4">
+                            <div class="statistic-item text-center">
+                                <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/cpi3.png" alt="" style="width: 50px;height: 50px;"></div>
+                                <h5 style="margin-top: 10px">Inflation -States-</h5>
+                                <div class="Statistic-buttons">
+                                    <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                    <a href="" ng-click="ShowTableInflationStates()" uk-tooltip="title:show Inflation States table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px"></span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-tags="CPI" class="col-xs-12 col-sm-6  col-md-4">
+                            <div class="statistic-item text-center">
+                                <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/cpi3.png" alt="" style="width: 50px;height: 50px;"></div>
+                                <h5 style="margin-top: 10px">Inflation-Product-</h5>
+                                <div class="Statistic-buttons">
+                                    <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                    <a href="" ng-click="ShowTableInflationProduct()" uk-tooltip="title:show Inflation Product table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px"></span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-tags="Foreign" class="col-xs-12 col-sm-6  col-md-4">
+                            <div class="statistic-item text-center">
+                                <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/trade1.png" alt="" style="width: 50px;height: 50px;"></div>
+                                <h5 style="margin-top: 10px">Foreign Trade<br>-Year-</h5>
+                                <div class="Statistic-buttons">
+                                    <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                    <a href="" ng-click="ShowTableForeignYear()" uk-tooltip="title:show Foreign Trade years table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px"></span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-tags="Foreign" class="col-xs-12 col-sm-6 col-md-4">
+                            <div class="statistic-item text-center">
+                                <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/trade2.png" alt="" style="width: 50px;height: 50px;"></div>
+                                <h5 style="margin-top: 10px">Foreign Trade<br>-Countries-</h5>
+                                <div class="Statistic-buttons text-center">
+                                    <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                    <a href="" ng-click="ShowTableForeignCountries()" uk-tooltip="title:show Foreign Trade Countries table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px"></span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-tags="Foreign" class="col-xs-12 col-sm-6  col-md-4">
+                            <div class="statistic-item text-center">
+                                <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/trade3.png" alt="" style="width: 50px;height: 50px;"></div>
+                                <h5 style="margin-top: 10px">Foreign Trade<br>-Product-</h5>
+                                <div class="Statistic-buttons">
+                                    <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                    <a href="" ng-click="ShowTableForeignProducts()" uk-tooltip="title:show Foreign Trade Products table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px"></span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-tags="sectoral" class="col-xs-12 col-sm-6  col-md-4">
+                            <div class="statistic-item text-center">
+                                <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/sector1.png" alt="" style="width: 50px;height: 50px;"></div>
+                                <h5 style="margin-top: 10px">Sectors-Years</h5>
+                                <div class="Statistic-buttons">
+                                    <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                    <a href="" ng-click="ShowTableSectorsAnnualSector()" uk-tooltip="title:show Sectors-Years table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px"></span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-tags="sectoral" class="col-xs-12 col-sm-6 col-md-4">
+                            <div class="statistic-item text-center">
+                                <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/sector2.png" alt="" style="width: 50px;height: 50px;"></div>
+                                <h5 style="margin-top: 10px">Sectors-<br>(Select Year)</h5>
+                                <div class="Statistic-buttons text-center">
+                                    <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                    <a href="" ng-click="ShowTableSectorsAnnualYears()" uk-tooltip="title:show Sectors- select Years table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px"></span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-tags="sectoral" class="col-xs-12 col-sm-6  col-md-4">
+                            <div class="statistic-item text-center">
+                                <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/sector3.png" alt="" style="width: 50px;height: 50px;"></div>
+                                <h5 style="margin-top: 10px">Product Annual-Sectors</h5>
+                                <div class="Statistic-buttons">
+                                    <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                    <a href="" ng-click="ShowTableProductAnnual()" uk-tooltip="title:show Sectors-Products table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px"></span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-tags="pop" class="col-xs-12 col-sm-6  col-md-4">
+                            <div class="statistic-item text-center">
+                                <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/population1.png" alt="" style="width: 50px;height: 50px;"></div>
+                                <h5 style="margin-top: 10px">Population</h5>
+                                <div class="Statistic-buttons">
+                                    <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                    <a href="" ng-click="ShowTablePopulation()" uk-tooltip="title:show Population table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px"></span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-tags="pop" class="col-xs-12 col-sm-6  col-md-4">
+                            <div class="statistic-item text-center">
+                                <div class="text-center" style="border: 3px dotted #3e4095;border-radius: 50%;width: 75px;height: 75px;line-height: 70px;margin: auto"><img src="img/population2.png" alt="" style="width: 50px;height: 50px;"></div>
+                                <h5 style="margin-top: 10px">Population-Date</h5>
+                                <div class="Statistic-buttons">
+                                    <a href="" ng-click="$event.preventDefault()"><span class="fa fa-download  fa-2x text-primary" style="position: absolute; bottom: 50px;left: 50px"></span></a>
+                                    <a href="" ng-click="ShowTablePopulationData()" uk-tooltip="title:show Population-Data table "><span class="fa fa-info  fa-2x text-muted" style="position: absolute; bottom: 50px;right: 50px"></span></a>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+<!--        <div class="sta" uk-filter="target: .js-filter" style="margin-top: 20px">-->
+
+<!--            <div class="row">-->
+
+<!--                <div class="col-xs-12 col-md-3 " >-->
+<!--                <ul uk-accordion>-->
+<!--                <li class="uk-open">-->
+<!--                <a class="uk-accordion-title" href="#" style="color: #8d25e8">Economic</a>-->
+<!--                <div class="uk-accordion-content">-->
+<!--                <ul class="  " style="margin-left: 20px">-->
+<!--                <li uk-filter-control="[data-tags*='white']" ><a style="margin-left: 10px;color: rgba(141,37,232,0.69);" href="#">National Income</a></li>-->
+<!--                <li uk-filter-control="[data-tags*='blue']"><a style="margin-left: 10px;color: rgba(141,37,232,0.69)" href="#">Price Indexes</a></li>-->
+<!--                <li uk-filter-control="[data-tags*='black']"><a style="margin-left: 10px;color: rgba(141,37,232,0.69)" href="#">Foreign Trade</a></li>-->
+<!--                <li uk-filter-control="[data-tags*='dark']"><a style="margin-left: 10px;color: rgba(141,37,232,0.69)" href="#">Sectoral</a></li>-->
+<!--                </ul>-->
+<!--                </div>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                <a class="uk-accordion-title" href="#" style="color: #8d25e8">Social</a>-->
+<!--                <div class="uk-accordion-content">-->
+<!--                <ul class="" style="margin-left: 20px">-->
+<!--                <li uk-filter-control="[data-tags*='pop']"><a style="margin-left: 10px;color: rgba(141,37,232,0.69)" href="#">Population</a></li>-->
+<!--                <li uk-filter-control="[data-tags*='health']"><a style="margin-left: 10px;color: rgba(141,37,232,0.69)" href="#">Health</a></li>-->
+<!--                <li uk-filter-control="[data-tags*='family']"><a style="margin-left: 10px;color: rgba(141,37,232,0.69)" href="#">Family</a></li>-->
+<!--                <li uk-filter-control="[data-tags*='labor']"><a style="margin-left: 10px;color: rgba(141,37,232,0.69)" href="#">Labor And Immigration</a></li>-->
+<!--                </ul>-->
+<!--                </div>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                <a class="uk-accordion-title" href="#" style="color: #8d25e8">SDG</a>-->
+<!--                <div class="uk-accordion-content">-->
+<!--                </div>-->
+<!--                </li>-->
+<!--                </ul>-->
+<!--                </div>-->
+
+<!--                <div class="col-md-9 col-xs-12" style="margin-top: -110px">-->
+
+<!--                    <ul class="  js-filter uk-child-width-2-2@s uk-child-width-1-3@l" uk-grid>-->
+
+<!--                        &lt;!&ndash; Start Filter White&ndash;&gt;-->
+
+<!--                        <li data-tags="white">-->
+<!--                            <div class="uk-animation-scale-up">-->
+<!--                                <div class="food">-->
+<!--                                    <div class="food-item">-->
+<!--                                        <i class="fa fa-male fa-4x"></i>-->
+<!--                                        <h4 style="color: #3e416d;">125$</h4>-->
+<!--                                        <h3 style= "font-family: gotham-rounded, helvetica neue, helvetica">CPI Sudan Sections & Levels </h3>-->
+<!--                                        <div layout="column" flex="33" flex-sm="100" flex-xs="100" layout-align="center center" style=" -webkit-box-orient: horizontal;flex-direction: revert;">-->
+<!--                                            <md-button style="margin:0 0px" aria-label="Open demo menu" class="md-icon-button" ng-click="ShowTableCpi()">-->
+<!--                                                <md-icon style="color: #3e416d;">error_outline</md-icon>-->
+<!--                                            </md-button>-->
+<!--                                            <md-menu md-offset="0 -7">-->
+<!--                                                <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdMenu.open($event)">-->
+<!--                                                    <md-icon style="color: #3e416d;">archive</md-icon>-->
+<!--                                                </md-button>-->
+<!--                                                <md-menu-content width="2">-->
+<!--                                                    <md-menu-item ng-repeat="item in ['Word','Excel','pdf']">-->
+<!--                                                        <md-button ng-click="announceClick($index,'cpiSudanSections')"> <span md-menu-align-target>{{item}}</span>  </md-button>-->
+<!--                                                    </md-menu-item>-->
+<!--                                                </md-menu-content>-->
+<!--                                            </md-menu>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                             </div>-->
+<!--                        </li>-->
+<!--                        &lt;!&ndash; End Filter White&ndash;&gt;-->
+<!--                    </ul>-->
+
+<!--                </div>-->
+
+<!--            </div>-->
+
+<!--        </div>-->
+
+    </div>
+</div>

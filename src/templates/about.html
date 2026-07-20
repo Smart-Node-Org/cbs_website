@@ -1,0 +1,214 @@
+<div class="container"> 
+    <!-- Start mission and vision  Section -->
+    <section id="service" class="service" >
+        <h3 style="font-size:40px;font-weight: bold;color:#3e4095;margin-top:40px " class="{{lang=='ar'?'text-right':''}}"> <span class="border-heading"></span> <span tr="about.about_cbs"></span></h3>
+        <p class="lead" style="font-size:18px;color: #595959;font-family: 'gotham-rounded, helvetica neue, helvetica', sans-serif" tr="about.about_full"> </p>
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-xs-12  d-flex align-items-stretch" ng-repeat="vision in ourVision"  style="margin-bottom: 20px;margin-top: 20px">
+                <div class="icon-box text-center"  style="box-shadow: 0 0 20px #ddd">
+                    <i class="fa fa-eye fa-5x" style="color: #3e4095; margin-bottom:15px"></i>
+                    <h2 style="color:#3e4095" tr="about.vision"></h2>
+                    <p style="font-size: 15px;font-family: 'gotham-rounded, helvetica neue, helvetica', sans-serif; color:#595959">{{vision.Vision}}</p>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-xs-12 d-flex align-items-stretch mt-4 mt-md-0" ng-repeat="mission in ourMissions"  style="margin-bottom: 20px;margin-top: 20px">
+                <div class="icon-box text-center"  style="box-shadow: 0 0 20px #ddd">
+                    <i class="fa fa-file fa-5x" style="color: #3e4095; margin-bottom:15px"></i>
+                    <h2  style="color:#3e4095" tr="about.mission"></h2>
+                    <p style="font-size: 15px;font-family: 'gotham-rounded, helvetica neue, helvetica', sans-serif;color:#595959">{{mission.mission}}</p>
+                </div>
+            </div>
+            <div class="col-sm-3 hidden-md hidden-lg hidden-xs"></div>
+            <div class="col-sm-6 col-md-4 col-xs-12 d-flex align-items-stretch mt-4 mt-lg-0"  style="margin-bottom: 20px;margin-top: 20px">
+                <div class="icon-box text-center"  style="box-shadow: 0 0 20px #ddd" ng-init="hiddens=true">
+                    <i class="fa fa-bullseye fa-5x" style="color: #3e4095; margin-bottom:15px"></i>
+                    <h2  style="color:#3e4095" tr="about.goals"></h2>
+                    <div  id="{{hiddens?'':'style-1'}}" class="scrollbar" style="height: 230px;overflow-y:{{ hiddens?'hidden':'scroll'}}">
+                    <ul id="contentscroll2" class="list-group force-overflow">
+                        <li class="list-group-item hidden-xs" ng-if="hiddens" ng-repeat="c in goal.slice(0,4)" style="border:none; color:#595959;text-align:center;font-size: 15px;padding:0;font-family: 'gotham-rounded, helvetica neue, helvetica', sans-serif;">{{c}}</li>
+                        <li class="list-group-item hidden-sm hidden-md hidden-lg" ng-repeat="c in goal.slice(0,6)" style="border:none; color:#595959;text-align:center;font-size: 15px;padding:0;font-family: 'gotham-rounded, helvetica neue, helvetica', sans-serif;">{{c}}</li>
+                        <li class="list-group-item " ng-if="!hiddens" ng-repeat="c in goal" style="border:none; color:#595959;text-align:center;font-size: 15px;padding: 0;font-family: 'gotham-rounded, helvetica neue, helvetica', sans-serif;">{{c}}</li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 hidden-md hidden-lg hidden-xs"></div>
+        </div>
+    </section>
+    <!-- End mission and vision  Section -->
+</div>
+
+
+<!-- start Section manger-->
+<div class="managers text-center">
+    <div class="manager-overlay">
+        <div class="container">
+            <div class="row">
+                <!-- Start Section Boos-->
+                <div class="col-xs-12" ng-repeat="person in OrganiztionChart|filter:{position_job: 'General Manager'}">
+                    <div class="boss" >
+                        <img src="http://smart-node.net/data/cbs/organiztion/{{person.img}}" alt="manager" class="img-circle" style="width: 150px; height: 150px;">
+                        <p>{{person.name}}</p>
+                        <span>{{person.position_job}}</span>
+                    </div>
+                </div>
+                <!-- End Section Boss-->
+
+                <!-- Start Section Boos-->
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3" ng-repeat="person in organ|filter">
+                    <div class="manager">
+                        <img src="http://smart-node.net/data/cbs/organiztion/{{person.img}}" alt="manager" class="img-circle" >
+                        <div class="manager-info">
+                            <p>{{person.name}}</p>
+                            <span>{{person.position_job}}</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Section Boss-->
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end Section manger-->
+
+<!--  About Section  -->
+<section id="abouts" class="well" style="margin:60px 0">
+    <div class="container">
+        <div class="abouts-container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+                    <div class="content order-lg-1 order-2">
+                        <h3 style="font-size:40px;font-weight: bold;color:#3e4095;" class="{{lang=='ar'?'text-right':''}}"> <span class="border-heading"></span> <span tr="about.fewword"></span> </h3>
+                        <p  class="lead" style="color: #595959;font-size: 18px;font-family: 'Alegreya Sans SC', sans-serif;text-align:justify">
+<!--                           The Central Bureau of Statistics has gone through several stages since its inception â€¢ It was established as a department in the Customs Authority to collect foreign trade statistics 1903. â€¢â€¢ It was transformed into the Ministry of Economic Planning in 1969.</p>-->
+                      
+                                           <span tr="about.about_full2"></span>
+                    </p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+                    <div id="myVideo" class="background order-lg-2 order-1 wow fadeInRight">
+                        <!--                        <img src="img/facebook.jpg" style="margin-top:20px;height: 450px;width:100%;border-radius: 15px; box-shadow: 5px 5px 3px rgba(62,64,149,0.8);">-->
+                        <video id="video4" class="lightbulbs" controls style="margin-top:20px;height: 450px;width:100%;background: black;border-radius: 10px">
+                            <source src="videos/4exper.mp4" type="video/mp4">
+                            Your browser does not support the video element
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="icon-box wow fadeInUp" style="margin-top: 30px">
+                <div class="icon"><span class="fa fa-history" style="color:#3e4095;font-size: 30px "></span></div>
+                <h3 style="font-size:20px;color: #3e4095;position: relative; top: 15px;left: 15px; font-weight: bold" tr="about.about_histroy"></h3>
+                <p class="lead" style="text-align:justify;transform:translate(0px,25px);color: #595959;font-size: 17px;font-family: 'Alegreya Sans SC', sans-serif">
+                    <span style="margin-left: -60px;" tr="about.about_full3">
+
+                    </span>
+                </p>
+            </div>
+
+            <div class="icon-box wow fadeInUp" data-wow-delay="0.2s" style="margin-top: 30px">
+                <div class="icon"><span class="fa fa-tasks" style="color:#3e4095;font-size: 30px "></span></div>
+                <h3 style="font-size:20px;color: #3e4095;position: relative; top: 15px;left: 15px; font-weight: bold" tr="about.about_mission"></h3>
+                <div  class="lead" style="transform:translate(0px,25px);color: #595959;font-size: 17px;font-family: 'Alegreya Sans SC', sans-serif">
+                    <span style="margin-left: -60px"  tr="about.about_stat"></span>
+                <ul class="list-unstyled" style="margin-left: 20px">
+                    <li style="font-size: 17px;;font-family: 'Alegreya Sans SC', sans-serif"><span class="fa fa-chevron-circle-right" style="margin-right: 10px;color: #3e4095"></span><span tr="about.about_stat2"></span>
+                <li style="font-size: 17px;;font-family: 'Alegreya Sans SC', sans-serif"><span class="fa fa-chevron-circle-right" style="margin-right: 10px;color: #3e4095"></span><span  tr="about.about_stat3"></span>
+                    <ul class="list-unstyled" style="margin-left: 20px">
+                        <li style="font-size: 17px;;font-family: 'Alegreya Sans SC', sans-serif"><span class="fa fa-arrow-right" style="margin-right: 10px;color: #3e4095"></span><span  tr="about.about_stat_meth"></span>
+                        <li style="font-size: 17px;;font-family: 'Alegreya Sans SC', sans-serif"><span class="fa fa-arrow-right" style="margin-right: 10px;color: #3e4095"></span><span  tr="about.about_statdesgin"></span>
+                        <li style="font-size: 17px;;font-family: 'Alegreya Sans SC', sans-serif"><span class="fa fa-arrow-right" style="margin-right: 10px;color: #3e4095"></span><span  tr="about.about_stat4"></span>
+                        <li style="font-size: 17px;;font-family: 'Alegreya Sans SC', sans-serif"><span class="fa fa-arrow-right" style="margin-right: 10px;color: #3e4095"></span><span  tr="about.about_stat5"></span>
+                        <li style="font-size: 17px;;font-family: 'Alegreya Sans SC', sans-serif"><span class="fa fa-arrow-right" style="margin-right: 10px;color: #3e4095"></span><span  tr="about.about_stat6"></span>
+                        <li style="font-size: 17px;;font-family: 'Alegreya Sans SC', sans-serif"><span class="fa fa-arrow-right" style="margin-right: 10px;color: #3e4095"></span><span  tr="about.about_stat7"></span>
+                    </ul>
+
+                <li style="font-size: 17px;;font-family: 'Alegreya Sans SC', sans-serif"><span class="fa fa-chevron-circle-right" style="margin-right: 10px;color: #3e4095"></span><span tr="about.about01"></span>
+                <li style="font-size: 17px;;font-family: 'Alegreya Sans SC', sans-serif"><span class="fa fa-chevron-circle-right" style="margin-right: 10px;color: #3e4095"></span><span tr="about.about02"></span>
+                <li style="font-size: 17px;;font-family: 'Alegreya Sans SC', sans-serif"><span class="fa fa-chevron-circle-right" style="margin-right: 10px;color: #3e4095"></span><span tr="about.about03"></span>
+                <li style="font-size: 17px;;font-family: 'Alegreya Sans SC', sans-serif"><span class="fa fa-chevron-circle-right" style="margin-right: 10px;color: #3e4095"></span><span tr="about.about04"></span>
+                <li style="font-size: 17px;;font-family: 'Alegreya Sans SC', sans-serif"><span class="fa fa-chevron-circle-right" style="margin-right: 10px;color: #3e4095"></span><span tr="about.about05"></span>
+                <li style="font-size: 17px;;font-family: 'Alegreya Sans SC', sans-serif"><span class="fa fa-chevron-circle-right" style="margin-right: 10px;color: #3e4095"></span><span tr="about.about06"></span>
+                <li style="font-size: 17px;;font-family: 'Alegreya Sans SC', sans-serif"> <span class="fa fa-chevron-circle-right" style="margin-right: 10px;color: #3e4095"></span><span tr="about.about07"></span>
+            </ul>
+            </div>
+            </div>
+
+            <div class="icon-box wow fadeInUp" data-wow-delay="0.4s" style="margin-top: 30px">
+                <div class="icon"><span class="fa fa-users" style="color:#3e4095;font-size: 30px "></span></div>
+                <h3 style="font-size:20px;color: #3e4095;position: relative; top: 15px;left: 15px; font-weight: bold" tr="about.mangertitle"></h3>
+                <div  class="lead" style="transform:translate(0px,25px);color: #595959;font-size: 17px;font-family: 'Alegreya Sans SC', sans-serif">
+                    <span style="margin-left: -60px;font-size: 17px;;font-family: 'Alegreya Sans SC', sans-serif" tr="about.mangertitle"></span>
+                    <ul class="list-unstyled" style="margin-left: 20px">
+                        <li style="font-size: 17px;;font-family: 'Alegreya Sans SC', sans-serif"><span class="fa fa-chevron-circle-right" style="margin-right: 10px;color: #3e4095"></span><span tr="manger1"></span>
+                        <li style="font-size: 17px;;font-family: 'Alegreya Sans SC', sans-serif"><span class="fa fa-chevron-circle-right" style="margin-right: 10px;color: #3e4095"></span><span tr="manger2"></span>
+                        <li style="font-size: 17px;;font-family: 'Alegreya Sans SC', sans-serif"><span class="fa fa-chevron-circle-right" style="margin-right: 10px;color: #3e4095"></span><span tr="manger3"></span>
+                        <li style="font-size: 17px;;font-family: 'Alegreya Sans SC', sans-serif"><span class="fa fa-chevron-circle-right" style="margin-right: 10px;color: #3e4095"></span><span tr="manger4"></span>
+                        <li style="font-size: 17px;;font-family: 'Alegreya Sans SC', sans-serif"><span class="fa fa-chevron-circle-right" style="margin-right: 10px;color: #3e4095"></span><span tr="manger5"></span>
+                        <li style="font-size: 17px;;font-family: 'Alegreya Sans SC', sans-serif"><span class="fa fa-chevron-circle-right" style="margin-right: 10px;color: #3e4095"></span><span tr="manger6"></span>
+                        <li style="font-size: 17px;;font-family: 'Alegreya Sans SC', sans-serif"><span class="fa fa-chevron-circle-right" style="margin-right: 10px;color: #3e4095"></span><span tr="manger7"></span>
+                        <li style="font-size: 17px;;font-family: 'Alegreya Sans SC', sans-serif"><span class="fa fa-chevron-circle-right" style="margin-right: 10px;color: #3e4095"></span><span tr="manger8"></span>
+                        <li style="font-size: 17px;;font-family: 'Alegreya Sans SC', sans-serif"><span class="fa fa-chevron-circle-right" style="margin-right: 10px;color: #3e4095"></span><span tr="manger9"></span>
+                        <li style="font-size: 17px;;font-family: 'Alegreya Sans SC', sans-serif"><span class="fa fa-chevron-circle-right" style="margin-right: 10px;color: #3e4095"></span><span tr="manger10"></span>
+                        <li style="font-size: 17px;;font-family: 'Alegreya Sans SC', sans-serif"><span class="fa fa-chevron-circle-right" style="margin-right: 10px;color: #3e4095"></span><span tr="manger11"></span>
+                    </ul>
+            </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- End About Section -->
+
+
+
+ <!--<div class="container">-->
+     <!--<h3 style="font-size:40px;font-weight: bold;color:#3e4095;margin-top:40px"> <span class="border-heading"></span>Administrative Structure</h3>-->
+     <!--<section id="speakers">-->
+         <!--<div class="row">-->
+             <!--<div class="col-xs-12">-->
+                 <!--<div class="text-center">-->
+                     <!--<div ng-repeat="person in OrganiztionChart|filter:{position_job: 'AL Manager'}">-->
+                         <!--<div data-aos="fade-up element-animate">-->
+                             <!--<div class="speaker  media d-block media-feature text-center" data-aos="fade-up" data-aos-delay="300">-->
+                                 <!--<img src="http://smart-node.net/data/cbs/organiztion/{{person.img}}" alt="Speaker 6" class="img-fluid" style="height: 300px">-->
+                                 <!--<div class="details" style="width: 450px; margin-left:360px">-->
+                                     <!--<h3>{{person.name}}</h3>-->
+                                     <!--<p>{{person.position_job}}</p>-->
+                                 <!--</div>-->
+                             <!--</div>-->
+                         <!--</div>-->
+                     <!--</div>-->
+                 <!--</div>-->
+             <!--</div>-->
+             <!--<div >-->
+                 <!--<div class="text-center wow zoomIn" data-wow-duration="1s" data-wow-offset="120">-->
+                     <!--<div ng-repeat="person in organ|filter" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">&lt;!&ndash;|filter:{position_job!:'AL Manager'}&ndash;&gt;-->
+                         <!--<div>-->
+                             <!--<div>-->
+                                 <!--<div data-aos="fade-up" >-->
+                                     <!--<div class="speaker" data-aos="fade-up" data-aos-delay="300">-->
+                                         <!--<img src="http://smart-node.net/data/cbs/organiztion/{{person.img}}" alt="Speaker 6" class="img-fluid" style="height: 300px">-->
+                                         <!--<div class="details">-->
+                                             <!--<h3>{{person.name}}</h3>-->
+                                             <!--<p>{{person.position_job}}</p>-->
+
+                                         <!--</div>-->
+                                     <!--</div>-->
+                                 <!--</div>-->
+                             <!--</div>-->
+                         <!--</div>-->
+                     <!--</div>-->
+                 <!--</div>-->
+             <!--</div>-->
+         <!--</div>-->
+
+     <!--</section>-->
+ <!--</div>-->
+
+
+
+
+

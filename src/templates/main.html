@@ -1,0 +1,377 @@
+<div dir="{{lang=='en'?'ltr':'rtl'}}">
+<div>
+<section style="background: url('img/download.jfif') ; ">
+    <div class="statistic text-center" >
+        <div class="row" style="margin-right: 0!important;">
+            <div style="margin-top: 30px">
+                <div  class="col-xs-12 col-sm-4 col-md-4 ">
+                    <img src="img/iegal.png">
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 ">
+                    <h1 style="color: #3e4095;font-family: gotham-rounded, helvetica neue, helvetica; font-weight: bold;line-height: 1.6;" class="republic"><span style="font-size: 20px" class="republicHeader"  tr="main.RepublicOfTheSudan"></span><br> <span style="font-size: 24px" class="cabinetHeadeer" tr="main.cabinet"></span><br> <span style="font-size: 25px;line-height: 0" class="statisticHeader" tr="main.statisticHeader"> </span></h1>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 ">
+                    <img src="img/cbslogo.png" style="width: 180px;height: 180px">
+                    <h1 id="counter" class="republic" tr="main.noNow"></h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Start Navbar-->
+
+
+<nav class="navbar"   ng-mouseleave="open='';margin=''" style="height: {{margin}}px;">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" style="border:2px solid #eeeeee">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar" style="background-color: #eeeeee"></span>
+                <span class="icon-bar" style="background-color: #eeeeee"></span>
+                <span class="icon-bar" style="background-color: #eeeeee"></span>
+            </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1  {{lang=='ar'?'direction-rtl':''}}">
+          
+            <ul class="nav navbar-nav {{lang=='ar'?'navbar-right':''}} {{lang=='ar'?'direction-rtl':''}}">
+                <li class="active" ng-if="lang=='en'"><a ui-sref="app.home" style="color: white;font-size: 18px; font-weight: bold;" ng-mouseenter="open='';margin=''" tr="main.home"></a></li>
+                <li ng-if="lang=='en'"><a ui-sref="app.about" style="color: white;font-size: 18px; font-weight: bold;" ng-mouseenter="open='';margin=''" tr="main.about"></a></li>
+                <li style="{{lang=='en'?'':'display:none !important'}}" class="nav-item hidden-lg hidden-sm hidden-md" ng-mouseenter="margin=''">
+                    <a ui-sref="app.statisitics" class="nav-link" style="color: white;font-size:18px; font-weight: bold;padding: 15px!important;"  tr="main.stat1"></a></li>
+                <li style="{{lang=='en'?'':'display:none !important'}}" class="nav-item dropdown has-megamenu {{open}} hidden-xs" ng-mouseenter="open='open';margin=250">
+                        <a ui-sref="app.statisitics" class="nav-link dropdown-toggle" style="color: white;font-size:18px; font-weight: bold;padding: 15px!important;"  tr="main.stat2"><!--STATISTICS-->
+                            <i class="fa fa-caret-down hidden-xs"></i></a>
+                        <div class="dropdown-menu mega-dropdownNavbar hidden-xs container" style="top:50px;padding: 50px;width: 99%!important;transform: translateY(5px);background: #4345B7;" role="menu">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-4 col-md-4">
+                                    <div class="col-megamenu">
+                                        <h4 class="title" style="color: #ffffff" tr="main.economic"></h4>
+                                        <ul class="list-unstyled">
+                                            <li><span class="fa fa-chevron-circle-right text-primary"></span> <a style="display: inline!important; color: #ffffff; font-size: 14px; font-weight: bold" ui-sref="app.statisitics" ng-click="changeStatistics('GDP')" tr="main.N_income"></a></li>
+                                            <li><span class="fa fa-chevron-circle-right text-primary" style="display: inline!important;"></span> <a style="display: inline!important; color:#ffffff; font-size: 14px; font-weight: bold" ui-sref="app.statisitics" ng-click="changeStatistics('CPI')" tr="main.P_indexes"></a></li>
+                                            <li><span class="fa fa-chevron-circle-right text-primary" style="display: inline!important;"></span> <a style="display: inline!important; color:#ffffff; font-size: 14px; font-weight: bold" ui-sref="app.statisitics" ng-click="changeStatistics('Foreign')" tr="main.F_Trade"></a></li>
+                                            <li><span class="fa fa-chevron-circle-right text-primary" style="display: inline!important;"></span> <a style="display: inline!important; color:#ffffff; font-size: 14px; font-weight: bold" ui-sref="app.statisitics" ng-click="changeStatistics('sectoral')" tr="main.Sectoral"></a></li>
+
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                                <div class="col-xs-12 col-sm-4 col-md-4">
+                                    <div class="col-megamenu">
+                                        <h4 class="title" style="color: #ffffff" tr="main.Social"></h4>
+                                        <ul class="list-unstyled">
+                                            <li><span class="fa fa-chevron-circle-right text-primary" style="display: inline!important;"></span> <a style="display: inline!important; color:#ffffff; font-size: 14px; font-weight: bold" ui-sref="app.statisitics" ng-click="changeStatistics('pop')" tr="main.Population"></a></li>
+                                            <li><span class="fa fa-chevron-circle-right text-primary" style="display: inline!important;"></span> <a style="display: inline!important; color:#ffffff; font-size: 14px; font-weight: bold" ui-sref="app.statisitics" ng-click="changeStatistics('health')" tr="main.Health"></a></li>
+                                            <li><span class="fa fa-chevron-circle-right text-primary" style="display: inline!important;"></span> <a style="display: inline!important; color:#ffffff; font-size: 14px; font-weight: bold" ui-sref="app.statisitics" ng-click="changeStatistics('family')" tr="main.Family"></a></li>
+                                            <li><span class="fa fa-chevron-circle-right text-primary" style="display: inline!important;"></span> <a style="display: inline!important; color:#ffffff; font-size: 14px; font-weight: bold" ui-sref="app.statisitics" ng-click="changeStatistics('labor')" tr="main.labor"></a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                                <div class="col-xs-12 col-sm-4 col-md-4">
+                                    <div class="col-megamenu">
+                                        <h4 class="title" style="color: #ffffff" > <a href="https://www.sdgs.cbs.gov.sd" target="_blank" class="text-white"  style="color: white;" rel="noopener noreferrer"  tr="main.SDG"></a> </h4>
+                                        <ul class="list-unstyled">
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div>
+                            </div><!-- end row -->
+                        </div> <!-- dropdown-mega-menu.// -->
+                </li>
+                <li ng-if="lang=='en'"><a ui-sref="app.Indicators" style="color: white;font-size: 18px; font-weight: bold;" ng-mouseenter="open='';margin=''" tr="main.INDICATORS"> </a></li>
+                <li ng-if="lang=='en'"><a ui-sref="app.Publications" style="color: white;font-size: 18px; font-weight: bold;" ng-mouseenter="open='';margin=''"  tr="main.PUBLICATIONS"> </a></li>
+                <li ng-if="lang=='en'"><a ui-sref="app.news" style="color: white;font-size: 18px; font-weight: bold;" ng-mouseenter="open='';margin=''" tr="main.NEWS"></a></li>
+			    <li><a ui-sref="app.metadata"  style="color: white;font-size: 18px; font-weight: bold" ng-mouseenter="open='';margin=''" tr="main.METADATA"></a></li>
+
+                <li><a ui-sref="app.contact" style="color: white;font-size: 18px; font-weight: bold;" ng-mouseenter="open='';margin=''" tr="main.CONTACTUS"></a></li>
+                <li ng-if="lang=='ar'"><a ui-sref="app.Indicators" style="color: white;font-size: 18px; font-weight: bold;" ng-mouseenter="open='';margin=''" tr="main.INDICATORS"> </a></li>
+                <li ng-if="lang=='ar'"><a ui-sref="app.Publications" style="color: white;font-size: 18px; font-weight: bold;" ng-mouseenter="open='';margin=''"  tr="main.PUBLICATIONS"> </a></li>
+                <li ng-if="lang=='ar'"><a ui-sref="app.news" style="color: white;font-size: 18px; font-weight: bold;" ng-mouseenter="open='';margin=''" tr="main.NEWS"></a></li>
+                <li  style="{{lang=='ar'?'':'display:none !important'}}"
+                class="nav-item hidden-lg hidden-sm hidden-md" ng-mouseenter="margin=''">
+                    <a ui-sref="app.statisitics" class="nav-link" style="color: white;font-size:18px; font-weight: bold;padding: 15px!important;"  tr="main.stat1"></a></li>
+                <li " style="{{lang=='ar'?'':'display:none !important'}}" class="nav-item dropdown has-megamenu {{open}} hidden-xs" ng-mouseenter="open='open';margin=250">
+                        <a ui-sref="app.statisitics" class="nav-link dropdown-toggle" style="color: white;font-size:18px; font-weight: bold;padding: 15px!important;"  tr="main.stat2"><!--STATISTICS-->
+                            <i class="fa fa-caret-down hidden-xs"></i></a>
+                        <div class="dropdown-menu mega-dropdownNavbar hidden-xs container" style="top:50px;padding: 50px;width: 99%!important;transform: translateY(5px);background: #4345B7;" role="menu">
+                            <div class="row"> 
+                               
+                                <div class="col-xs-12 col-sm-4 col-md-4">
+                                    <div class="col-megamenu" style="float: right">
+                                        <h4 class="title" style="color: #ffffff;font-size: 20px;transform: translateX(60px)"> <a href="https://www.sdgs.cbs.gov.sd" target="_blank" class="text-white"  style="color: white;" rel="noopener noreferrer"  tr="main.SDG"></a> </h4>
+                                        <ul class="list-unstyled">
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div>
+                                <div class="col-xs-12 col-sm-4 col-md-4">
+                                    <div class="col-megamenu" style="float: right">
+                                        <h4 class="title"  tr="main.Social" style="color: #ffffff;font-size: 20px;transform: translateX(60px)">الاجتماعيه</h4>
+                                        <ul class="list-unstyled">
+                                            <li><a style="display: inline !important; color:#ffffff; font-size: 15px; font-weight: bold" ui-sref="app.statisitics" ng-click="changeStatistics('pop')"><span class="fa fa-chevron-circle-left text-primary" style="float: right;display: inline!important;margin-left: 10px;transform: translateY(5px);margin-right: 20px"></span><span style="float: right" tr="main.Population">السكان</span></a></li>
+                                            <li><a style="display: inline !important; color:#ffffff; font-size: 15px; font-weight: bold" ui-sref="app.statisitics" ng-click="changeStatistics('health')"><span class="fa fa-chevron-circle-left text-primary" style="float: right;display: inline!important;margin-left: 10px;transform: translateY(5px);margin-right: 20px"></span><span style="float: right" tr="main.Health">الصحة</span></a></li>
+                                            <li><a style="display: inline !important; color:#ffffff; font-size: 15px; font-weight: bold" ui-sref="app.statisitics" ng-click="changeStatistics('family')"><span class="fa fa-chevron-circle-left text-primary" style="float: right;display: inline!important;margin-left: 10px;transform: translateY(5px);margin-right: 20px"></span><span style="float: right" tr="main.Family">الأسرة</span></a></li>
+                                            <li><a style="display: inline !important; color:#ffffff; font-size: 15px; font-weight: bold" ui-sref="app.statisitics" ng-click="changeStatistics('labor')"><span class="fa fa-chevron-circle-left text-primary" style="float: right;display: inline!important;margin-left: 10px;transform: translateY(5px);margin-right: 20px"></span><span style="float: right" tr="main.labor">العمل والهجرة</span></a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                                <div class="col-xs-12 col-sm-4 col-md-4">
+                                    <div class="col-megamenu" style="float: right">
+                                        <h4 class="title" style="color: #ffffff;font-size: 20px;transform: translateX(60px)">الاقتصاديه</h4>
+                                        <ul class="list-unstyled">
+                                            <li><a style="display: inline!important; color: #ffffff; font-size: 15px; font-weight: bold;" ui-sref="app.statisitics" ng-click="changeStatistics('GDP')"><span class="fa fa-chevron-circle-left text-primary" style="float: right;display: inline!important;margin-left: 10px;transform: translateY(5px);margin-right: 20px"></span><span style="float: right" tr="main.N_income">الدخل القومي</span></a></li>
+                                            <li><a style="display: inline!important; color:#ffffff; font-size: 15px; font-weight: bold;" ui-sref="app.statisitics" ng-click="changeStatistics('CPI')"><span class="fa fa-chevron-circle-left text-primary" style="float: right;display: inline!important;margin-left: 10px;transform: translateY(5px);margin-right: 20px"></span><span style="float: right" tr="main.P_indexes">مؤشرات الأسعار</span></a></li>
+                                            <li><a style="display: inline!important; color:#ffffff; font-size: 15px; font-weight: bold;" ui-sref="app.statisitics" ng-click="changeStatistics('Foreign')"><span class="fa fa-chevron-circle-left text-primary" style="float: right;display: inline!important;margin-left: 10px;transform: translateY(5px);margin-right: 20px"></span><span style="float: right" tr="main.F_Trade">التجارة الخارجية</span></a></li>
+                                            <li><a style="display: inline!important; color:#ffffff; font-size: 15px; font-weight: bold;" ui-sref="app.statisitics" ng-click="changeStatistics('sectoral')"><span class="fa fa-chevron-circle-left text-primary" style="float: right;display: inline!important;margin-left: 10px;transform: translateY(5px);margin-right: 20px"></span><span style="float: right" tr="main.Sectoral">القطاعيه</span></a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                             
+                               
+                               
+                            </div><!-- end row -->
+                        </div> <!-- dropdown-mega-menu.// -->
+                </li>
+                <li ng-if="lang=='ar'"><a ui-sref="app.about" style="color: white;font-size: 18px; font-weight: bold;" ng-mouseenter="open='';margin=''" tr="main.about"></a></li>
+                <li class="active" ng-if="lang=='ar'"><a ui-sref="app.home" style="color: white;font-size: 18px; font-weight: bold;" ng-mouseenter="open='';margin=''" tr="main.home"></a></li>
+            </ul>
+             <ul class="nav navbar-nav  {{lang=='ar'?'navbar-left':''}}  ">
+                <li ng-if="lang=='en'"><a style="color: white;font-size: 18px; font-weight: bold" ng-click="langShiftToAr()" > {{lang=='en'?'ar':'en'}} </a></li>
+                <li ng-if="lang=='ar'"><a style="color: white;font-size: 18px; font-weight: bold" ng-click="langShiftToEn()" >{{lang=='ar'?'en':'ar'}}</a></li>
+             </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav><!-- end navbar-->
+</div>
+
+        <!--
+            
+            
+            <header id="header" class="fixed-top" style="background: #3e4095;height: 80px">-->
+            <!--<div class="container d-flex align-items-center" >-->
+
+                <!--<nav class="nav-menu d-none d-lg-block navigation-main" style="margin-top: 10px">-->
+                    <!--<ul style="margin-left: -80px">-->
+                        <!--<li class="active"><a ui-sref="app.home" style="color: white;font-size: 15px" >HOME</a></li>-->
+                        <!--<li class="drop-down"><a ui-sref="app.statisitics" style="color: white;font-size:15px">STATISTICS</a>-->
+
+                        <!--</li>-->
+                        <!--<li><a ui-sref="app.Indicators" style="color: white;font-size: 15px">INDICATORS </a></li>-->
+                        <!--&lt;!&ndash;<li><a ui-sref="app.poplications" style="color: white">POPLICATIONS </a></li>&ndash;&gt;-->
+
+                        <!--<li ><a ui-sref="app.news" style="color: white;font-size: 15px">NEWS</a>-->
+
+                        <!--</li>-->
+                        <!--<li><a ui-sref="app.about" style="color: white;font-size: 15px">ABOUT </a></li>-->
+
+                        <!--<li><a ui-sref="app.contact" style="color: white;font-size: 15px">CONTACT</a></li>-->
+
+
+                        <!--<li><a ui-sref="app.metadata" style="position: relative;left: 570px;color: white;font-size: 15px">METADATA</a></li>-->
+
+
+                        <!--<li><a style="color: white;position: relative;left:580px;font-size: 15px" >Ar</a></li>-->
+
+                    <!--</ul>-->
+
+                <!--</nav>&lt;!&ndash; .nav-menu &ndash;&gt;-->
+
+
+            <!--</div>-->
+        <!--</header>&lt;!&ndash; End Header &ndash;&gt;-->
+
+
+
+<!--<nav class="navbar navbar-inverse " style="background-color:#8d25e8;height: 80px">-->
+    <!--<div class="container-fluid"style="color: white">-->
+        <!--<div class="navbar-header">-->
+            <!--<button class="navbar-toggle" data-toggle="collapse" data-target="#y">-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+            <!--</button>-->
+            <!--<a class="navbar-brand" href="#">Mega Store</a>-->
+        <!--</div>-->
+        <!--<div id="y" class="collapse navbar-collapse">-->
+            <!--<ul class="nav navbar-nav">-->
+                <!--<li><a href="#"style="color: white;font-size: 25px" >Home</a></li>-->
+                <!--<li><a href="#">Store</a></li>-->
+                <!--<li><a href="#">Fourm</a></li>-->
+                <!--<li><a href="#">About</a></li>-->
+                <!--<li><a href="#">Contact</a></li>-->
+            <!--</ul>-->
+
+            <!--<ul class="nav navbar-nav navbar-right">-->
+                <!--<p class="navbar-text">Welcome User</p>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</nav>-->
+
+
+
+<!--<nav class="navbar navbar-default navbar-static">-->
+    <!--<div class="navbar-header">-->
+        <!--<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">-->
+            <!--<span class="sr-only">Toggle navigation</span>-->
+            <!--<span class="icon-bar"></span>-->
+            <!--<span class="icon-bar"></span>-->
+            <!--<span class="icon-bar"></span>-->
+        <!--</button>-->
+
+    <!--</div>-->
+
+    <!--<div class="collapse navbar-collapse js-navbar-collapse">-->
+        <!--<ul class="nav navbar-nav">-->
+            <!--<li class="dropdown dropdown-large">-->
+                <!--<a href="#">Some link</a>-->
+            <!--</li>-->
+            <!--<li class="dropdown dropdown-large">-->
+                <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Statistics <b class="caret"></b></a>-->
+
+                <!--<ul class="dropdown-menu dropdown-menu-large row">-->
+                    <!--<li class="col-sm-6">-->
+                        <!--<ul>-->
+                            <!--<li class="dropdown-header">Econamic</li>-->
+                            <!--<li><a href="#">Example</a></li>-->
+                            <!--<li><a href="#">Example</a></li>-->
+                            <!--<li><a href="#">Example</a></li>-->
+                            <!--<li><a href="#">Example</a></li>-->
+                            <!--<li><a href="#">Example</a></li>-->
+                            <!--<li><a href="#">Example</a></li>-->
+                            <!--<li class="divider"></li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                    <!--<li class="col-sm-6">-->
+                        <!--<ul>-->
+                            <!--<li class="dropdown-header">Soical</li>-->
+                            <!--<li><a href="#">Example</a></li>-->
+                            <!--<li><a href="#">Example</a></li>-->
+                            <!--<li><a href="#">Example</a></li>-->
+                            <!--<li><a href="#">Example</a></li>-->
+                            <!--<li><a href="#">Example</a></li>-->
+                            <!--<li class="divider"></li>-->
+
+                        <!--</ul>-->
+                    <!--</li>-->
+
+
+                <!--</ul>-->
+
+            <!--</li>-->
+
+
+
+
+
+
+        <!--</ul>-->
+
+    <!--</div>&lt;!&ndash; /.nav-collapse &ndash;&gt;-->
+<!--</nav>-->
+
+<section class="">
+    <div ui-view="sub"></div>
+</section>
+
+<!-- Start Footer -->
+<footer id="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <!-- Start CBS -->
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 footer-contact">
+                    <h2 style="color: #eeeeee;font-size: x-large" class="{{lang=='ar'?'text-right':''}}" tr="main.CBS"></h2>
+                    <hr style="background-color: white;margin-top: -10px;margin-bottom: 20px">
+                    <ul class="list-unstyled {{lang=='ar'?'text-right float-right':''}}" style="margin: 0px!important;padding: 0px!important">
+                        <!-- <li style="text-align: left; margin-top: -10px">
+                            <a href=""><i class="fa fa-youtube" aria-hidden="true"></i> fa-youtube</a>
+                            <a href=""><span class="fa fa-youtube text-primary" style="margin-left:15px;color: #eeeeee!important;transform: translateY(-3px);font-size: 25px;text-align: center;border-radius: 50%;"></span></a>
+                            <a href=""><span class="fa fa-facebook text-primary" style="margin-left:30px;color: #eeeeee!important;transform: translateY(-3px);font-size: 25px;text-align: center;border-radius: 50%;"></span></a>
+                            <a href=""><span class="fa fa-twitter text-primary" style="margin-left:30px;color: #eeeeee!important;transform: translateY(-3px);font-size: 25px;text-align: center;border-radius: 50%;"></span></a>
+                            <a href=""><span class="fa fa-linkedin text-primary" style="margin-left:30px;color: #eeeeee!important;transform: translateY(-3px);font-size: 25px;text-align: center;border-radius: 50%;"></span></a>
+                        </li> -->
+                        <li style="margin-bottom: 10px"><span class="fa fa-chevron-right"></span> <span  tr="main.60Street"> </span> </li>
+                        <li style="margin-bottom: 10px"><span class="fa fa-chevron-right"></span><span  tr="main.KhartoumSD"> </span> </li>
+                        <li style="margin-bottom: 10px"><span class="fa fa-chevron-right"></span> <span  tr="main.RepublicOfSudan"> </span></li>
+                        <li style="margin-bottom: 10px"><span class="fa fa-chevron-right"></span> <span  tr="main.Phone"> </span>: 0122028025</li>
+                        <li style="margin-bottom: 40px"><span class="fa fa-chevron-right"></span>  <span  tr="main.Email"> </span>: CBS@gmail.com</li>
+                    </ul>
+                </div>
+                <!-- End CBS -->
+
+                <!--Start Useful Link-->
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 footer-links">
+                    <h2 style="color:#eeeeee;font-size: x-large" class=" {{lang=='ar'?'text-right':''}}" tr="main.Useful_Links"></h2>
+                    <hr style="background-color: white;margin-top: -10px;margin-bottom: 20px">
+                    <ul class="list-unstyled">
+                        <li><a ui-sref="app.home"><span class="fa fa-chevron-right"></span><span tr="main.home"></span> </a></li>
+                        <li><a ui-sref="app.about"><span class="fa fa-chevron-right"></span> <span tr="main.about_link"></span></a></li>
+                        <li><a ui-sref="app.statisitics"><span class="fa fa-chevron-right"></span><span tr="main.Statistic"></span> </a></li>
+                        <li><a ui-sref="app.contact"><span class="fa fa-chevron-right"></span><span tr="main.CONTACTUS"></span> </a></li>
+                    </ul>
+                </div>
+                <!--End Useful Link-->
+                <!--Start Related Link-->
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 footer-links">
+                    <h2 style="color:#eeeeee;font-size: x-large" class=" {{lang=='ar'?'text-right':''}}" tr="main.relate_Links"></h2>
+                    <hr style="background-color: white;margin-top: -10px;margin-bottom: 20px">
+                    <ul class="list-unstyled">
+                        <li><span class="fa fa-chevron-right"></span><a href="http://sudan.gov.sd/"  target="_blank" tr="main.TCOF"> </a></li>
+                        <li><span class="fa fa-chevron-right"></span><a href="https://nic.gov.sd/" target="_blank" tr="main.nic"></a></li>
+                        <li><span class="fa fa-chevron-right"></span><a href="http://www.albankaldawli.org/"  target="_blank" tr="main.albankaldawli"></a></li>
+                        <li><span class="fa fa-chevron-right"></span><a href=" https://sudan.unfpa.org/"  target="_blank" tr="main.unfpa"> </a></li>
+                        <li><span class="fa fa-chevron-right"></span><a href="https://fao.org/sudan/ar"  target="_blank" tr="main.fao"> </a></li>
+                    </ul>
+                </div>
+                <!--End Related Link-->
+                <!--Start Our Services-->
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 footer-links">
+                    <h2 style="color:#eeeeee;font-size: x-large" class=" {{lang=='ar'?'text-right':''}}" tr="main.OurServices"></h2>
+                    <hr style="background-color: white;margin-top: -10px;margin-bottom: 20px">
+                    <ul class="list-unstyled">
+                        <li><a ui-sref=""><span class="fa fa-chevron-right"></span><span tr="main.Statistic"></span> </a></li>
+                        <li><a ui-sref=""><span class="fa fa-chevron-right"></span><span tr="main.stat3"></span>  </a></li>
+                        <li><a ui-sref=""><span class="fa fa-chevron-right"></span><span tr="main.stat4"></span>   </a></li>
+                        <li><a ui-sref=""><span class="fa fa-chevron-right"></span> <span tr="main.stat5"></span>  </a></li>
+                        <li><a ui-sref=""><span class="fa fa-chevron-right"></span><span tr="main.stat6"></span> </a></li>
+                    </ul>
+                </div>
+                <!--End Our Services-->
+
+                <!--Start Join Our Newsletter-->
+<!--                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 footer-newsletter">-->
+<!--                    <h2 style="color:#eeeeee;font-size: x-large">Join Our Newsletter</h2>-->
+<!--                    <hr style="background-color: white;margin-top: -10px;margin-bottom: 20px">-->
+<!--                    <h6 style="color: white !important;">Tamen quem nulla quae legam multos aute sint culpa legam noster magna</h6>-->
+<!--                    <h6 style="color: white !important;">Tamen quem nulla quae legam multos aute sint culpa legam noster magna</h6>-->
+<!--                </div>-->
+                <!--End Join Our Newsletter-->
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container d-md-flex py-4" >
+
+        <div class="mr-md-auto text-center text-md-left" style="margin-bottom: 30px">
+            <div class="copyright">
+                <h4 style="color: white">
+                    <SPAN style="font-size: large;color: yellow">&copy; Copyright</SPAN> <span style="color: yellow"></span>
+                    <br>All rights reserved for the Central Bureau of Statistics
+                </h4></div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/company-free-html-bootstrap-template/ -->
+            </div>
+        </div>
+
+    </div>
+</footer>
+</div>
+<!-- End Footer -->
